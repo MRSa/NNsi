@@ -1,0 +1,37 @@
+#####  NNsh ソースコードファイル構成(概要)  #####
+
+<<< Generics >>>
+dbmgr.c    ：データベース制御
+filemgr.c  ：ファイル(file Stream & VFS)制御
+httpmgr.c  ：http通信管理
+netent.c   ：proxy通信ラッパ
+netmng.c   ：TCP/IP管理(netlibラッパ)
+windows.c  ：画面管理ユーティリティ
+skeleton.c ：Palmwareスケルトン・共通部
+machine.c  ：機種別初期化/終了関数
+machine.h  ：機種別シンボル(特にCLIE)
+
+<<< Skeletons >>>
+local.h    ：総合インクルードファイル/バージョン管理
+main.c     ：Palmwareスケルトン・アプリ固有部(skeleton.cでinclude)
+proto.h    ：プロトタイプ宣言
+symbols.h  ：シンボル宣言
+struct.h   ：構造体宣言
+global.h   ：大域変数宣言
+sections.h ：マルチセグメント宣言ヘッダ
+
+<<< NNsh Related >>>
+msgmgr.c   ：メッセージ管理
+msgwrite.c ：メッセージ書き込み処理
+msgview.c  ：メッセージ表示画面
+subjmgr.c  ：スレ名(subject.txt)管理・解釈
+bbsmng.c   ：板名管理・使用板選択
+nnshset.c  ：NNsh設定画面
+nnshmain.c ：NNshメイン画面
+offline.c  ：NaNaShi互換関数群(Offline参照用関数群)
+messages.h ：出力メッセージシンボル定義
+
+<<< ARMlets >>>
+armc0001.c ： ARMlet関数その１
+armc0002.c ： ARMlet関数その２
+armutls.h  ： ARM用エンディアン変換マクロ等

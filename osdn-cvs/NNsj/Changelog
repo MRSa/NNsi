@@ -1,0 +1,62 @@
+2005-03-12  MRSa  <mrsa@users.sourceforge.jp>
+    * Rsc/nns-fix.h
+    CLIE Launcherでのカテゴリをミスって表示していた不具合を修正する
+
+2005-02-15  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/nnshmain.c
+    マクロスクリプトをメモ帳に出力する。
+
+2004-09-22  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/nnshmain.c
+    NNsj終了確認部分をNNsi連携にあわせ微修正。
+
+2004-07-09  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/nnshmain.c 他
+    マクロ「スタックへＰＵＳＨ」「スタックからＰＯＰ」「スレ
+    インデックス番号の取得」を追加。(V1.04対応)
+
+2004-07-03  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/nnshmain.c 他
+    NNsiMacroEdit単体のマクロスクリプトＤＢ保管・復元に対応。
+      → NNsiでは単マクロスクリプトしか認識できない。(従来のまま)
+
+2004-07-01  MRSa  <mrsa@users.sourceforge.jp>
+    マクロ「正なら分岐」「負なら分岐」を追加。(V1.03+対応)
+
+2004-07-01  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/macroview.c
+    * Src/opcode.c
+    * Rsc/nnsh.rcp
+    NNsiMacro V1.03対応。
+
+2004-06-02  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/macroview.c
+    * Src/opcode.c
+    * Rsc/nnsh.rcp
+    NNsiMacro V1.02対応。
+
+2003-12-05  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/macroview.c
+    * Src/opcode.c
+    * Rsc/nnsh.rcp
+    NNsiMacro V1.01対応。
+    
+    * Rsc/nnsh.rcp
+    上移動ボタンが有効でなかった不具合を修正。
+    
+    * Src/nnshmain.c
+    １行削除したときの挙動を微妙に修正。(まだあんまりうまくない...)
+
+2003-12-04  MRSa  <mrsa@users.sourceforge.jp>
+    * Rsc/nnsh.rcp
+    情報フィールドを画面下部に持ってくる。
+
+2003-12-03  MRSa  <mrsa@users.sourceforge.jp>
+    * Inc/symbols.h
+    * Inc/struct.h
+    * Inc/messages.h
+    * Rsc/nnsh.rcp
+    * Rsc/nnsh.h
+    * Src/nnshmain.c
+    * Src/main.c
+	１行挿入/１行削除モードを追加。

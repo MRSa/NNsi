@@ -1,0 +1,12 @@
+.cdtproject
+.project
+release
+debug
+Makefile
+Makefile.Debug
+Makefile.Release
+ui_a2BC.h
+object_script.a2BC.Debug
+object_script.a2BC.Release
+temp_source_file
+ui_addBoard.h

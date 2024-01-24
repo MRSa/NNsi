@@ -1,0 +1,318 @@
+----------------------------------------------------------------------------------
+  NNsiマクロ実行エンジン(Ver.1.06)についての覚書 (Jul. 31, 2006)
+----------------------------------------------------------------------------------
+
+! スクリプト仕様
+* PalmのDBをスクリプトとし、DBの１レコードを１コマンドとしてコマンドを実行する。
+** レコードのインデックス順(0～n)にコマンドを実行する。
+
+* レコード構造は、構造体 NNshMacroRecordとする。
+
+! レコード構造仕様
+
+  NNshMacroRecord
+ ┌───────┬───────┬─────┬─────┬───────┐
+ │seqNum(UInt16)│opCode(UInt16)│dst(UInt8)│src(UInt8)│MacroData(※) │
+ └───────┴───────┴─────┴─────┴───────┘
+
+* seqNum ： シーケンス番号。必ずレコードインデックス＋１の数を格納する。
+           ※ ジャンプコマンドのジャンプ先番号として使用する。 ※
+
+* opCode ： マクロ実行コード。以下のコマンドを受け付ける。
+
+     NNSH_MACROCMD_MACROEND     // マクロ終了
+     NNSH_MACROCMD_MOVE         // 代入
+     NNSH_MACROCMD_ADD          // 加算
+     NNSH_MACROCMD_SUB          // 減算
+     NNSH_MACROCMD_AND          // 論理積
+     NNSH_MACROCMD_OR           // 論理和
+     NNSH_MACROCMD_XOR          // 排他的論理和
+     NNSH_MACROCMD_MESSAGE      // ログ出力
+     NNSH_MACROCMD_EXECUTE      // 機能の実行
+     NNSH_MACROCMD_CMP          // 数値の比較
+     NNSH_MACROCMD_JMP          // 無条件ジャンプ
+     NNSH_MACROCMD_JZ           // 一致した場合ジャンプ
+     NNSH_MACROCMD_JNZ          // 一致しなかった場合ジャンプ
+     NNSH_MACROCMD_BEEP         // ビープ音を鳴らす
+     NNSH_MACROCMD_BBSTYPE      // 板タブのBBSタイプを代入
+     NNSH_MACROCMD_STRSTR       // スレタイ文字列が含まれるかどうか
+     NNSH_MACROCMD_STRCMP       // スレタイ文字列が一致するかどうか
+     NNSH_MACROCMD_SETTABNUM    // 板タブに含まれる数を代入
+     NNSH_MACROCMD_GETMESNUM    // スレに含まれるメッセージ数を代入
+     NNSH_MACROCMD_MESSTATUS    // スレ状態を代入
+     NNSH_MACROCMD_IMPORT       // NNsi設定インポート
+     NNSH_MACROCMD_EXPORT       // NNsi設定エクスポート
+     NNSH_MACROCMD_OPERATE      // NNsi設定の値設定
+     NNSH_MACROCMD_STATUS       // NNsi設定の値取得
+     NNSH_MACROCMD_LAUNCHDA     // DA起動
+     NNSH_MACROCMD_CLIPCOPY     // クリップボードに文字列コピー(1.01)
+     NNSH_MACROCMD_CLIPADD      // クリップボードに文字列を連結(1.01)
+     NNSH_MACROCMD_CLIPINSTR    // クリップボードの文字列に含まれるか確認(1.01)
+     NNSH_MACROCMD_TITLECLIP    // スレタイトルをクリップボードにコピー(1.01)
+     NNSH_MACROCMD_SET_FINDBBSSTR // クリップボードの文字列を板検索用文字列にする(1.02)
+     NNSH_MACROCMD_SET_FINDTHREADSTR // クリップボードの文字列をスレ検索用文字列にする(1.02)
+     NNSH_MACROCMD_UPDATE_RESNUM // スレのレス数を更新する(1.03)
+     NNSH_MACROCMD_JPL          // 値が大きい場合にはジャンプ(1.03)
+     NNSH_MACROCMD_JMI          // 値が小さい場合にはジャンプ(1.03)
+     NNSH_MACROCMD_OUTPUTTITLE  // スレタイトルをログ出力(1.03)
+     NNSH_MACROCMD_OUTPUTCLIP   // クリップボードの内容をログ出力(1.03)
+     NNSH_MACROCMD_REMARK       // 注釈文(何もしない) (1.03)
+     NNSH_MACROCMD_PUSH         // スタックにPUSH(1.04)
+     NNSH_MACROCMD_POP          // スタックにPOP(1.04)
+     NNSH_MACROCMD_GETRECNUM    // 選択中スレのレコード番号を取得する(1.04)
+     NNSH_MACROCMD_FINDTHREADSTRCOPY  // スレ検索用文字列をクリップボードにコピー(1.04)
+     NNSH_MACROCMD_INPUTDIALOG  // 文字列を入力し、クリップボードへコピー (1.05)
+     NNSH_MACROCMD_OUTPUTDIALOG // 文字列を出力する (1.05)
+     NNSH_MACROCMD_CONFIRMDIALOG // クリップボードの文字列を表示し、OK/Cancelを入力させる (1.05)
+     NNSH_MACROCMD_MESATTRIBUTE  // スレの属性値を代入 (1.06)
+     NNSH_MACROCMD_JUMPLAST      // スレの最下行にいる場合にはジャンプ (1.06)
+
+* dst ：  マクロ実行コードの実行結果を格納するレジスタ番号を指定する。
+(代入元) レジスタは、GR0(0xe0)～GR15(0xef)の16個のうちどれか。
+         レジスタの指定がなかった場合、もしくは異常だった場合、自動的にGR0を指定
+         したことにしてマクロ実行を行う。
+
+         マクロ実行コードがジャンプ(JZ, JNZ)の場合に、dstはジャンプ条件となる。
+         (dstに指定されたレジスタとゼロを比較した結果によりジャンプするか決める。)
+
+
+* src ：  マクロ実行コードで使用するレジスタ番号を指定する。
+(代入先) レジスタは、GR0(0xe0)～GRf(0xef)の16個のうちどれか。
+         この項目でレジスタの指定がなかった場合、macroDataのoperatorに直値が指定
+        されたものとしてマクロ実行を行う。
+
+
+* macroData ： (構造体)
+        マクロ実行データ。直値や文字列を指定する。ただし、NNsi設定の値設定、
+       値参照の場合には、どの設定値を読み込むかの指定も行う。
+
+        macroDataは、文字列タイプデータの場合と、数値タイプデータの場合で
+       構造が異なる。
+
+** 文字列タイプデータの場合
+ ┌────────┬─────────────────────────┐
+ │operator(UInt16)│                data(Char[32])                    │
+ └────────┴─────────────────────────┘
+   operator ： データの属性を示す。（意味は各マクロ実行コマンドで異なる）
+   data     ： 文字列データ。（NULLターミネートする。）
+
+
+** 数値タイプデータの場合
+ ┌────────┬─────────┬───────┬───────┐
+ │operator(UInt16)│subCommand(UInt16)│data1(UInt16) │data2(UInt16) │
+ └────────┴─────────┴───────┴───────┘
+   operator   ： 数値データ
+   subCommand ： オプションコマンド
+   data1      ： 数値型オプションデータ１
+   data2      ： 数値型オプションデータ２
+
+
+! コマンド仕様
+
+ NNSH_MACROCMD_MACROEND     // マクロ終了
+   マクロの実行を終了する
+
+ NNSH_MACROCMD_MOVE         // 代入
+   dstレジスタに値(srcレジスタ or operator)を代入
+
+ NNSH_MACROCMD_ADD          // 加算
+   dstレジスタと値(srcレジスタ or operator)の加算を行い、結果をdstレジスタに代入
+
+ NNSH_MACROCMD_SUB          // 減算
+   dstレジスタから値(srcレジスタ or operator)を引き算し、結果をdstレジスタに代入
+
+ NNSH_MACROCMD_AND          // 論理積
+   dstレジスタから値(srcレジスタ or operator)のANDをとり結果をdstレジスタに代入
+
+ NNSH_MACROCMD_OR           // 論理和
+   dstレジスタから値(srcレジスタ or operator)のORをとり結果をdstレジスタに代入
+
+ NNSH_MACROCMD_XOR          // 排他的論理和
+   dstレジスタから値(srcレジスタ or operator)のEX-ORをとり結果をdstレジスタに代入
+
+ NNSH_MACROCMD_MESSAGE      // ログ出力
+   srcレジスタの値を実行結果ログに出力する。srcレジスタが指定されていない場合には、
+   macroDataのdataを実行結果ログに出力する。
+
+ NNSH_MACROCMD_EXECUTE      // 機能の実行
+   一覧画面が持つ機能を実行する。(一部コマンドは、実行できないようガードがかかって
+   いる。)
+
+ NNSH_MACROCMD_CMP          // 数値の比較
+   dstレジスタから値(srcレジスタ or operator)を引き算し、結果をdstレジスタに代入
+
+ NNSH_MACROCMD_JMP          // 無条件ジャンプ
+   値(srcレジスタ or operator)のシーケンス番号へジャンプする
+
+ NNSH_MACROCMD_JZ           // 一致した場合ジャンプ
+    dstレジスタの値がゼロならば、値(srcレジスタ or operator)のシーケンス番号へ
+   ジャンプする
+
+ NNSH_MACROCMD_JNZ          // 一致しなかった場合ジャンプ
+    dstレジスタの値がゼロでなければ、値(srcレジスタ or operator)のシーケンス
+   番号へジャンプする
+
+ NNSH_MACROCMD_BEEP         // ビープ音を鳴らす
+    ビープ音を鳴らす。値(srcレジスタ or operator)がゼロの場合には、インフォ音を
+   鳴らし、その他の場合にはアラーム音を鳴らす。値が 0xffff の場合には、エラーの
+   ログを実行結果ログに出力する。(ログに出力する文字列は、macroDataのdataで指定
+   する。)
+
+ NNSH_MACROCMD_BBSTYPE      // BBSタイプを代入
+    dstレジスタに現在選択されているスレのbbsタイプを代入する
+
+ NNSH_MACROCMD_STRSTR       // 文字列が含まれるかどうか
+    macroDataのdataで指定された文字列が、現在選択されているスレのタイトルに
+  含まれているか確認し、含まれている場合にはdstレジスタにゼロを、含まれていない場合
+  には１を格納する
+
+ NNSH_MACROCMD_STRCMP       // 文字列が一致するかどうか
+    macroDataのdataで指定された文字列が、現在選択されているスレのタイトルと
+  一致するか確認し、一致する場合にはdstレジスタにゼロを、一致しいない場合には１を
+  格納する
+
+ NNSH_MACROCMD_SETTABNUM    // タブに含まれる数を代入
+    現在表示中のスレ一覧に、いくつのスレが格納されているか調べ、その結果をdst
+  レジスタに格納する
+
+ NNSH_MACROCMD_GETMESNUM    // スレに含まれるメッセージ数を代入
+    現在選択されているスレに含まれるメッセージ数をdstレジスタに格納する
+
+ NNSH_MACROCMD_MESSTATUS    // スレ状態を代入
+    現在選択されているスレのスレ状態をdstレジスタに格納する
+
+ NNSH_MACROCMD_IMPORT       // NNsi設定インポート
+    NNsi設定をインポートする。VFSサポート機種の場合、dstレジスタがゼロの場合には、
+   Palm内からデータをインポート、dstレジスタがゼロでない場合には、VFSからデータを
+   インポートする
+
+ NNSH_MACROCMD_EXPORT       // NNsi設定エクスポート
+    NNsi設定をエクスポートする。
+
+ NNSH_MACROCMD_STATUS       // NNsi設定の値取得
+    macroDataのsubCommandに指定されたNNsi設定について、値をdstレジスタに格納する
+
+    [subcommandの指定]
+     ・NNsi起動時にマクロを実行する(0xfffe)
+     ・新着確認後に回線を切断する(0xfffd)
+     ・新着確認後にcheckMailDAを起動する(0xfffc)
+     ・参照専用ログの取得レベル(0xfffb)
+     ・新着確認後にビープ音を鳴らす(0xfffa)
+     ・スレを参照専用ログにコピーするとき、削除も同時に実施する(0xfff9)
+
+ NNSH_MACROCMD_OPERATE      // NNsi設定の値設定
+    macroDataのsubCommandに指定されたNNsi設定について、値を変更し、変更前の値を
+   dstレジスタに格納する
+     
+    [subcommandの指定]
+     ・NNsi起動時にマクロを実行する(0xfffe)
+     ・新着確認後に回線を切断する(0xfffd)
+     ・新着確認後にcheckMailDAを起動する(0xfffc)
+     ・参照専用ログの取得レベル(0xfffb)
+     ・新着確認後にビープ音を鳴らす(0xfffa)
+     ・スレを参照専用ログにコピーするとき、削除も同時に実施する(0xfff9)
+
+ NNSH_MACROCMD_LAUNCHDA     // DA起動
+   macroDataの data1(上位２桁)+data2(下位２桁) のクリエータIDを持つDAを起動する
+
+ NNSH_MACROCMD_CLIPCOPY     // クリップボードに文字列コピー(1.01)
+    macroDataのdataで指定された文字列をクリップボードにコピーする
+
+ NNSH_MACROCMD_CLIPADD      // クリップボードに文字列を連結(1.01)
+    macroDataのdataで指定された文字列をクリップボードの文字列に連結する
+
+ NNSH_MACROCMD_CLIPINSTR    // クリップボードの文字列に含まれるか確認(1.01)
+     macroDataのdataで指定された文字列とクリップボードにある文字列と
+  含まれるか確認し、含まれる場合にはdstレジスタにゼロを、含まれない場合には１を
+  格納する
+
+ NNSH_MACROCMD_TITLECLIP    // スレタイトルをクリップボードにコピー(1.01)
+     スレタイトルをクリップボードにコピーする
+
+ NNSH_MACROCMD_SET_FINDBBSSTR  // 板タブ検索用文字列の設定(1.02)
+     クリップボードの文字列を板タブ検索用文字列として設定する
+
+ NNSH_MACROCMD_SET_FINDTHREADSTR  // スレタイ検索用文字列の設定(1.02)
+     クリップボードの文字列をスレタイ検索用文字列として設定する
+
+ NNSH_MACROCMD_UPDATE_RESNUM   //  スレのレス番号を更新する(1.03)
+     選択中スレのレス番号を更新し、レス数をdstレジスタに格納する
+ 
+ NNSH_MACROCMD_JPL             // 値が正なら分岐(1.03)
+     dstレジスタの値が正であれば、値(srcレジスタ or operator)のシーケンス
+   番号へジャンプする
+
+ NNSH_MACROCMD_JMI             // 値が負なら分岐(1.03)
+     dstレジスタの値が負であれば、値(srcレジスタ or operator)のシーケンス
+   番号へジャンプする
+
+ NNSH_MACROCMD_OUTPUTTITLE     // スレタイトルをログ出力(1.03)
+     選択中スレのタイトルをログに出力する。
+
+ NNSH_MACROCMD_OUTPUTCLIP      // クリップボードの内容をログ出力(1.03)
+     クリップボードに格納されている文字列をログに出力する
+
+ NNSH_MACROCMD_REMARK          // 注釈文(何もしない) (1.03)
+    何もしない(スクリプトの可読性向上のため...) 
+
+ NNSH_MACROCMD_PUSH         // スタックにPUSH(1.04)
+    データをスタックにプッシュする。（ただし、スタック領域は１６個）
+
+ NNSH_MACROCMD_POP          // スタックにPOP(1.04)
+    データをスタックからポップする。
+
+ NNSH_MACROCMD_GETRECNUM    // 選択中のレコード番号を取得する(1.04)
+    選択中スレのレコード番号をdstレジスタに格納する
+ 
+ NNSH_MACROCMD_FINDTHREADSTRCOPY  // スレ検索用文字列をクリップボードにコピー(1.04)
+    スレ検索用文字列をクリップボードにコピーする 
+ 
+ NNSH_MACROCMD_INPUTDIALOG  // 文字列を入力する (1.05)
+    文字列の入力を促し、入力した文字列をクリップボードにコピーする
+
+ NNSH_MACROCMD_OUTPUTDIALOG // 文字列を出力する (1.05)
+    文字列をダイアログ表示(INFORMATION表示)する。
+
+ NNSH_MACROCMD_CONFIRMDIALOG // クリップボードの文字列を表示し確認する (1.05)
+    クリップボードにある文字列をダイアログ表示(CONFIRMATION表示)する
+    また、dstレジスタにボタンが押された情報
+    （OK (0) または Cancel (0以外)）を格納する。
+
+ NNSH_MACROCMD_MESATTRIBUTE  // スレの属性値を代入する (1.06)
+    現在選択されているスレのスレ属性値をdstレジスタに格納する
+
+     スレ属性値について：8ビットデータで示されています。
+                     ┌─┬─┬─┬─┬─┬─┬─┬─┐
+                     │f0│er│f1│f2│rs│ng│--│--│
+                     └─┴─┴─┴─┴─┴─┴─┴─┘
+ 
+                             f0, f1, f2 : お気に入りを示すビット
+                             er         : 取得エラーが発生したスレを示すビット
+                             rs         : 取得予約スレであることを示すビット
+                             ng         : スレ別のNGワード設定がONであることを示すビット
+                             --         : 未使用(予約ビット)
+
+                          (例) スレ属性値は、上記ビットをORして確認します。
+                                0x10   // 「お気に入り」レベル(L)
+                                0x20   // 「お気に入り」レベル(1)
+                                0x30   // 「お気に入り」レベル(2)
+                                0x80   // 「お気に入り」レベル(3)
+                                0xb0   // 「お気に入り」レベル(H)
+                                0x40   // 「エラー発生」スレである
+                                0x08   // 「取得予約」スレである
+                                0x04   //  NGワード設定 ONのスレである
+                                0x50   // 「お気に入り」レベル(L)でかつ、「エラー発生」スレである
+                                
+                           ※ 0x
+
+
+ NNSH_MACROCMD_JUMPLAST      // スレの最下行にいる場合にはジャンプ (1.06)
+    現在カーソルがあるスレが最下行であった場合には、ジャンプする
+
+
+! 注記
+!! データサイズ
+* 数値は、UInt16で扱う。(負の値は扱えない。)
+* 文字列は、32バイト以内でしか扱えない。
+
+[EOF]

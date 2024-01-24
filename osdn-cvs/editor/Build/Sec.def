@@ -1,0 +1,4 @@
+application { NNsi NNsi stack=14400 }
+multiple code { editfns }
+
+

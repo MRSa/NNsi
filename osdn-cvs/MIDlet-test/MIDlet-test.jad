@@ -1,0 +1,9 @@
+MIDlet-1: Midlet-test,,testMain
+MIDlet-Jar-URL: MIDlet-test.jar
+MicroEdition-Configuration: CLDC-1.1
+MIDlet-Version: 1.0.0
+MIDlet-Name: Midlet SuiteTest
+MIDlet-Description: MIDlet-test
+MIDlet-Vendor: NNsi Project
+MIDlet-Info-URL: http://nnsi.sourceforge.jp/
+MicroEdition-Profile: MIDP-2.0

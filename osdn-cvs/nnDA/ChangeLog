@@ -1,0 +1,63 @@
+2005-03-18  MRSa  <mrsa@users.sourceforge.jp>
+    * 内部の整理。関数化を実施する。
+    *  Stefan Stolzさん作成の "pnoJpegLib for PalmOS"を使用して
+     JPEGファイルを開けるようにしてみる。(ただし、VFSファイルのみ)
+
+2004-11-13  MRSa  <mrsa@users.sourceforge.jp>
+    * エラー表示のメッセージを変更する。
+
+2004-11-09  MRSa  <mrsa@users.sourceforge.jp>
+    * FileStreamでのJPEGファイル表示でハングアップしてしまう不具合を修正する.
+    * 最初にSONY JPEG Utilではなく Yves Piguetさんのjpeglibがインストールされて
+     いるか検索し、インストールされていないときにのみ SONY JPEG Utilを利用する
+     ように変更する。
+
+2004-11-08  MRSa  <mrsa@users.sourceforge.jp>
+    * エラーではないのにエラー表示をしてしまう不具合を修正する。
+
+2004-11-07  MRSa  <mrsa@users.sourceforge.jp>
+    * Yves Piguetさん作成の "jpeglib for Palm OS" を使用して
+     JPEGファイルを開けるようにしてみる。
+	
+2004-11-06  MRSa  <mrsa@users.sourceforge.jp>
+    * SONY JPEG Utilを使ってファイルを開けるようにしてみる。
+    * VFSのテキストファイルを開けるようにしてみる。
+
+2004-09-13  MRSa  <mrsa@users.sourceforge.jp>
+    * DIA搭載機でウィンドウ表示とシルク表示の不整合が発生する不具合を修正。
+
+2004-08-04  MRSa  <mrsa@users.sourceforge.jp>
+    * 半角文字列のフォント横幅を毎回計算した値にしてみる。
+
+2004-07-26  MRSa  <mrsa@users.sourceforge.jp>
+    * htmlデータ解析で、フォントの大きさを大きくできるようにする。
+
+2004-07-26  MRSa  <mrsa@users.sourceforge.jp>
+    * htmlデータ解析でエラーが出ていたのを修正して様子をみる。
+
+2004-07-26  MRSa  <mrsa@users.sourceforge.jp>
+    * メモリハンドルからデータを取得して、htmlデータ解析後表示できる
+     ようにしてみる。
+
+2004-03-19  MRSa  <mrsa@users.sourceforge.jp>
+    * ヘルプの説明を追加（参照画面の＠キー操作）。
+    * ハードキー２と３で終了できるようにする。
+
+2004-03-13  MRSa  <mrsa@users.sourceforge.jp>
+    * UTF-8形式のファイルを表示できるようにする。
+     (AMsoftさんのUTF-8 -> JIS変換DBが必要)
+
+2004-02-22  MRSa  <mrsa@users.sourceforge.jp>
+    * NNsiのキー操作拡張にあわせて参照画面のヘルプ変更。
+    * 表示フォントサイズを変更することを可能にする。
+
+2004-02-21  MRSa  <mrsa@users.sourceforge.jp>
+    * FileStream表示モード時に、折り返し表示が可能なようにしてみる。
+
+2004-02-17  MRSa  <mrsa@users.sourceforge.jp>
+    * OS4 CLIEだと、画面描画されない（消えてしまう）不具合に対処。
+    * NNsi設定画面、ユーザタブ設定画面用のヘルプ表示機能搭載。
+    * FileStream内容の表示機能(テキスト/16進)を搭載。
+
+2004-02-14  MRSa  <mrsa@users.sourceforge.jp>
+	Initial revision.

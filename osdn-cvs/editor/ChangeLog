@@ -1,0 +1,115 @@
+2004-12-04  MRSa  <mrsa@users.sourceforge.jp>
+    vchrRockerUp関連を追加。
+
+2004-08-18  MRSa  <mrsa@users.sourceforge.jp>
+    Src/nnshmain.c
+    他アプリケーションから起動されたとき、保存時にはその指示された
+    ディレクトリを開くように変更する。
+
+2004-08-08  MRSa  <mrsa@users.sourceforge.jp>
+    Src/nnshmain.c
+    VFSi等、他アプリケーションから呼び出されたときには、ファイル読み出し機能を
+    使うとKaniEditを終了させるよう変更する。
+
+2004-05-07  MRSa  <mrsa@users.sourceforge.jp>
+    Src/machine.c
+    Src/main.c
+    Src/nnshmain.c
+    Inc/machine.h
+    NR70でのシルク制御不具合を修正。
+    GARMIN iQUE 3600のシルク制御対応。
+
+2004-03-11  MRSa  <mrsa@users.sourceforge.jp>
+    Src/machine.c
+    PalmOS Cobaltシミュレータでのシルク制御不具合に対処。
+
+2004-03-06  MRSa  <mrsa@users.sourceforge.jp>
+    Src/*.c
+    シュリンク。グローバル変数を全面廃止。
+    外部ランチャからの起動コードに対応。
+
+2004-03-01  MRSa  <mrsa@users.sourceforge.jp>
+    Src/utf8.c
+    UTF-8の読み/書きをGF Messenger付属のDBを使用してできるようにする。
+
+2004-03-01  MRSa  <mrsa@users.sourceforge.jp>
+    Src/main.c
+    PalmOS5のCLIEでsmallフォントを使えるようにした。
+
+2004-02-23  MRSa  <mrsa@users.sourceforge.jp>
+    Src/machine.c
+    PEG-TH55のシルク制御に対応。
+
+2004-02-23  MRSa  <mrsa@users.sourceforge.jp>
+    Src/utf8.c
+    UTF-8対応準備開始。(まだまだ、、、)
+
+2004-01-04  MRSa  <mrsa@users.sourceforge.jp>
+    Src/nnshmain.c
+    Src/main.c
+    Src/windows.c
+    描画ミスがあった場所を修正。(OS4のDEBUG ROMで動作確認。)
+
+2003-12-31  MRSa  <mrsa@users.sourceforge.jp>
+    Src/nnshmain.c
+    ファイル選択ウィンドウのJOG/カーソルキー制御を自前制御に変更する。
+    ファイル選択ウィンドウのファイル名選択データを選択するよう変更する。
+    ファイル選択ウィンドウで、左カーソルでキャンセル、右カーソルで選択を実行可能にする。
+
+2003-11-28  MRSa  <mrsa@users.sourceforge.jp>
+    Src/nnshmain.c
+    フォーカスを設定するとき、カーソルをフィールドの末尾に
+    移動させるよう変更する
+    ATOKとの整合性問題が発生する内容を確認。
+
+2003-11-23  MRSa  <mrsa@users.sourceforge.jp>
+    Src/windows.c
+    Src/nnshmain.c
+    Busyウィンドウの表示方法を変更し､Load/Save時にウィンドウを表示するよう変更。
+
+2003-11-22  MRSa  <mrsa@users.sourceforge.jp>
+    Inc/symbols.h
+    Inc/struct.h
+    Src/nnshset.c
+    Src/nnshmain.c
+    Src/main.c
+    終了時に一時ファイルへ保存できるようにしてみる。
+    終了時にダイアログ表示を可能にしてみる。
+    FEPの制御を入れてみる。
+    SDK 5.3に上げてみる。
+    DIAサポートを入れてみる。
+
+2003-09-06  MRSa  <mrsa@users.sourceforge.jp>
+    Src/nnshmain.c
+    ファイル入出力ダイアログのリスト枠が残ってしまっていたのを修正。
+
+    Src/machine.c
+    Src/main.c
+    VFSのNotificationを解除せずに終了していたのを修正。
+
+2003-09-05  MRSa  <mrsa@users.sourceforge.jp>
+    Src/nnshmain.c
+    ファイルセーブ時のデータサイズを拡大。
+    ファイルが存在したとき、バックアップファイルを作成するよう変更。
+    ファイルセーブダイアログ表示時にFatal Errorが発生する不具合を修正。
+
+2003-08-31  MRSa  <mrsa@users.sourceforge.jp>
+    Src/main.c
+    終了時に、保存ダイアログを表示するよう変更する
+    
+    Src/windows.c
+    オリジナルダイアログを実装準備。
+
+
+2003-08-16  MRSa  <mrsa@users.sourceforge.jp>
+    Src/nnshcmn.c
+    改行コードを加味した文字列変換＆コピー関数を追加
+    
+    Src/nnshmain.c
+    データロード/セーブ時のデータバッファの持ち方を変更し、メモリ使用量を節約
+
+    Src/filemgr.c
+    FileStreamの部分を修正。
+
+2003-08-15  MRSa  <mrsa@users.sourceforge.jp>
+    Initial revision.

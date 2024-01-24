@@ -1,0 +1,11 @@
+MIDlet-1: FWmain,/res/icon.png,jp.sourceforge.nnsi.a2b.frameworks.samples.MidpDefaultMain
+MIDlet-Jar-URL: MIDlet-FW.jar
+MIDlet-Icon: /res/icon.png
+MicroEdition-Configuration: CLDC-1.1
+MIDlet-Version: 1.2.4
+MIDlet-Info-URL: http://nnsi.sourceforge.jp/
+MIDlet-Name: a2B-FW
+MIDlet-Description: a MIDP application framework
+MIDlet-Vendor: NNsi Project
+MicroEdition-Profile: MIDP-2.0
+MIDlet-Permissions: javax.microedition.io.Connector.http,javax.microedition.io.Connector.file.write,javax.microedition.io.Connector.file.read,javax.microedition.io.Connector.https,javax.microedition.io.Connector.socket

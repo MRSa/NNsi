@@ -1,0 +1,629 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,10
+ PRODUCTVERSION 1,0,0,10
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041104b0"
+        BEGIN
+            VALUE "Comments", "NNsiのログを母艦の..."
+            VALUE "CompanyName", "NNsi Project (nnsi.sourceforge.jp)"
+            VALUE "FileDescription", "NNsiMona (NNsiコンジット)"
+            VALUE "FileVersion", "1, 0, 0, 10"
+            VALUE "InternalName", "NNsiMona"
+            VALUE "LegalCopyright", "Copyright (C) 2005 NNsi Project"
+            VALUE "OriginalFilename", "NNsiMona.dll"
+            VALUE "ProductName", "NNsiMona (NNsi Conduit)"
+            VALUE "ProductVersion", "1, 0, 0, 10"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_CONDUIT_CFG_DETAILED, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 254
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 277
+    END
+
+    IDD_CONDUIT_ACTION, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 141
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CONDUIT_CFG_DETAILED DIALOGEX 0, 0, 262, 283
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "HotSync動作の変更"
+FONT 8, "MS UI Gothic", 400, 0, 0x0
+BEGIN
+    RADIOBUTTON     "Palmのお気に入りログを更新 (&F)",
+                    IDC_RADIO_UPDATEFAVOR_2CH,49,140,126,10
+    RADIOBUTTON     "Palmのログを更新 (&U)",IDC_RADIO_UPDATE_2CH,49,160,126,
+                    10
+    RADIOBUTTON     "データの同期 (&S)",IDC_RADIO_SYNC,49,181,126,10
+    RADIOBUTTON     "母艦がPalmを上書き (&D)",IDC_RADIO_PCTOHH,49,200,126,10
+    RADIOBUTTON     "Palmが母艦を上書き (&H)",IDC_RADIO_HHTOPC,49,219,126,10
+    RADIOBUTTON     "何もしない (&n)",IDC_RADIO_DONOTHING,49,239,126,10
+    CONTROL         "標準に設定 (&a)",IDC_MAKEDEFAULT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,194,193,58,10
+    DEFPUSHBUTTON   "設定",IDOK,194,130,50,14
+    PUSHBUTTON      "中断",IDCANCEL,194,146,50,14
+    PUSHBUTTON      "ヘルプ",9,194,162,50,14
+    GROUPBOX        "<HotSync動作の設定>",IDC_ACTIONGROUPBOXTEXT,6,127,177,
+                    129,WS_GROUP
+    CONTROL         110,IDC_2CHTOHH_FAVOR,"Static",SS_BITMAP,7,136,32,17,
+                    WS_EX_TRANSPARENT
+    CONTROL         109,IDC_2CHTOHH,"Static",SS_BITMAP,7,156,32,17,
+                    WS_EX_TRANSPARENT
+    CONTROL         111,IDC_SYNC,"Static",SS_BITMAP,7,175,32,17
+    CONTROL         104,IDC_PCTOHH,"Static",SS_BITMAP,7,195,32,17
+    CONTROL         105,IDC_HHTOPC,"Static",SS_BITMAP,7,216,32,17
+    CONTROL         106,IDC_DONOTHING,"Static",SS_BITMAP,7,236,32,17
+    GROUPBOX        "<現在の設定>",1006,6,78,240,44
+    LTEXT           "通常のHotSync動作 :",IDC_STATIC,12,93,70,8
+    LTEXT           "(未設定)",1004,83,94,150,8
+    LTEXT           "次回のHotSync動作 :",IDC_STATIC,12,106,70,8
+    LTEXT           "(未設定)",1005,83,107,156,8
+    GROUPBOX        "<2chブラウザ>",IDC_2chBROWSER,6,7,240,66
+    LTEXT           "ブラウザの種類",IDC_STATIC,13,21,47,8
+    COMBOBOX        IDC_BROWSERKIND,65,18,175,30,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "ディレクトリ",IDC_STATIC,14,37,48,8
+    EDITTEXT        IDC_2chBROWSERDIRECTORY,65,36,151,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_2chSELECTBROWSER,221,36,19,14
+    LTEXT           "ログ取得間隔(ms)",IDC_STATIC,7,268,54,8
+    EDITTEXT        IDC_EDIT_LOGWAITTIME,65,263,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BROWSERDIRECTORY,65,53,151,14,ES_AUTOHSCROLL
+    LTEXT           "ログディレクトリ",IDC_STATIC,14,55,48,8
+    PUSHBUTTON      "...",IDC_SELECTBROWSER,221,53,19,14
+END
+
+IDD_CONDUIT_ACTION DIALOGEX 0, 0, 262, 200
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "HotSync動作の変更"
+FONT 8, "MS UI Gothic", 400, 0, 0x0
+BEGIN
+    RADIOBUTTON     "データの同期 (&S)",IDC_RADIO_SYNC,56,94,110,10,WS_GROUP | 
+                    WS_TABSTOP
+    RADIOBUTTON     "母艦がPalmを上書き (&D)",IDC_RADIO_PCTOHH,56,121,108,10
+    RADIOBUTTON     "Palmが母艦を上書き (&H)",IDC_RADIO_HHTOPC,56,147,108,10
+    RADIOBUTTON     "何もしない (&n)",IDC_RADIO_DONOTHING,56,173,109,10
+    CONTROL         "標準に設定 (&a)",IDC_MAKEDEFAULT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,196,74,58,10
+    DEFPUSHBUTTON   "設定",IDOK,196,11,50,14
+    PUSHBUTTON      "中断",IDCANCEL,196,27,50,14
+    PUSHBUTTON      "ヘルプ",9,196,43,50,14
+    GROUPBOX        "<同期の方法>",IDC_ACTIONGROUPBOXTEXT,8,8,177,186,
+                    WS_GROUP
+    CONTROL         103,IDC_SYNC,"Static",SS_BITMAP,14,91,32,17
+    CONTROL         104,IDC_PCTOHH,"Static",SS_BITMAP,14,117,32,17
+    CONTROL         105,IDC_HHTOPC,"Static",SS_BITMAP,14,143,32,17
+    CONTROL         106,IDC_DONOTHING,"Static",SS_BITMAP,14,169,32,17
+    CONTROL         109,IDC_2CHTOHH,"Static",SS_BITMAP,14,67,32,17
+    RADIOBUTTON     "Palmのログを更新 (&U)",IDC_RADIO_UPDATE_2CH,56,71,126,
+                    10,WS_GROUP | WS_TABSTOP
+    RADIOBUTTON     "Palmのお気に入りログを更新 (&F)",
+                    IDC_RADIO_UPDATEFAVOR_2CH,56,48,126,10,WS_GROUP | 
+                    WS_TABSTOP
+    CONTROL         110,IDC_2CHTOHH_FAVOR,"Static",SS_BITMAP,14,44,32,17
+    CONTROL         111,IDC_SYNC2CH,"Static",SS_BITMAP,14,21,32,17
+    RADIOBUTTON     "ログの更新とデータの同期 (&R)",IDC_RADIO_SYNC2CH,56,25,
+                    126,10,WS_GROUP | WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_SYNC                BITMAP                  "sync.bmp"
+IDB_PCTOHH              BITMAP                  "pctohh.bmp"
+IDB_HHTOPC              BITMAP                  "hhtopc.bmp"
+IDB_DONOTHING           BITMAP                  "donothin.bmp"
+IDB_2CHTOHH             BITMAP                  "2chtohh.bmp"
+IDB_2chTOHH_FAVOR       BITMAP                  "bmp2chto.bmp"
+IDB_SYNC2CH             BITMAP                  "sync2ch.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_CONDUIT_CFG_DETAILED DLGINIT
+BEGIN
+    IDC_BROWSERKIND, 0x403, 9, 0
+0x6947, 0x6f6b, 0x614e, 0x6976, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_CONDUIT_NAME        "NNsi (NNsiMona)"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CONNECTION          "接続を確認し、もう一度やりなおしてください。"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_DEVICE_FULL         "Palmのメモリが足りないようです。確認をお願いします。"
+    IDS_DESKTOP_FULL        "母艦のディスク容量が足りないようです。空き領域を増やしてから再度HotSyncを実行してみてください。"
+    IDS_BAD_ADD_REC         "次のレコードがPalmにコピーできませんでした。 : %s"
+    IDS_BAD_PURGE_REMOTE    "Palmにある消去済みレコードをクリアすることができませんでした。 : %s"
+    IDS_BAD_DEL_REC         "Palmの次のレコードを削除することができませんでした。 : %s"
+    IDS_BAD_CHANGE_REC      "Palmの次のレコードを変更することができませんでした。: %s"
+    IDS_BAD_LOCALADD_REC    "次のレコードを母艦にコピーすることができませんでした。 : %s"
+    IDS_REMOTE_BAD_CHANGE_CAT 
+                            "Palmのレコードを カテゴリ '%s' から カテゴリ '未分類'に移動することができませんでした。"
+    IDS_BAD_READ_RECORD     "Palmの次レコードを読み出すことができませんでした。"
+    IDS_REMOTE_TOOMANY_CATS "カテゴリが15個を超えたため、カテゴリ '%s'のレコードはすべて'未分類'に変更しました。"
+    IDS_REMOTE_CAT_DELETED  "-- カテゴリ '%s'は削除済みです。このカテゴリに所属するレコードはすべて '未分類'に変更しました。"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_DOUBLE_MODIFIED     "次のレコードは、Palmと母艦の両方とも変更されていました。(%s)  このレコードはそのまま残りますので、不要なレコードを削除してから再度HotSyncしてください。"
+    IDS_ARCH_DOUBLE_MOD1    "次のレコードは、Palmと母艦の両方で変更されていました。 (%s) このレコードは母艦とPalmの両方でダブります。"
+    IDS_REVERSE_DELETE      "次のレコードは片方で変更され、もう片方では削除されています。 (%s) 変更されたレコードは残ります。"
+    IDS_RECCOUNT_DESKTOP1   "Palmのレコードを母艦にコピーできませんでした。(母艦のレコード数の最大を超えたかも？) 修正して、再度HotSyncしてください。"
+    IDS_RECCOUNT_PILOT1     "母艦のレコードをPalmにコピーできませんでした。(Palmのレコード数の最大を超えたかも？) 修正して、再度HotSyncしてください。"
+    IDS_CUSTOM_LABEL        "ラベルが母艦とPalmで変更されています。 Palm上のラベル('%1s')は、母艦上のラベル('%2s')に上書きされます。 "
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_BAD_XMAP            "母艦上でレコードのソートがうまくできていないようです。"
+    IDS_BAD_ARCHIVE_ERR     "削除したレコードのアーカイブに失敗しました。"
+    IDS_BAD_RESET_FLAGS_REMOTE 
+                            "Palmのデータベース状態フラグがクリアできませんでした。 (エラーコード %s)"
+    IDS_DOUBLE_MODIFY_SUBSC1 
+                            "このレコードについて、カテゴリ(%s)が変更されています。 このレコードはたぶんダブります。"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_LOG_SPACING         "    - "
+    IDS_RECORD_COUNT_MISMATCH 
+                            "レコード数が異なります。 (ローカル： %1l件、リモート： %2l件)"
+    IDS_UNKNOWN_FATAL_ERROR "致命的エラー %l."
+    IDS_BAD_PURGE_LOCAL     "母艦の削除済みレコードをクリアすることができませんでした。 (エラーコード %s)"
+    IDS_BAD_LOCAL_SAVE      " -- データベースの保存に失敗しました。 (local, エラーコード %s)"
+    IDS_BAD_RESET_FLAGS_LOCAL 
+                            " -- デスクトップのデータベース状態フラグがクリアできませんでした。 (エラーコード %s)"
+    IDS_BAD_CLOSE_DB_REMOTE " -- データベースクローズに失敗しました。 (remote, エラーコード %s)"
+    IDS_BAD_CLOSE_DB_LOCAL  " -- データベースクローズに失敗しました。 (local,  エラーコード %s)"
+    IDS_LOCAL_CAT_DELETED   "-- カテゴリ '%s'は削除済みです。このカテゴリに所属するレコードはすべて '未分類'に変更しました。"
+    IDS_LOCAL_BAD_CHANGE_CAT 
+                            "レコードのカテゴリを '%s' から '未分類' へ変更できませんでした。"
+    IDS_LOCAL_TOOMANY_CATS  "カテゴリが15個を超えたため、カテゴリ '%s'のレコードはすべて'未分類'に変更しました。"
+    IDS_DATABASE_DESCRIPTION 
+                            "DB Name %1s, Creator ID %2s, Type %3u, Flags %4d, Version %5d"
+    IDS_DATABASE_SHORT_DESC "DB Name %1s, Creator ID %2s"
+    IDS_PC_DB_CREATE_FAILURE 
+                            " -- データベースの作成に失敗しました。 (母艦: %1s, Error %2u)"
+    IDS_HH_DB_CREATE_FAILURE 
+                            " -- データベースの作成に失敗しました。 (Palm: %1s, Error %2u)"
+    IDS_PC_ADD_RECORD_ERROR " -- レコードの追加に失敗しました。 (母艦: %1s, Error %2u)"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_HH_ADD_RECORD_ERROR " -- レコードの追加に失敗しました。 (Palm: %1s, Error %2u)"
+    IDS_PC_READ_REC_ERROR   " -- レコードの読み出しに失敗しました。 (母艦: %1s, Error %2u)"
+    IDS_HH_READ_REC_ERROR   " -- レコードの読み出しに失敗しました。 (Palm: %1s,　Error %2u)"
+    IDS_RECORD_DESC_ID      "レコードID %u"
+    IDS_RECORD_DESC_INDEX   "レコードインデックス %u"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CURRENT_SETTINGS_GROUP "現在の設定(%s):"
+    IDS_SYNC_FILES          "データの同期"
+    IDS_PCTOHH              "母艦がPalmを上書き"
+    IDS_HHTOPC              "Palmが母艦を上書き"
+    IDS_DO_NOTHING          "何もしない"
+    IDS_SYNC_ACTION_TEXT    "HotSync動作"
+    IDS_2chBROWSER_NAME     "母艦の2chブラウザ設定"
+    IDS_WARN_ACTION_TEMPORARY 
+                            "現バージョンの動作設定は、「何もしない」設定と、「Palmのお気に入りログを更新」のみ有効です。\n(それ以外を設定では、現状「Palmのログを更新」動作を実行します。)\n\n注意： Palmのログは、すべてVFS上にログ取得する設定にしてください。"
+    IDS_SYNC_2CH            "ログの更新とデータの同期"
+    IDS_SYNC_2CHTOHH        "Palmのログを更新"
+    IDS_SYNC_2CHTOHH_FAVOR  "Palmのお気に入りログを更新"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_BROWSER_PGIKO       "ぽけギコ"
+    IDS_BROWSER_GIKONAVI    "ギコナビ"
+    IDS_BROWSER_JANE        "Jane"
+    IDS_BROWSER_NAVI2CH     "Navi2ch"
+    IDS_BROWSER_ABONE       "ABone"
+    IDS_BROWSER_2PP         "2++"
+END
+
+#endif    // 日本語 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 英語 (米国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,10
+ PRODUCTVERSION 1,0,0,10
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x21L
+#else
+ FILEFLAGS 0x20L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileVersion", "1, 0, 0, 10"
+            VALUE "ProductName", "NNsiMona"
+            VALUE "ProductVersion", "1, 0, 0, 10"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_CONDUIT_CFG_DETAILED, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 252
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 294
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CONDUIT_ACTION DIALOGEX 0, 0, 262, 203
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Change HotSync Action"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    RADIOBUTTON     "&Synchronize the files",IDC_RADIO_SYNC,72,101,79,10,
+                    WS_GROUP | WS_TABSTOP
+    RADIOBUTTON     "&Desktop overwrites handheld",IDC_RADIO_PCTOHH,72,127,
+                    108,10
+    RADIOBUTTON     "&Handheld overwrites Desktop",IDC_RADIO_HHTOPC,72,153,
+                    108,10
+    RADIOBUTTON     "Do &nothing",IDC_RADIO_DONOTHING,72,179,48,10
+    CONTROL         "Set &as default",IDC_MAKEDEFAULT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,196,74,58,10
+    DEFPUSHBUTTON   "OK",IDOK,196,11,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,196,27,50,14
+    PUSHBUTTON      "Help",9,196,43,50,14
+    GROUPBOX        "<PlaceHolder>",IDC_ACTIONGROUPBOXTEXT,8,8,177,188,
+                    WS_GROUP
+    CONTROL         103,IDC_SYNC,"Static",SS_BITMAP,14,97,32,17
+    CONTROL         104,IDC_PCTOHH,"Static",SS_BITMAP,14,123,32,17
+    CONTROL         105,IDC_HHTOPC,"Static",SS_BITMAP,14,149,32,17
+    CONTROL         106,IDC_DONOTHING,"Static",SS_BITMAP,14,175,32,17
+    RADIOBUTTON     "&Update log from Servers",IDC_RADIO_UPDATE_2CH,72,76,88,
+                    10,WS_GROUP | WS_TABSTOP
+    CONTROL         109,IDC_2CHTOHH,"Static",SS_BITMAP,14,70,32,17
+    RADIOBUTTON     "Update logs ONLY &Favorites ",IDC_RADIO_UPDATEFAVOR_2CH,
+                    72,50,93,10,WS_GROUP | WS_TABSTOP
+    CONTROL         110,IDC_2CHTOHH_FAVOR,"Static",SS_BITMAP,14,45,32,17
+    CONTROL         111,IDC_SYNC2CH,"Static",SS_BITMAP,14,22,32,17
+    RADIOBUTTON     "&Retrive logs and Synchronize",IDC_RADIO_SYNC2CH,72,27,
+                    103,10,WS_GROUP | WS_TABSTOP
+END
+
+IDD_CONDUIT_CFG_DETAILED DIALOGEX 0, 0, 262, 300
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Change HotSync Action"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    RADIOBUTTON     "&Synchronize the files",IDC_RADIO_SYNC,65,183,79,10,
+                    WS_GROUP | WS_TABSTOP
+    RADIOBUTTON     "&Desktop overwrites handheld",IDC_RADIO_PCTOHH,65,207,
+                    108,10
+    RADIOBUTTON     "&Handheld overwrites Desktop",IDC_RADIO_HHTOPC,65,228,
+                    108,10
+    RADIOBUTTON     "Do &nothing",IDC_RADIO_DONOTHING,65,248,48,10
+    CONTROL         "Set &as default",IDC_MAKEDEFAULT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,194,195,58,10
+    DEFPUSHBUTTON   "OK",IDOK,194,131,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,194,147,50,14
+    PUSHBUTTON      "Help",9,194,163,50,14
+    GROUPBOX        "<Conduit Name HotSync Action Place Holder>",
+                    IDC_ACTIONGROUPBOXTEXT,6,126,177,140,WS_GROUP
+    CONTROL         111,IDC_SYNC,"Static",SS_BITMAP,7,180,32,17
+    CONTROL         104,IDC_PCTOHH,"Static",SS_BITMAP,7,202,32,17
+    CONTROL         105,IDC_HHTOPC,"Static",SS_BITMAP,7,223,32,17
+    CONTROL         106,IDC_DONOTHING,"Static",SS_BITMAP,7,245,32,17
+    GROUPBOX        "<User's Current Settings Place Holder>",1006,6,77,238,
+                    44
+    LTEXT           "Default HotSync Action:",IDC_STATIC,12,92,77,8
+    LTEXT           "Static",1004,101,92,131,8
+    LTEXT           "Next HotSync Action:",IDC_STATIC,12,105,77,8
+    LTEXT           "Static",1005,101,105,131,8
+    GROUPBOX        "<2ch Browser>",IDC_2chBROWSER,6,2,240,69
+    COMBOBOX        IDC_BROWSERKIND,64,13,176,30,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_BROWSERDIRECTORY,64,52,152,14,ES_AUTOHSCROLL
+    LTEXT           "Browser",IDC_STATIC,13,16,47,8
+    LTEXT           "Log Directory",IDC_STATIC,14,53,48,8
+    PUSHBUTTON      "...",IDC_SELECTBROWSER,221,52,19,14
+    RADIOBUTTON     "&Update log from Servers",IDC_RADIO_UPDATE_2CH,65,161,
+                    88,10,WS_GROUP | WS_TABSTOP
+    CONTROL         109,IDC_2CHTOHH,"Static",SS_BITMAP,8,157,32,17
+    RADIOBUTTON     "Update logs ONLY &Favorites ",IDC_RADIO_UPDATEFAVOR_2CH,
+                    65,140,93,10,WS_GROUP | WS_TABSTOP
+    CONTROL         110,IDC_2CHTOHH_FAVOR,"Static",SS_BITMAP,8,135,32,17
+    LTEXT           "wait time (ms)",IDC_STATIC,7,283,43,8
+    EDITTEXT        IDC_EDIT_LOGWAITTIME,61,280,40,14,ES_AUTOHSCROLL
+    LTEXT           "Directory",IDC_STATIC,14,37,48,8
+    EDITTEXT        IDC_2chBROWSERDIRECTORY,64,35,152,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_2chSELECTBROWSER,221,34,19,14
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_CONDUIT_NAME        "NNsiMona (Modified from Generic Memo Conduit)"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CONNECTION          "Please check your connections and try again."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_DEVICE_FULL         "Your Palm organizer may be full.  Check the Palm organizer's Memory Application."
+    IDS_DESKTOP_FULL        "Your Desktop disk may be full.  Check the disk space and HotSync again."
+    IDS_BAD_ADD_REC         "Could not copy the following record to Palm organizer: %s"
+    IDS_BAD_PURGE_REMOTE    "Could not purge the deleted records on Palm organizer. %s"
+    IDS_BAD_DEL_REC         "Could not delete the following record on Palm organizer: %s"
+    IDS_BAD_CHANGE_REC      "Could not modify the following record on Palm organizer: %s"
+    IDS_BAD_LOCALADD_REC    "Could not copy the following record to the Desktop: %s"
+    IDS_REMOTE_BAD_CHANGE_CAT 
+                            "Could not move the Palm organizer records in category '%s' to 'Unfiled'."
+    IDS_BAD_READ_RECORD     "Could not read the next Palm organizer record."
+    IDS_REMOTE_TOOMANY_CATS "Only 15 categories are allowed.  All records in remote category %s were changed to 'Unfiled'."
+    IDS_REMOTE_CAT_DELETED  "-- Remote category %s has been deleted. The records in this category have been moved to 'Unfiled'."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_DOUBLE_MODIFIED     "The following record was modified on both Palm organizer and the Desktop: %s. This record will be duplicated on each platform. Delete the unwanted record and HotSync again."
+    IDS_ARCH_DOUBLE_MOD1    "The following record was modified on both Palm organizer and the Desktop: %s. This record will be duplicated on each platform. "
+    IDS_REVERSE_DELETE      "The following record, %s,  was modified on one platform and deleted on the other. The modified version will appear on both platforms."
+    IDS_RECCOUNT_DESKTOP1   "Some Palm organizer records were not copied to the Desktop. Your computer may be full or you may have reached the maximum allowed records on the desktop. To correct this situation, delete some records and HotSync again."
+    IDS_RECCOUNT_PILOT1     "Some Desktop records were not copied to Palm organizer. Your Palm organizer may be full. To correct this situation, delete some records and HotSync again."
+    IDS_CUSTOM_LABEL        "A custom label was modified on the Desktop and Palm organizer.  The Palm organizer  label '%1s' was overwritten by the Desktop label '%2s'"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_BAD_XMAP            "Records may not be sorted correctly on the Desktop."
+    IDS_BAD_ARCHIVE_ERR     "Some or all of your deleted records were not archived."
+    IDS_BAD_RESET_FLAGS_REMOTE 
+                            "Could not clear Palm organizer's status flags. Error Code %s"
+    IDS_DOUBLE_MODIFY_SUBSC1 
+                            "The following record in a subscription category was modified: %s. This record may be duplicated if it exists in the subscription source file."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_LOG_SPACING         "    - "
+    IDS_RECORD_COUNT_MISMATCH 
+                            "Record count mismatch. %1l local records, %2l remote records"
+    IDS_UNKNOWN_FATAL_ERROR "Fatal Error %l."
+    IDS_BAD_PURGE_LOCAL     "Could not purge the deleted records on Desktop. Error Code %s"
+    IDS_BAD_LOCAL_SAVE      " -- Could not save the local database. Error Code %s"
+    IDS_BAD_RESET_FLAGS_LOCAL 
+                            " -- Could not clear Desktop's Database's status flags. Error Code %s"
+    IDS_BAD_CLOSE_DB_REMOTE " -- Could not close remote database. Error Code %s"
+    IDS_BAD_CLOSE_DB_LOCAL  " -- Could not close local database. Error Code %s"
+    IDS_LOCAL_CAT_DELETED   "-- Local category %s has been deleted. The records in this category have been moved to 'Unfiled'."
+    IDS_LOCAL_BAD_CHANGE_CAT 
+                            "Could not move the local records in category '%s' to 'Unfiled'."
+    IDS_LOCAL_TOOMANY_CATS  "Only 15 categories are allowed.  All records in local category %s were changed to 'Unfiled'."
+    IDS_DATABASE_DESCRIPTION 
+                            "DB Name %1s, Creator ID %2s, Type %3u, Flags %4d, Version %5d"
+    IDS_DATABASE_SHORT_DESC "DB Name %1s, Creator ID %2s"
+    IDS_PC_DB_CREATE_FAILURE 
+                            " -- Failed to create PC Database: %1s, Error %2u"
+    IDS_HH_DB_CREATE_FAILURE 
+                            " -- Failed to create HH Database: %1s, Error %2u"
+    IDS_PC_ADD_RECORD_ERROR " -- PC failed to add record: %1s, Error %2u"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_HH_ADD_RECORD_ERROR " -- HH failed to add record: %1s, Error %2u"
+    IDS_PC_READ_REC_ERROR   " -- PC failed to read record: %1s, Error %2u"
+    IDS_HH_READ_REC_ERROR   " -- HH failed to read record: %1s, Error %2u"
+    IDS_RECORD_DESC_ID      "Record ID %u"
+    IDS_RECORD_DESC_INDEX   "Record Index %u"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CURRENT_SETTINGS_GROUP "%s's Current Settings:"
+    IDS_SYNC_FILES          "Synchronize the files."
+    IDS_PCTOHH              "Desktop overwrites Palm organizer."
+    IDS_HHTOPC              "Palm organizer overwrites Desktop."
+    IDS_DO_NOTHING          "Do Nothing."
+    IDS_SYNC_ACTION_TEXT    "HotSync Action for Memo"
+    IDS_2chBROWSER_NAME     "2ch Browser"
+    IDS_WARN_ACTION_TEMPORARY "Current Version can set ONLY ""DO NOTHING""."
+    IDS_SYNC_2CH            "Retrive logs and Synchronize."
+    IDS_SYNC_2CHTOHH        "Update log from Servers."
+    IDS_SYNC_2CHTOHH_FAVOR  "Update logs ONLY Favorites."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_BROWSER_PGIKO       "pGIKO"
+    IDS_BROWSER_GIKONAVI    "GikoNavi"
+    IDS_BROWSER_JANE        "Jane"
+    IDS_BROWSER_NAVI2CH     "Navi2ch"
+    IDS_BROWSER_ABONE       "ABone"
+    IDS_BROWSER_2PP         "2++"
+END
+
+#endif    // 英語 (米国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+#include "afxres.rc"         // Standard components
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

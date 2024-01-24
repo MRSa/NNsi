@@ -1,0 +1,371 @@
+■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□
+ - NNsi Project -
+                SSL v2認証についてのメモ
+                                                            Feb/12/2004  MRSa
+■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□
+
+■参考情報
+
+・SSL v2 Specification
+  → http://wp.netscape.com/eng/security/SSL_2.html
+
+・MD5(RFC1321)
+  → http://www.faqs.org/rfcs/rfc1321.html 
+
+・RC4
+  → http://www.rsasecurity.com/rsalabs/faq/3-6-3.html
+  →
+
+・実装
+  → OpenSSL(http://www.openssl.org)を参考にする
+  
+・ASN.1
+  → ASN.1 バイナリ変換規則
+    (http://www.geocities.co.jp/SiliconValley-SanJose/3377/)
+
+
+■キホンの認証フロー
+
+  1) CLIENT HELLO(クライアント → サーバ)
+     → 暗号化しないで、CLIENTが受け付ける暗号化方式 と challenge を送る
+     → challengeは乱数。ぶっちゃけ何でもよい
+
+  2) SEVER HELLO(サーバ → クライアント)
+     → 暗号化しないで、次のデータを送る
+         a) SERVERが受け付ける暗号化方式と、
+         b) サーバの証明書(X.509形式の証明書)
+         c) connection-id
+
+  3) ※ 暗号化通信用 MASTER KEYを生成する ※
+     → 乱数、何でもよい。
+
+  4) CLIENT MASTER KEY(クライアント → サーバ)
+     → 証明書内に含まれるサーバの公開鍵を使って、MASTER KEYを暗号化して送る
+
+  5) SERVER VERIFY(サーバ → クライアント)
+     → SERVER WRITE KEYで暗号化して、challengeを送る
+     
+  6) CLIENT FINISHED(クライアント → サーバ)
+     → CLIENT WRITE KEYで暗号化して、connection-idを送る
+     
+  7) SERVER FINISHED(サーバ → クライアント)
+     → SERVER WRITE KEYで暗号化された、session-idを送る
+     
+  8) 実データ送信(クライアント → サーバ)
+     → 実データを暗号化して送る
+  
+
+■SSL v2の暗号化方式
+
+  コード値   暗号化方式
+  01 00 80 : SSL_RC4_128_WITH_MD5
+  02 00 80 : SSL_RC4_128_EXPORT40_WITH_MD5
+  03 00 80 : SSL_RC2_CBC_128_CBC_WITH_MD5
+  04 00 80 : SSL_RC2_CBC_128_CBC_EXPORT40_WITH_MD5
+  05 00 80 : SSL_IDEA_128_CBC_WITH_MD5
+  06 00 40 : SSL_DES_64_CBC_WITH_MD5
+  07 00 c0 : SSL_DES_192_EDE3_CBC_WITH_MD5
+
+
+■メッセージフォーマット(詳細は、SSL v2のSpec.を参照)
+
+・client-hello         C -> S: challenge, cipher_specs
+  → 暗号化しないで、cipher_specsとchallenge
+
+  CLIENT-HELLO (Phase 1; Sent in the clear)
+    char MSG-CLIENT-HELLO
+    char CLIENT-VERSION-MSB
+    char CLIENT-VERSION-LSB
+    char CIPHER-SPECS-LENGTH-MSB
+    char CIPHER-SPECS-LENGTH-LSB
+    char SESSION-ID-LENGTH-MSB
+    char SESSION-ID-LENGTH-LSB
+    char CHALLENGE-LENGTH-MSB
+    char CHALLENGE-LENGTH-LSB
+    char CIPHER-SPECS-DATA[(MSB<<8)|LSB]
+    char SESSION-ID-DATA[(MSB<<8)|LSB]
+    char CHALLENGE-DATA[(MSB<<8)|LSB]
+
+
+・server-hello         S -> C: connection-id,server_certificate,cipher_specs
+  → 暗号化しないで、cipher_specsとserver_certificate、connection-id
+
+  SERVER-HELLO (Phase 1; Sent in the clear)
+    char MSG-SERVER-HELLO
+    char SESSION-ID-HIT
+    char CERTIFICATE-TYPE
+    char SERVER-VERSION-MSB
+    char SERVER-VERSION-LSB
+    char CERTIFICATE-LENGTH-MSB
+    char CERTIFICATE-LENGTH-LSB
+    char CIPHER-SPECS-LENGTH-MSB
+    char CIPHER-SPECS-LENGTH-LSB
+    char CONNECTION-ID-LENGTH-MSB
+    char CONNECTION-ID-LENGTH-LSB
+    char CERTIFICATE-DATA[MSB<<8|LSB]
+    char CIPHER-SPECS-DATA[MSB<<8|LSB]
+    char CONNECTION-ID-DATA[MSB<<8|LSB]
+
+
+・client-master-key    C -> S: {master_key}server_public_key
+  → server_public_keyで暗号化したmaster_key
+
+  CLIENT-MASTER-KEY (Phase 1; Sent primarily in the clear)
+    char MSG-CLIENT-MASTER-KEY
+    char CIPHER-KIND[3]
+    char CLEAR-KEY-LENGTH-MSB
+    char CLEAR-KEY-LENGTH-LSB
+    char ENCRYPTED-KEY-LENGTH-MSB
+    char ENCRYPTED-KEY-LENGTH-LSB
+    char KEY-ARG-LENGTH-MSB
+    char KEY-ARG-LENGTH-LSB
+    char CLEAR-KEY-DATA[MSB<<8|LSB]
+    char ENCRYPTED-KEY-DATA[MSB<<8|LSB]
+    char KEY-ARG-DATA[MSB<<8|LSB]
+
+
+・server-verify        S -> C: {challenge}server_write_key
+  → server_write_keyで暗号化したchallenge
+
+  SERVER-VERIFY (Phase 1; Sent encrypted)
+    char MSG-SERVER-VERIFY
+    char CHALLENGE-DATA[N-1]
+
+   CLIENT-HELLOで送られてくる、CHALLENGE-DATAを暗号化して送る。
+
+   ※ 送信データは、 "MAC + 実データ" が暗号化されている。
+
+
+
+・client-finish        C -> S: {connection-id}client_write_key
+  → client_write_keyで暗号化したconnection-id
+
+  CLIENT-FINISHED (Phase 2; Sent encrypted)
+    char MSG-CLIENT-FINISHED
+    char CONNECTION-ID[N-1]
+
+   SERVER-HELLOで送られてくる、CONNECTION-IDを暗号化して送る。
+
+   ※ 送信データは、 "MAC + 実データ" が暗号化されている。
+
+
+・server-finish        S -> C: {new_session_id}server_write_key
+  → server_write_keyで暗号化したnew_session_id
+
+  SERVER-FINISHED (Phase 2; Sent encrypted)
+    char MSG-SERVER-FINISHED
+    char SESSION-ID-DATA[N-1]
+
+   ※ 送信データは、 "MAC + 実データ" が暗号化されている。
+
+
+■RC4(128bit) with MD5の場合の暗号化鍵
+
+  MASTER-KEY、"0(0x30)"、CHALLENGE、CONNECTION-IDの文字列を連結して、
+HASH(MD5)をとった、16バイトのデータを元キーとして与える。
+（一番最初に与えて、それを初期化せずにずーっと使う。）
+
+  [読む場合の鍵]
+     KEY-MATERIAL-0 = MD5[ MASTER-KEY, "0", CHALLENGE, CONNECTION-ID ]
+
+  [書く場合の鍵]
+     KEY-MATERIAL-1 = MD5[ MASTER-KEY, "1", CHALLENGE, CONNECTION-ID ]
+
+
+■MAC(Message Authentication Code)について
+
+  暗号化されたデータの最初にくっつくデータ。16バイト。
+
+  ※ 送信側の鍵 + 実データ + シーケンス番号(32bit) を HASH(MD5)した値。
+    → シーケンス番号は、送信と受信で違う番号を使う。
+    → メッセージを１つ送ったら、インクリメントさせる。
+    → 暗号化していてもしていなくてもメッセージを送ったらインクリメント。
+    → 具体例
+      ・CLIENT FINISHEDのシーケンス番号は２になる。
+      ・SERVER VERIFYのシーケンス番号は１になる。
+      ・SERVER FINISHEDのシーケンス番号は２になる。
+
+
+■X.509証明書の形式
+
+  実際には、これをDER形式でサーバが送ってくる。
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+X.509-Certificate ::= SEQUENCE {
+    certificateInfo CertificateInfo,
+    signatureAlgorithm AlgorithmIdentifier,
+    signature BIT STRING
+}
+
+CertificateInfo ::= SEQUENCE {
+    version [0] Version DEFAULT v1988,
+    serialNumber CertificateSerialNumber,
+    signature AlgorithmIdentifier,
+    issuer Name,
+    validity Validity,
+    subject Name,
+    subjectPublicKeyInfo SubjectPublicKeyInfo
+}
+
+Version ::= INTEGER { v1988(0) }
+
+CertificateSerialNumber ::= INTEGER
+
+Validity ::= SEQUENCE {
+    notBefore UTCTime,
+    notAfter UTCTime
+}
+
+SubjectPublicKeyInfo ::= SEQUENCE {
+    algorithm AlgorithmIdentifier,
+    subjectPublicKey BIT STRING
+}
+
+AlgorithmIdentifier ::= SEQUENCE {
+    algorithm OBJECT IDENTIFIER,
+    parameters ANY DEFINED BY ALGORITHM OPTIONAL
+}
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+■調査用パッチ
+
+  公開鍵での暗号化データ調査用のパッチ... (えらいベタベタ...)
+
+    --------------------------------------------------------------------------
+                             調査用パッチここから
+    --------------------------------------------------------------------------
+*** openssl-0.9.7d/ssl/s2_clnt.c	2003-12-28 01:09:58.000000000 +0900
+--- openssl-0.9.7d-mod/ssl/s2_clnt.c	2004-05-27 12:45:21.000000000 +0900
+***************
+*** 679,684 ****
+--- 679,689 ----
+  				return(-1);
+  				}
+  			}
++ /** MRSa { **/
++ /** CHANGE MASTERKEY **/
++ 		sess->master_key_length=16;
++ 		memcpy(sess->master_key, "NNsi_for_PalmOS_(SSLv2FakeConn.)", sess->master_key_length);
++ /** } MRSa **/
+  
+  		if (sess->cipher->algorithm2 & SSL2_CF_8_BYTE_ENC)
+  			enc=8;
+***************
+*** 697,703 ****
+  		s2n(clear,p);
+  		memcpy(d,sess->master_key,(unsigned int)clear);
+  		d+=clear;
+- 
+  		enc=ssl_rsa_public_encrypt(sess->sess_cert,enc,
+  			&(sess->master_key[clear]),d,
+  			(s->s2->ssl2_rollback)?RSA_SSLV23_PADDING:RSA_PKCS1_PADDING);
+--- 702,707 ----
+***************
+*** 707,712 ****
+--- 711,731 ----
+  			SSLerr(SSL_F_CLIENT_MASTER_KEY,SSL_R_PUBLIC_KEY_ENCRYPT_ERROR);
+  			return(-1);
+  			}
++ /** MRSa { **/
++ {
++     char *xx_p;
++     int   xx_i, data;
++     printf("\n/**** RSA PUBLIC KEY ENCODE { ****/\n");
++     xx_p = d;
++     for (xx_i = 0; xx_i < enc; xx_i++)
++     {
++       data = (int) (xx_p[xx_i] & 0xff);
++       printf("\n    *ptr = '\\x%02x';\n", data);
++       printf("    ptr++;\n");
++     }
++     printf("\n/**** } RSA PUBLIC KEY ENCODE ****/\n");
++ }
++ /** } MRSa **/
+  #ifdef PKCS1_CHECK
+  		if (s->options & SSL_OP_PKCS1_CHECK_1) d[1]++;
+  		if (s->options & SSL_OP_PKCS1_CHECK_2)
+    --------------------------------------------------------------------------
+                             調査用パッチここまで
+    --------------------------------------------------------------------------
+
+
+    --------------------------------------------------------------------------
+                調査用パッチここから (2011-08-22, 1.0.0dに適用した版)
+    --------------------------------------------------------------------------
+--- openssl-1.0.0d/ssl/s2_clnt.c	2009-01-08 08:44:26.000000000 +0900
++++ openssl-1.0.0d-mod/ssl/s2_clnt.c	2011-08-22 10:07:36.392664500 +0900
+@@ -597,6 +597,9 @@
+ 		/*challenge id data*/
+ 		if (RAND_pseudo_bytes(s->s2->challenge,SSL2_CHALLENGE_LENGTH) <= 0)
+ 			return -1;
++		/** MRSa Mod.  { **/
++                memset(s->s2->challenge, 0x00, SSL2_CHALLENGE_LENGTH);
++		/** } MRSa Mod. **/
+ 		memcpy(d,s->s2->challenge,SSL2_CHALLENGE_LENGTH);
+ 		d+=SSL2_CHALLENGE_LENGTH;
+ 
+@@ -665,6 +668,11 @@
+ 				return(-1);
+ 				}
+ 			}
++/** MRSa { **/
++/** CHANGE MASTERKEY **/
++		sess->master_key_length=16;
++		memcpy(sess->master_key, "NNsi_for_PalmOS_(SSLv2FakeConn.)", sess->master_key_length);
++/** } MRSa **/
+ 
+ 		if (sess->cipher->algorithm2 & SSL2_CF_8_BYTE_ENC)
+ 			enc=8;
+@@ -683,7 +691,6 @@
+ 		s2n(clear,p);
+ 		memcpy(d,sess->master_key,(unsigned int)clear);
+ 		d+=clear;
+-
+ 		enc=ssl_rsa_public_encrypt(sess->sess_cert,enc,
+ 			&(sess->master_key[clear]),d,
+ 			(s->s2->ssl2_rollback)?RSA_SSLV23_PADDING:RSA_PKCS1_PADDING);
+@@ -693,6 +700,21 @@
+ 			SSLerr(SSL_F_CLIENT_MASTER_KEY,SSL_R_PUBLIC_KEY_ENCRYPT_ERROR);
+ 			return(-1);
+ 			}
++/** MRSa { **/
++{
++    char *xx_p;
++    int   xx_i, data;
++    printf("\n/**** RSA PUBLIC KEY ENCODE { ****/\n");
++    xx_p = d;
++    for (xx_i = 0; xx_i < enc; xx_i++)
++    {
++      data = (int) (xx_p[xx_i] & 0xff);
++      printf("\n    *ptr = '\\x%02x';\n", data);
++      printf("    ptr++;\n");
++    }
++    printf("\n/**** } RSA PUBLIC KEY ENCODE ****/\n");
++}
++/** } MRSa **/
+ #ifdef PKCS1_CHECK
+ 		if (s->options & SSL_OP_PKCS1_CHECK_1) d[1]++;
+ 		if (s->options & SSL_OP_PKCS1_CHECK_2)
+    ------------------------------------------------------------------------
+                調査用パッチここまで  2011-08-22, v1.0.0d に適用した版
+    --------------------------------------------------------------------------
+
+
+■OpenSSLの使い方
+
+% cat x509-he.asc |openssl x509 -inform DER -out x509.pem
+  → DER形式の証明書ファイル(x509-he.asc)を PEM形式のファイル(x509.pem)に変換
+
+% openssl s_client -ssl2 -connect 2chv.tora3.net:443 -msg -cipher RC4-MD5 >log
+  → 2chv.tora3.net に SSLポートで、RC4-MD5で接続する。
+
+
+■認証サーバについて
+  旧 https://tiger2.he.net/~tora3n2c/futen.cgi
+  新 https://2chv.tora3.net/futen.cgi
+
+
+
+[EOF]

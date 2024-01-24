@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="deployed/|verified/" path="" kind="src"/>
+	<classpathentry path="J2MELIB" kind="con"/>
+	<classpathentry path="/MIDlet-FW" combineaccessrules="false" kind="src"/>
+	<classpathentry path="" kind="output"/>
+</classpath>

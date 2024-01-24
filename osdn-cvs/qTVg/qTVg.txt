@@ -1,0 +1,34 @@
+---------------------------------------------------------------
+  qTVg : 「テレビ番組表」アプリ用データ取得ツール
+
+  Copyright (C) 2007年～、NNsi Project
+---------------------------------------------------------------
+
+※ NNsi Projectの詳細は、http://sourceforge.jp/projects/nnsi を
+  ご確認ください。
+
+
+■ライセンスについて
+本アプリケーションは、Qt4 Open Source Editionを利用して作成しました。
+そのため、本アプリケーションは、Qt4 Open Source Editionの制約を
+受けます。
+
+= = = = = = = = =
+ The Qt/Windows Open Source Edition is provided with no support 
+and no warranty.
+
+ The Qt Open Source Edition is provided under the GNU General 
+Public License (GPL). 
+
+ You may use the Qt Open Source Edition for:
+
+ - Development of open source/non-proprietary software 
+   that is also released under the GPL license.
+
+ - Compiling and running GPL software developed by others.
+= = = = = = = = =
+
+※ Qt Open Source Edition については、次を参照してください。
+   → http://www.trolltech.com/download/opensource.html
+
+以上

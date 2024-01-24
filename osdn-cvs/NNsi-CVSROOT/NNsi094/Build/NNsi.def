@@ -1,0 +1,2 @@
+application { NNsi NNsi stack=5120 }
+multiple code { editfns editfns2 editfns3 editfns4 }

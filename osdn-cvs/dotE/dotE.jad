@@ -1,0 +1,11 @@
+MIDlet-1: dotE,icon.png,MyMidpMain
+MIDlet-Jar-URL: dotE.jar
+MIDlet-Icon: icon.png
+MicroEdition-Configuration: CLDC-1.1
+MIDlet-Version: 0.6.2
+MIDlet-Vendor: NNsi Project
+MIDlet-Name: dotE
+MIDlet-Description: dot 'E' painter for MIDP
+MIDlet-Info-URL: http://nnsi.sourceforge.jp/archives/midp/dotE/
+MicroEdition-Profile: MIDP-2.0
+MIDlet-Permissions: javax.microedition.io.Connector.http,javax.microedition.io.Connector.file.write,javax.microedition.io.Connector.file.read,javax.microedition.io.Connector.https

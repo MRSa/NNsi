@@ -1,0 +1,3448 @@
+2007-07-13  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/msgview.c
+  ゾーン表示で、レス末尾の未読ポイントが設定できなかった不具合を修正。
+
+2007-03-11  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/nnshset.c
+  * Src/msgview.c
+  * Rsc/nnsh.rcp.*
+  「Goアンカーの整列」機能を追加。
+   (Goアンカーで出るレス番号の選択肢を整列して表示する機能)
+
+2007-03-10  MRSa  <mrsa@users.sourceforge.jp>
+  * ArmSrc/armc0002.c
+  * Src/msgview.c
+  &nbsp; を半角一文字に変換するようにして、AAの再現性を向上させる。
+
+2007-02-04  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/msgview.c
+  スレをメモ帳にコピーするとき、文字列選択でコピーする場合では、文字列の後ろに
+  ゴミが入る不具合を修正する。
+
+2007-02-04  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/msgview.c
+  書き込み時に名前とemail欄、書き込み日時（要は頭の２行）を削除し、代わりに
+  レス番号を挿入するように変更する。
+
+2007-02-04  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/msgview.c
+  * Rsc/nnsh.rcp.*
+  * Inc/struct.h
+  * Src/nnshset.c
+  書き込みボタンを押したとき「引用カキコ」ができる設定をNNsi設定-5に追加する。
+
+2007-01-12  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/msgview.c
+  * Rsc/nnsh.rcp.*
+  * Inc/symbols.h
+  引用書き込み機能を追加する。
+  （参照レスを引用符付きで書き込み画面へコピーする機能）
+
+2007-01-11  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/msgview.c
+  URLの文字数が長いものについて、リンクを開こうとすると
+  リセットがかかってしまう不具合を修正する。
+  それとともに、検出可能なURL長を160文字から240文字へ
+  拡張する。
+
+2006-12-19  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/machine.c
+  Yomeru5で日本語化したPalmで、文字がかすれてしまう不具合を修正。
+  (Yomeru5の作者、金沢さん、フォローどうもありがとうございました！！)
+
+2006-11-03  MRSa  <mrsa@users.sourcefoge.jp>
+  * Src/msgview.c
+  * Rsc/nnsh.rcp.*
+  * Inc/symbols.h
+  NG1, NG2の削除が完全にできていなかったのを修正。
+  NGワード設定を、スレ参照画面の編集メニューに追加。
+  スレ参照画面の機能にNGワード設定を追加。
+
+2006-10-08  MRSa  <mrsa@users.sourceforge.jp>  
+  * Src/msgview.c
+  * Src/nnshset.c
+  * Rsc/nnsh.rcp.*
+  * Inc/symbols.h
+  NG1およびNG2の廃止。NG3に統合し、NG設定とする。
+  スレ参照画面で、キーワードを抽出し、NG登録する機能を追加。
+
+2006-08-22  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/msgwrite.c
+  スレ立てができていなかった不具合を修正。
+
+2006-07-19  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/symbols.h
+  * Src/macro.h
+  マクロでスレのスレ状態を格納できるようにマクロを拡張する。
+
+2006-05-28  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/msgwrite.c
+  2ちゃんねる書き込み仕様変更に再度追従...。
+
+2006-05-28  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/msgwrite.c
+  2ちゃんねる書き込み仕様変更に暫定追従...。
+
+2006-05-24  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/nnshcmn.c
+  Palm TXで「メモ帳出力」ができなかった不具合を修正する。
+
+2006-05-23  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/msgview.c
+  Fキーに「検索」を割り当てるようにする。
+
+2006-05-08  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/msgview.c
+  文字列の大文字/小文字を区別しない検索がうまく動いていなかった不具合を修正。
+
+  * Src/bbsmng.c
+  板検索の再開位置を間違える不具合を修正。
+
+  ※ 2件ともNNsiスレPart5の402さんよりcontributeしていただきました。
+    ありがとうございました！！！
+
+
+2006-05-06  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/windows.c
+  Palm TXで検索ウィンドウを表示したとき、フォーカスがフィールドにない不具合を修正する。
+
+2006-05-05  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/msgview.c
+  * Src/nnshset.c
+  * Src/inoutXML.c
+  * Rsc/nnsh.rcp.icon
+  * Rsc/nnsh.rcp.noicon
+  * Inc/struct.h
+  * Inc/symbols.h
+  * Inc/xmldefs.h
+  NNsi設定-6に「NG-3切替」の項目を追加する。
+
+2006-05-04  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/msgmgr.c
+  まちBBSのスレがPalm TXで読めなかった不具合を修正する。
+
+2006-04-29  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/windows.c
+  * Src/msgview.c
+  Treo650/Tungsten T5/Palm TXで、参照画面でCenterキーをGo(選択メニュー)に設定すると、
+  Centerキーを押すと選択するまもなく一覧画面へ戻ってしまう不具合を修正する。
+
+2006-03-12  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/msglist.c
+  * Src/nnshmain.c
+  * Src/nnshset.c
+  * Rsc/nnsh.rcp.icon
+  * Rsc/nnsh.rcp.noicon
+  スレ一覧でお気に入りのレベルを表示することができるようにする。
+
+2006-02-12  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/msgview.c
+  * Src/nnshset.c
+  * Src/inoutXML.c
+  * Rsc/nnsh.rcp.icon
+  * Rsc/nnsh.rcp.noicon
+  * Inc/struct.h
+  * Inc/symbols.h
+  * Inc/xmldefs.h
+  Goメニューに「スレ番号指定取得」を追加する。
+
+2005-12-24  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/msgwrite.c
+  書き込み画面でスレプレビューモードを追加する。
+
+2005-12-06  MRSa  <mrsa@users.sourceforge.jp>
+  * Inc/sections.h
+  * Src/getlog.c
+  LogTemporary-NNsi のパージ処理が走らなかった不具合を修正する。
+  
+  * Src/nnshmain.c
+  参照ログサイト別一覧表示モードのカーソルを画面上部に移動させないようにする。
+  
+
+2005-11-19  MRSa  <mrsa@users.sourceforge.jp>
+  * Inc/messages.h
+  * Inc/sections.h
+  * Inc/struct.h
+  * Inc/symbols.h
+  * Inc/xmldefs.h
+  * Rsc/nnsh.rcp.icon
+  * Rsc/nnsh.rcp.noicon
+  * Src/inoutXML.c
+  * Src/msglist.c
+  * Src/nnshmain.c
+  参照ログサイト別一覧表示モードを搭載してみる。
+
+2005-11-18  MRSa  <mrsa@users.sourceforge.jp>
+  * Rsc/nnsh.rcp.icon
+  * Rsc/nnsh.rcp.noicon
+  * Inc/messages.h
+  * Inc/symbols.h
+  標準URLをhttp://menu.2ch.net/bbstable.htmlへ、
+  旧URLを http://www.ff.iij4u.or.jp/~ch2/bbstable.html に変更する。
+
+
+2005-11-06  MRSa  <mrsa@users.sourceforge.jp>
+  * Rsc/nnsh.rcp.icon
+  参照ログ取得設定の説明を充実。
+  スレタイ絞込み検索モードの追加時に、参照ログ一覧設定画面が開けなく
+  なっていた不具合を修正を修正する。
+
+
+2005-10-25  MRSa  <mrsa@users.sourceforge.jp>
+  * Rsc/nnsh.rcp.icon
+  * Rsc/nnsh.rcp.noicon
+  * Src/msglist.c
+  * Src/nnshmain.c
+  スレタイの絞込み検索時でも、スレ一覧カラーを通常と同じにする。
+  その代わり画面右中央に検索モードを示すマーカーを表示するようにする。
+
+
+2005-10-21  MRSa  <mrsa@users.sourceforge.jp>
+  * Inc/struct.h
+  * Src/msgmgr.c
+  ●ログイン用パスワードをNNsi再起動後にも記憶しておくように修正する。
+
+
+2005-10-02  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/msglist.c
+  スレタイの絞込み検索時、大文字/小文字の区別なしでできなかったところを修正する。
+
+
+2005-09-19  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/machine.c
+  * Src/msgmgr.c
+  * Src/msgview.c
+  * Src/nnshset.c
+  * Inc/messages.h
+  * Inc/symbols.h
+  * Rsc/nnsh.rcp.icon
+  * Rsc/nnsh.rcp.noicon
+  スレ単位でNG設定-3をON/OFFできるように拡張する。
+  NG設定-1、NG設定-2は、デフォルトで"，"で複数キーワードを設定可能とする。
+
+2005-08-27  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/machine.c
+  VFSメディアタイプが"DoC"のとき、LifeDriveの内蔵ディスクを
+  指定したことにするよう変更する。
+
+2005-08-03  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/msglist.c
+  ユーザタブでもスレ絞込み検索が有効となるように修正。
+
+2005-07-31  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/msglist.c
+  ユーザタブでスレ絞込み検索を実行したとき、自動で
+  スレ絞込み検索モードをOFFにするよう変更する。
+
+2005-07-30  MRSa  <mrsa@users.sourceforge.jp>
+  * Inc/messages.h
+  NNsi設定-8の板一覧取得URLを「新URL」へ切り替えたとき、
+  ダイアログボックスに表示されるメッセージが変わっていな
+  かった不具合を修正する。
+  
+  * Inc/struct.h
+  * Inc/symbols.h
+  * Inc/xmldefs.h
+  * Rsc/nnsh.rcp.icon
+  * Rsc/nnsh.rcp.noicon
+  * Src/inoutXML.c
+  * Src/machine.c
+  * Src/msglist.c
+  * Src/nnshmain.c
+  * Src/windows.c
+  スレ一覧画面のスレタイ絞込み検索機能を搭載。
+  （ただし、ユーザタブでの絞り込み検索は実装できない。）
+   → 絞込み検索中は、スレ一覧に表示するタイトルは、
+    「その他」の色で表示する。
+   → 絞込み検索モードの解除は、タイトル検索でチェックを
+     はずす、もしくは、板一覧タブを切り替えることで可能。
+
+2005-07-27  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/msgview.c
+  スレを参照しているとき、検索をしかけると、大文字/小文字の
+  区別なしの指定がされていた場合でも区別されてしまう不具合を
+  修正する。
+
+2005-07-23  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/nnshmain.c
+  スレタイ検索時に検索文字列が設定されていなかった場合に
+  現在選択中の文字列を表示するようにする。
+
+2005-06-19  MRSa  <mrsa@users.soureforge.jp>
+  * Src/windows.c
+  ハードキーの真ん中を押したときに、検索ウィンドウの文字列を
+  確定するように修正する。
+
+2005-06-10  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/msgwrite.c
+  Cookieが複数個あったとき、うまく処理できていなかった不具合を
+  修正する
+
+2005-06-09  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/msgwrite.c
+  したらば＠JBBSに書き込んだとき、スレを差分取得するよう修正する
+
+2005-06-05  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/msgwrite.c
+  したらば＠JBBSの書き込みをできるように修正する
+
+2005-05-05  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/nnshmain.c
+  * Inc/struct.h
+  * Inc/xmldefs.h
+  * Src/inoutXML.c
+  巡回待ち時間を設定可能にしてみる。(NNsi設定-8)
+
+2005-05-04  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/msgview.c
+  * Inc/symbols.h
+  * Rsc/nnsh.rcp.icon
+  * Rsc/nnsh.rcp.noicon
+  スレレベル更新の機能をスレ参照画面に割り付けられる
+  ように変更する。  
+
+2005-03-29  MRSa  <mrsa@users.sourceforge.jp>
+  * ArmSrc/armc0002.c
+  * Src/msgview.c
+  * Rsc/nnsh.rcp.icon
+  * Rsc/nnsh.rcp.noicon
+  * Inc/symbols.h
+  * Inc/messages.h
+  * Inc/proto.h
+  Be@2chで、BE IDの表示を行うように変更する。
+  Be@2chのプロフィール参照機能をサポートする。
+  (使用するには、webDAのインストールが必要)
+
+2005-03-13  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/macro.c
+  * Src/windows.c
+  NNsiMacro 1.05対応。
+  (マクロ内でダイアログの表示をサポート)
+
+2005-03-06  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/msgwrite.c
+  Be@2chに対する書き込みをサポート。
+
+2005-03-05  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/msgwrite.c
+  * Src/msgmgr.c
+  * Src/httpmgr.c
+  * Rsc/nnsh.rcp.icon
+  * Rsc/nnsh.rcp.noicon
+  * Inc/struct.h
+  * Inc/symbols.h
+  書き込み画面に、設定ダイアログを追加。
+   → ●ログインの実行、Be@2chログインの実行、および
+     書き込みシーケンス２、Be@2chログイン情報の使用
+     設定を変更可能にする。
+  Be@2chのログイン情報を使って書き込み可能にする。
+  (まだ、Be@2ch掲示板には書き込みできない。)
+
+2005-03-03  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/msgmgr.c
+  * Src/nnshmain.c
+  * Src/httpmgr.c
+  * Rsc/nnsh.rcp.icon
+  * Inc/struct.h
+  * Inc/symbols.h
+  Be@2ch対応準備。（ログイン処理の機能搭載）  
+
+2005-02-27  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/getloglist.c
+  参照ログ一覧で「１つ下も取得」で取得したサイトを
+  選択ウィンドウで記事を表示させようとしたとき、
+  そのときに使用している領域が不足してしまう不具合を
+  修正する。
+
+2005-02-20  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/armc0002.c
+  * Src/msgview.c
+  "<SCRIPT> ～ </SCRIPT>"の文字列を画面表示しないよう
+  細工してみる。
+
+2005-02-19  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/getlog.c
+  参照ログの「１つ下」取得機能を変更。１つ下を取得する
+  機能をヒープメモリからテンポラリＤＢに変更してみる。
+
+2005-02-17  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/macro.c
+  * Src/nnshmain.c
+  マクロ選択機能を実装。(NNsjのマクロスクリプトを直接
+  選択し、実行する機能。)
+
+2005-02-12  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/getlog.c
+  参照ログ取得設定のスレタイヘッダで、"%t"が書かれていた
+  場合、その前までの文字列をヘッダに格納するよう変更。
+
+  * Src/getloglist.c
+  参照ログ取得設定で、ログ一括削除機能を追加。
+
+  * Src/nnsh.rcp.icon
+  参照ログ取得のハードキー設定で、webDAで開く、ログ一括
+  削除機能を追加する
+
+  * Src/getloglist.c
+  参照ログ取得設定で、既読ログのみ一括削除する機能を追加。
+
+2005-02-11  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/getloglist.c
+  * Src/symbols.h
+  「１つ下取得」で表示される記事一覧を拡張。(66 → 80)
+  ついでに「１つ下取得」のサイト数を拡張。(66 → 72)
+  ※ メモリ不足が出たら修正を検討する。
+  
+  * Src/getlog.c
+  参照ログ取得の「１つ下取得」を、サイト解析したときの下側
+  にあるＵＲＬから順に取得するよう変更する。
+  (この変更により、最新のサイト順で上から並ぶ、はず。)
+   → 中止。うまくない。再度検討。(現行で並んでいるはず)
+
+2005-02-10  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/subjmgr.c
+  offlineスレの全削除がうまく働いていなかった不具合を修正。
+  
+  * Src/getlog.c
+  リダイレクトの受信指示の手抜き部分によりうまく処理できて
+  いなかった不具合を修正。
+
+2005-01-23  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/getlog.c
+  302のリダイレクト指示でリダイレクト先のＵＲＬ切り出しを
+  ミスっていた不具合を修正する。
+
+  * Src/subjmgr.c
+  * Src/offline.c
+  参照ログ一覧で「一覧更新」を実行すると、参照ログ取得機能で
+  取得したスレ情報が消えてしまう不具合を修正する。
+
+2005-01-22  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/msgwrite.c
+  * Rsc/nnsh.rcp.icon
+  * Rsc/nnsh.rcp.noicon
+  スレ書き込み画面で「ネットワーク設定」を開けるように変更
+
+2005-01-20  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/getloglist.c
+  下に移動したとき、末尾のところで間違えた記事を選択して
+  いた不具合を修正する。
+
+2005-01-18  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/getlog.c
+  * Inc/struct.h
+  参照ログの「１つ下も取得」でn時間更新確認の設定がゼロでは
+  ないとき、重複して取得しないようにする。
+  「１つ下も取得」で取得するサブログは、185を超えていると
+  パージ処理を実施するように変更する。
+
+2005-01-14  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/getloglist.c
+  参照ログの「１つ下も取得」で取得ログ数が増加しすぎたとき、
+  Fatal Errorとなってしまう不具合を修正する。
+  
+  n時間更新確認の設定がゼロのときにはログを上書きする
+  ようにする。（従来の挙動）
+
+  * Rsc/nnsh.rcp.icon
+  * Rsc/nnsh.rcp.noicon
+  n時間後再取得 → n時間更新確認に変更する。
+
+2005-01-13  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/symbols.h
+  * Src/getlog.c
+  * Src/struct.h
+  参照ログの「１つ下も取得」で、ログを消さないように参照ログ
+  ファイル名をユニークになるよう変更する。
+  参照ログの取得時間が設定時刻に到達しない場合には、ログが
+  なくても更新チェックを実施するように変更する。
+
+2005-01-10  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/nnshmain.c
+  新着確認後の処理を「メールチェック」→「マクロ実行」の
+  順番に変更する。
+
+2005-01-03  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/getloglist.c
+  参照ログ一覧で「１つ下も取得」を行って記事選択ダイアログで、
+  未読（新規）記事には記事タイトルの先頭に「*」をつけるように
+  してみる。
+
+  * Src/msgview.c
+  参照ログ一覧のログ参照中に、選択メニューで「削除後一覧へ」を
+  メニューに表示するようにしてみる。
+
+2004-12-31  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/getloglist.c
+  * Src/nnshmain.c
+  * Src/nnshset.c
+  * Inc/struct.h
+  * Rsc/nnsh.rcp.icon
+  * Rsc/nnsh.rcp.noicon
+  新着確認終了後にマクロを実行する機能を追加する。
+
+  * Src/getloglist.c
+  参照ログ一覧で、「１つ下も取得」で一覧を表示したときに
+  キャンセルを選択したとき、「Webブラウザで開きますか？」と
+  聞かれていた不具合を修正する。
+
+2004-12-30  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/getloglist.c
+  参照ログ一覧で、「１つ下も取得」という指定があるURLについて、
+  参照しようとしたとき、記事の一覧を開いて、記事を選択してから
+  参照するように変更する。  
+
+2004-12-26  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/nnshmain.c
+  BBS一覧の取得に失敗したとき、スレが消えない不具合を修正する。
+
+  * Src/bbsmng.c
+  BBS一覧が１件もないときに、BBS一覧を取得すると「参照ログ」が
+  登録されない不具合を修正する。
+
+2004-12-25  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/msgmgr.c
+  HTMLの切り出し開始文字列が、最初のブロックに含まれていないとき、うまく
+  切り出せない不具合を修正する。
+
+2004-12-24  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/msgview.c
+  * Src/msgmgr.c
+  * Inc/symbols.h
+  スレ参照画面から直接参照中のスレを削除する機能を追加する。
+  
+  * Src/getlog.c
+  参照ログのタイトルをアンカーから抽出可能にする。
+  （タイトルヘッダに %t を指定したとき）
+  「１つ下も取得」を設定しているとき、参照ログの初回読み出しデータバッファ内に
+  表示開始文字列がなかった場合、URL確認中でロックアップしてしまう不具合を修正。
+
+2004-12-19  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/symbols.h
+  「１つ下も取得」のリンク数を 80 → 64 に削減
+
+2004-12-18  MRSa  <mrsa@users.sourceforge.jp>
+  * Rsc/nnsh.rcp.icon
+  * Rsc/nnsh.rcp.noicon
+  BBS登録のヒントにある、したらば@JBBSのURLが古かったので修正する。
+  
+  * Src/getloglist.c
+  一覧表示が消える不具合を対処する。
+  新規登録時のレベルを一覧表示中のものにする。
+
+2004-12-15  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/msgview.c
+  * Inc/symbols.h
+  * Inc/messages.h
+  NG-3の切り替えを参照画面の選択メニューから実行可能にしてみる。
+
+2004-12-09  MRSa  <mrsa@users.sourceforge.jp>
+  * Inc/machine.h
+  * Src/machine.c
+  TapWave Zodiacのハードキー制御を追加してみる。	
+
+2004-12-04  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/windows.c
+  * Src/nnshmain.c
+  * Inc/messages.h
+  一覧画面の「URLを取得」機能に、Imageファイル取得機能を追加する。
+  (URL入力ダイアログに "Image取得"のチェックボックスを追加する)
+  これに伴い、現状「参照専用ログ」タブのときのみ有効だった一覧
+  画面のURLのデータ取得機能をタブによらず実行可能にした。
+  
+  * Rsc/nnsh.rcp.icon
+  * Rsc/nnsh.rcp.noicon
+  参照画面の機能、"リンクをwebDAで" を "webDAで見る"に表記を変更
+  
+  * Inc/symbols.h
+  参照画面の選択MENU項目「link(webDA)」を「リンク先参照」に変更
+
+  vchrRockerUpの制御を追加する。
+
+2004-12-02  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/getlog.c
+  zipファイル受信機能を修正。
+
+2004-12-01  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/machine.c
+  「BBS一覧を上書き」設定を、NNsi設定のデフォルトにする。
+
+2004-11-28  MRSa  <mrsa@users.sourceforge.jp>
+  * Inc/sections.h
+  * Inc/proto.h
+  (ようやく)セグメントの整理。
+  プロトタイプ宣言を「sections.h」に集約。
+  マクロ関連の宣言を「proto.h」に集約。
+
+2004-11-26  MRSa  <mrsa@users.sourceforge.jp>
+  * ...
+  "vchrHardRockerCenter"をジョグPushと同等に割り当てる。。。
+  (ただし、選択メニューのときには条件からはずす)
+
+2004-11-25  MRSa  <mrsa@users.sourceforge.jp>
+  * ...
+  T|T5向けの真ん中ボタン制御をとりあえずやめにしてみる。
+  Zodiacの右ボタン群を制御できるようにしてみる。
+  したらば@JBBSで書き込みできなかった不具合を修正する。
+  ２ちゃんねるBe掲示板の読み込みに対応する。
+  
+
+2004-11-16  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/bbsmng.c
+  BBSデータの取得でハングアップするようになった不具合を
+  修正する。
+
+2004-11-13  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/getlog.c
+  fileStreamにJPEGファイルを受信したときのファイル名が
+  変だった不具合を修正する。
+  * Src/machine.c
+  Blazer v4に(仮)対応。
+
+2004-11-13  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/getlog.c
+  * Src/nnshmain.c
+  * Src/msgview.c
+  参照専用ログの受信時にファイル名領域で領域オーバーが
+  発生していた不具合を修正する。
+  ログ参照中に webDA を開く指示を受けたとき、prc, pdb
+  ファイルも自動的にImage受信モードに切り替えるように
+  してみる。
+
+2004-11-11  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/getlog.c
+  * Src/msgview.c
+  Imageファイルを受信できるようにしてみる。
+  (/Palm/Images ディレクトリに保管する)
+  zipファイルを受信できるようにしてみる。
+  (参照専用ログのディレクトリに保管する)
+  ログ参照中に webDA で開く指示を受けたとき、zipファイル、
+  または jpegファイルだった場合には Image受信モードに自動的に
+  切り替えるようにしてみる。
+
+2004-11-11  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/msgview.c
+  * Src/getlog.c
+  * Rsc/nnsh.rcp.icon
+  * Rsc/nnsh.rcp.noicon
+  * Inc/symbols.h
+  * Inc/messages.h
+  参照画面の機能に「Image取得」を追加する。
+  Jpegファイルを受信した場合には、/Palm/Images にファイルを
+  転送するようにする。
+  Jpegファイルを受信した場合には、nnDAを起動するように変更する。
+  (とりあえず現状はnnDAを無条件に起動する)
+
+2004-11-10  MRSa  <mrsa@users.sourceforge.jp>
+  * Src/getlog.c
+  * Src/nnshmain.c
+  「URLを取得」で、JPEGファイルの受信を可能にする。
+   (URLの取得時、"."のところでファイル名を切っていたのをやめる)
+
+2004-11-02  MRSa  <mrsa@users.sourceforge.jp>
+  * Rsc/nnsh.rcp.icon
+  * Rsc/nnsh.rcp.noicon
+  * Inc/struct.h
+  * Inc/symbols.h
+  * Src/nnshset.c
+  * Src/msgview.c
+  NG3設定の機能拡張。NGワードチェックを「全体」「名前/Mail欄だけ」「メッセージ欄以外」
+  「メッセージ欄」の領域指定を可能にした。さらに、NGワードのみを * に置換できるように
+  した。(NNsi設定-4の「NG3」で表示されるダイアログで設定可能。)
+
+2004-10-24  MRSa  <mrsa@users.sourceforge.jp>
+   * Rsc/nnsh.rcp.icon
+   * Rsc/nnsh.rcp.noicon
+   * Inc/struct.h
+   * Inc/symbols.h
+   * Src/nnshset.c
+   * Src/machine.c
+   VFS設定を自動ONの設定にしたとき、前回のNNsi設定-7で設定したVFS ON設定内容を戻すように変更。
+   一覧画面の多目的スイッチに、未読数表示とレス数表示の切り替えを行う項目を追加する。
+
+2004-10-03  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/msgmgr.c
+   * Src/nnshmain.c
+   * Src/httpmgr.c
+   * Inc/messages.h
+   * Inc/struct.h
+   過去ログ取得機能を追加。（GZip使用設定でかつ、●ログインを行っている時に、スレ番指定取得、
+   スレ全取得を実施して、サーバから取得エラーを受信した場合に、過去スレ取得を実施するように変更。）
+
+2004-10-02  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/nnshmain.c
+   まだ取得していないスレについて参照しようとしたとき、取得保留モードだった場合には、
+   取得していないスレを開いてしまう不具合を修正する。
+
+2004-09-29  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/machine.c
+   VFSがアンマウントされたとき、NNsiが使用中のVFSかどうかをチェックし、使用中ではなかった場合には
+   アンマウントイベントを無視するように変更する。
+
+2004-09-27  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/nnshset.c
+   NNsi設定-8のZLIB使用設定後に、ZLIBがインストールされているかどうかのチェックを実施するよう変更する。
+
+2004-09-26  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/nnshcmn.c
+   * Src/httpmgr.c
+   * Src/main.c
+   転送データのgzip圧縮に仮対応。（Nickleさん、ありがとうございます！）
+   HTTP/1.0で送信要求を出すように変更する。(chunkedメッセージを受信しないように...)
+
+2004-09-25  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/windows.c
+   BUSYウィンドウの背景色を設定するよう変更する
+
+   * Src/msgview.c
+   * Src/nnshmain.c
+   * Src/machine.c
+   * Src/windows.c
+   * Src/getloglist.c
+   * Src/main.c
+   VZ90ハードボタン制御を追加。(Captureボタンと等価にする)
+
+   * Rsc/nnsh.rcp.icon
+   アイコン背景を透過色に修正する
+
+
+2004-09-22  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/getliglist.c
+   * Rsc/nnsh.rcp.icon
+   * Inc/symbols.h
+   参照ログ一覧画面で、「ＵＲＬをwebDAで開く」機能を追加する
+   * Src/msgview.c
+   * Src/nnshmain.c
+   参照画面では、「；」キー、参照ログ一覧画面および一覧画面では「Ｙ」キーで
+   「webDAでURLを開く」機能を実行するようにする
+
+   * Src/macroedit.c
+   * Rsc/nnsh.rcp.icon
+   * Src/netent.c
+   一覧画面での「マクロ設定」機能をNNsj(NNsiMacroEdit)との連携機能に修正。
+
+2004-09-16  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/nnshmain.c
+   * Inc/symbols.h
+   * Rsc/nnsh.rcp.icon
+   * Rsc/nnsh.rcp.noicon
+   一覧画面で、「スレをwebDAで開く」機能を追加する
+
+2004-09-15  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/msgview.c
+   * Inc/symbols.h
+   * Rsc/nnsh.rcp.icon
+   * Rsc/nnsh.rcp.noicon
+   参照画面において、「リンクをwebDAで開く」機能を追加
+
+2004-09-12  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/windows.c
+   DIA搭載機で、選択ウインドウ表示時にシルクが拡大されていた不具合を
+   修正する。
+
+2004-08-18  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/subjmgr.c
+   スレ一覧全取得がワークバッファのメモリサイズに依存していた不具合を
+   修正する。
+
+2004-08-14  MRSa  <mrsa@users.sourceforge.jp>
+   * Inc/machine.h
+   * Src/msgview.c
+   * Src/nnshmain.c
+   * Src/machine.c
+   * Src/getloglist.c
+   * Src/main.c
+   ハードボタン５のサポートを追加する。
+   
+   * Src/windows.c
+   選択メニューで、ハードキーを「NNsiで制御」にしていたとき、ハードキーの
+   ボタンを無効にするよう修正する。
+
+2004-08-04  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/nnshmain.c
+   板検索で板を移動したときに、未取得スレが削除されない不具合を修正する。
+
+2004-08-03  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/macro.c
+   マクロ実行中に中断できるようにする。
+
+2004-07-09  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/macro.c
+   NNsiMacro 1.04に更新。
+   スレタイトルを入力して検索する機能も」、マクロコマンドとして実行を許可
+   するよう変更する。
+   
+   
+   * Src/getlog.c
+   RSSにチェックが入っていた場合には、強制的に漢字コードをUTF-8に調整するよう
+   変更してみる。(文字化け対策)
+
+2004-07-04  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/macro.c
+   NNsiMacro 1.03++に更新。
+
+2004-07-03  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/macro.c
+   NNsiMacro 1.03+に更新。
+   マクロ実行中にはAuto Offタイマーを停止させるよう変更する。
+   
+   * Rsc/nnsh.rcp.icon
+   * Rsc/nnsh.rcp.noicon
+   スレ整列メニューの位置を変更する。
+
+2004-07-01  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/msgmgr.c
+   * Src/macro.c
+   * Src/nnshmain.c
+   一覧画面でレス数を更新できるようにしてみる。（マクロコマンドとして用意する。）
+   NNsiMacro 1.03-に更新。
+
+2004-06-30  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/inoutXML.c
+   * Src/xmldefs.h
+   * Src/nnshmain.c
+   新着確認実施前にDAを起動できるようにしてみる。(起動するDAは今後...)
+   多目的スイッチ１，２で新着確認実施前にＤＡ起動・新着確認実行後に回線の
+   切断設定が可能なようにする。
+
+2004-06-17  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/nnshcmn.c
+   * Inc/struct.h
+   メモ帳へ出力するとき、前回出力したメモ帳カテゴリを反映するように変更する。
+    → メモ帳側の改修が必要な模様。対処を中止する。
+
+2004-06-07  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/main.c
+   ビーム受信時の不具合を修正する。
+   
+   * Src/msglist.c
+   スレタイトルが全て表示されていない不具合を修正する。
+
+   * Src/nnshdmmy.c
+   ダミー画面で、Eキーで起動コード入力ウィンドウを開くようにする。
+
+2004-06-02  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/macro.c
+   マクロで、クリップボードから板検索文字列、スレタイ検索文字列を設定可能にする。
+
+   * Src/msglist.c
+   エラー表示中にマークが消える不具合を修正する。
+
+   * Src/nnshmain.c
+   * Src/main.c
+   マクロ自動実行機能で、起動時1回だけ実行できる機能を実装する。
+
+2004-06-01  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/msglist.c
+   一覧画面で、取得予約中スレに"!"マークをつけるようにする。
+
+2004-05-30  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/skeleton.c
+   * Src/main.c
+   * Src/nnshcmn.c
+   * Src/getloglist.c
+   * Src/nnshmain.c
+   * Rsc/nnsh.rcp.icon
+   * Rsc/nnsh.rcp.noicon
+   ２ちゃんねるのレス番号ビーム可能にする。(暫定)
+   参照ログのURLをビーム可能にする。(暫定)
+   ※ NNsiを起動しておかないと受信ができない！！ (Fatal Errorが発生する！) ※
+
+2004-05-28  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/msgwrite.c
+   暫定の２重投稿防止対策で、書き込み/スレ立て時は再送信処理を行わない
+   よう変更する。
+
+2004-05-27  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/rsaoutput.dat
+   ２ちゃんねる認証の新サーバに対応する。
+
+   * Src/skeleton.c
+   * Src/main.c
+   * Src/nnshcmn.c
+   こっそりNNsi間通信の準備。。。
+
+2004-05-26  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/msgview.c
+   レスをメモ帳にコピーしたとき、不正な文字列が混じってしまう不具合を修正。
+
+2004-05-25  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/msgmgr.c
+   認証サーバが移転したのにあわせた修正。（とりあえずPalmOS 5.2機向けの対応）
+
+2004-05-20  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/msglist.c
+   * Src/nnshset.c
+   * Rsc/nnsh.rcp.*
+   * Src/xmldefs.h
+   * Src/inoutXML.c
+   * Src/struct.h
+   「未読ありには参照ログなし」スイッチを追加。
+   
+   * Src/nnshmain.c
+   * Inc/message.h
+   * Rsc/nnsh.rcp.*
+   多目的スイッチに「未読ありには参照ログなし」と「取得済み全て
+   には参照ログなし」を切り替えられるようにする。
+   
+   * Src/msgmgr.c
+   * Inc/symbols.h
+   演算オーバフローのワーニングを消去する。
+
+2004-05-16  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/netmng.c
+   PalmOS Cobaltシミュレータで、通信ができなかった不具合を修正。
+   (NetLibSocketConnect()で、通信先ホストを指定するバッファの
+    サイズが、NetSocketAddrType でないと通信できない模様。
+    従来までは、NetSocketAddrINTypeを指定しても大丈夫だった。)
+
+2004-05-15  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/bbsmng.c
+   板を検索したとき、板が見つからなかった場合に検索中ウィンドウが
+   残ってしまう不具合を修正する。
+
+2004-05-09  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/nnshmain.c
+   新着確認を中止したとき、checkMailDAを起動してしまう不具合を
+   修正する。
+
+2004-05-06  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/msgview.c
+   「リンクを開く」系のところで、https://が有効になっていなかった
+   不具合を修正する。
+
+2004-05-04  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/getlog.c
+   新着確認時に取得時刻が変わらなかった場合には、更新マークを
+   消去するようにする。(→ ロジックだけ入れる。もうちょっと使って
+   みて仕様変更が妥当か検討する)
+
+2004-05-03  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/getloglist.c
+   Last-Modifiedの受信時刻取得を拡充。
+   Webブラウザで開いたり、レスを参照したときは、更新マークが
+   消えるよう変更してみる。(今までは20分固定だった)
+
+   * Src/httpmgr.c
+   通常サイトアクセス時、HTTP/1.0 のプロトコルを送信してもらう
+   ようにしてみる。(これで、chunkedなデータが送られてこない？)
+
+   * Src/sslv2.c
+   SERVER HELLO受信時、レングスを取得するマスクが0x7fff の
+   はずが 0x7ffffになっていたので修正。（実際は未使用）
+
+2004-05-02  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/getloglist.c
+   * Src/nnshmain.c
+   参照ログ一覧画面のボタン配置を変更する
+   参照ログ一覧画面から開いた画面は、参照ログ一覧画面に戻るよう変更する
+   参照ログ一覧画面から参照画面に移動できるようにする
+   スレ一覧画面に「参照ログ一覧」へ移動する選択肢を追加する
+
+   * Src/main.c
+   参照画面でNNsiが起動されたとき、一覧画面に戻ろうとするとFatalが
+   発生する不具合を修正する。
+
+   * Src/getloglist.c
+   参照ログ一覧画面の選択メニューで、MemoURLの起動ができなかった
+   不具合を修正する。
+   参照ログ一覧画面からNNsiでサイトを開くとき、不正アクセスをして
+   いた不具合を修正する。
+
+2004-05-01  MRSa  <mrsa@users.sourceforge.jp>
+   * Rsc/nnsh.rcp.icon
+   * Src/getloglist.c
+   * Src/nnshset.c
+   * Inc/symbols.h
+   * Inc/struct.h
+   参照ログ一覧画面で選択メニュー機能を実装する。
+   参照ログ一覧画面でハードキーに機能を割り当てられるようにする。
+   参照ログ一覧画面でMemoURLにURLを送ることができるようにする。
+
+   * Src/machine.c
+   参照ログ一覧画面でジョグアシストを無効にする。
+
+2004-04-27  MRSa  <mrsa@users.sourceforge.jp>   
+   * Src/nnshmain.c
+   * Src/bbsmng.c
+   * Rsc/nnsh.rcp.icon
+   * Rsc/nnsh.rcp.noicon
+   スレ取得停止機能を実装。使用するBBSの一覧画面で、「詳細」を選んで表示される
+   データに『取得停止』を追加。（取得停止中のＢＢＳに所属するスレは、スレ取得でき
+   ないようになる。ただし、スレ一覧の取得は可能。）
+
+   * Src/msgmgr.c
+   スレ情報画面で、数字キーの１～６で、スレレベルを変更可能に、Ｗキーでブラウザで
+   開くように拡張する。
+   スレ情報画面で、取得停止中のＢＢＳに所属していた場合にはその旨表示するよう変更。
+
+2004-04-25  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/getloglist.c
+   一部整理。操作説明(nnDA)を起動できるように変更する。
+
+2004-04-25  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/getloglist.c
+   * Src/machine.c
+   一覧画面で、実は横画面の幅が拡大されていなかった不具合を改修する。
+   参照ログ取得の一覧画面でボタン操作を拡大。
+
+2004-04-22  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/getloglist.c
+   * Src/getlog.c
+   * Src/nnshmain.c
+   * Src/main.c
+   * Inc/struct.h
+   * Inc/symbols.h
+   * Rsc/nnsh.rcp.icon
+   * Rsc/nnsh.rcp.noicon
+   参照ログ取得の一覧画面を作成し、スレ一覧画面から呼び出せるようにしてみる。
+   (Vキー押下もしくはメニュー「参照ログ取得設定一覧」から)
+   参照ログ取得で、ログをまったく取得しないモードを追加してみる。
+   If-Modified-Since更新時のデバイス時刻を記録するようにしてみる。
+   参照ログのレベルを0～9の10段階から、0～Fの16段階に拡張してみる。   
+   
+2004-04-20  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/getlog.c
+   参照ログ取得で、未更新のサイトでログファイルを消去していた不具合を
+   修正する。
+   サーバにIf-Modified-Sinceを送るのは、ログファイルを取得済みのとき
+   だけに修正する。
+
+2004-04-19  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/getlog.c
+   * Src/httpmgr.c
+   参照ログ取得機能で、If-Modified-Sinceを有効にする。
+
+2004-04-18  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/msgview.c
+   RDF形式のレス参照中に「リンクを開く」を実施したとき、表示される
+   ダイアログでラベルを<title>から抽出するよう変更する。
+
+   * Src/getlog.c
+   参照ログ取得での新着確認でも、取得したログタイトルを新規取得と
+   なるように変更する。
+
+2004-04-17  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/getlog.c
+   参照ログの末尾には、URLを格納するようにしてみる。
+   RSS受信対応も改良(UTF8表示の高速化)
+
+   * Src/msgview.c
+   RSS表示中、「リンクを開く」のアンカー抽出に不具合があったのを修正。
+
+2004-04-15  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/msgview.c
+   * Src/getlog.c
+   * Src/armc0002.c
+   * Inc/symbols.h
+   RSS対応準備。アンカー、ヘッダタイトル部で処理をミスっていた部分の
+   リカバリ実施。(UTF8のnnDA呼び出し方法を変更。)
+
+2004-04-13  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/msgview.c
+   * Src/windows.c
+   * Src/armc0002.c
+   * Inc/symbols.h
+   * Rsc/nnsh.rcp.icon
+   * Rsc/nnsh.rcp.noicon
+   アンカー(<a, </a)、強調(<em, </em)について、色をつけられるようにする。
+
+   * Src/httpmgr.c
+   受信総バイト数を表示するようにしてみる。
+
+2004-04-12  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/msglist.c
+   * Src/nnshset.c
+   * Rsc/nnsh.rcp.icon
+   * Rsc/nnsh.rcp.noicon
+   スレ一覧で未読数を表示できるようにする。
+
+2004-04-11  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/*.c
+   Garmin iQUE 3600対応。(RecordをCaptureに、EscをBackに割り当てる。DIA制御 ver.1に対応。)
+   
+   * Src/machine.c
+   NNsi設定初期化時、WebBrowserで開くとき、最新50にチェックを入れるようにする。
+   NNsi設定初期化時、「前レス移動で末尾を表示」にチェックを入れるようにする。
+
+2004-04-09  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/msgview.c
+   MemoURL DAインストール時、スレタイトルをMemoURLのタイトルに入れるよう変更する。
+
+2004-04-05  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/msgview.c
+   参照画面で、グラフィック描画モードかつゾーン表示モードにしていると、ローカルあぼーん機能が
+   動作しない不具合を修正する。
+
+   * Src/bbsmng.c
+   使用するBBSの登録で、使用設定がずれないように改修したつもり。
+
+   * Src/dbmgr.c
+   ユニークIDからDBのインデックス番号を取得できるような関数を用意する。
+
+2004-04-03  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/sslv2.c
+   ●ログインネゴシエーション時、処理に滞りがあったため１秒ウェイトを入れておく。
+
+2004-04-01  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/msgview.c
+   まちBBSのレス表示で、表示色がおかしくなる不具合を修正する。
+   
+   * Src/getlog.c
+   参照専用ログ取得機能を使うと、一覧に「ダブり」が発生するのを抑止する。
+   
+   * Src/dbmgr.c
+   ＤＢの検索キーがレコードの先頭しか対応していなかった不具合を修正する。
+   レコードの存在チェックを２分検索以外で実施する方法を用意する。
+   （参照専用ログの「ダブり」抑止対応。）
+
+
+2004-03-31  MRSa  <mrsa@users.sourceforge.jp>
+   * Inc/struct.h
+   * Inc/symbols.h
+   * Src/getlog.c
+   予約領域の変更。（ＵＲＬ領域の最大数拡張）
+
+   * Src/machine.c
+   NNsi起動時、区切り用ＤＢが存在しなかった場合に自動的に１レコード追加するよう変更する。
+
+   * Src/msgview.c
+   * Src/armc0002.c
+   参照専用ログの色表示について、調整を行う。
+
+2004-03-29  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/getlog.c
+   参照専用ログ取得時の不具合関連もろもろを修正（したつもり）。
+   （スレタイトルが重複する不具合は残っている。）
+   
+   * Src/netmng.c
+   ホストIPを一応ネットワークオーダーに変えてみた。
+
+2004-03-25  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/getlog.c
+   * Src/msgview.c
+   レス内アンカー抽出を小文字アンカー("<a")がないサイトで行うとFatalが出る可能性が
+   あった不具合を修正する。
+   MemoURLDA対応準備(したけど、、、MemoURLがうまく動作しないので挙動はMemoURLと同等に。。。)
+
+2004-03-23  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/getlog.c
+   参照専用ログの区切りパターン動的変更を可能にする。
+   参照画面の選択メニューで、区切りパターン編集、区切りパターン変更、
+   RAW/NORMALの切り替えができるようにする。
+
+2004-03-22  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/skeleton.c
+   Palm Reporterを使用するための仕掛けを入れる。
+   
+   * Src/msgmgr.c
+   * Src/msgview.c
+   HTMLモードのデータ区切りについて、改行も考慮に入れてみる。
+
+2004-03-21  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/getlog.c
+   * Src/msgmgr.c
+   * Src/msgview.c
+   * Rsc/nnsh.rcp.icon
+   参照専用ログについて、「区切り」と「取得先」を分割して設定できるようにする。
+   HTMLログ参照中に、区切りとRAWモードを切り替えできるようにする。
+
+2004-03-20  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/nnshset.c
+   * Src/getlog.c
+   「参照専用ログ取得設定」について、整理を開始する。
+   
+   * Src/nnshmain.c
+   スレ一覧画面で、再取得をCancelするとBusyウィンドウが消えずに残る
+   不具合に対処する。
+
+2004-03-14  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/msgview.c
+   * Src/windows.c
+   * ArmSrc/armc0002.c
+   参照画面でレスヘッダに色をつけられるようにしてみる。
+
+2004-03-14  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/nnshset.c
+   * Rsc/nnsh.rcp.icon
+   * Rsc/nnsh.rcp.noicon
+   参照画面の色設定ウィンドウを作ってみる。
+   （ゾーン表示モードでの区切り文字列を変更可能にする）
+
+2004-03-11  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/machine.c
+   * Src/nnshset.c
+   DIA制御時のウィンドウサイズ取得方法を変更する。
+   NNsi設定系画面で、ウィンドウサイズ変更のイベント処理を追加する。
+
+2004-03-11  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/msgview.c
+   * Rsc/nnsh.rcp.icon
+   * Rsc/nnsh.rcp.noicon
+   * Inc/symbols.h
+   抽出したURLをMemoURL(http://amsoft.minidns.net/palm/memourl.html)
+   へ出力できるようにしてみた。
+   参照画面の選択メニューに"MemoURLへ出力"を追加してみた。
+   参照画面@キーでヘルプを表示できるようにしてみた。
+
+2004-03-08  MRSa  <mrsa@users.sourceforge.jp>
+   * */*
+   NNsi設定の領域をグローバル領域内のポインタからに移動。
+
+2004-02-23  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/msgview.c
+   オオボケ。参照画面で数字キーに機能を割り当てるとジャンプできなく
+   なるのを忘れていた。.にタイトル、,にレベルを割り当て、-に差分取得
+   を割り当てた。
+
+2004-02-22  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/msgview.c
+   参照画面で、Ｍキーを押すと、一覧画面に戻るよう変更。同様に、１キー
+   および０キーをそれぞれタイトル、スレレベルのセレクタトリガを押した
+   のと同等になるよう調整する。
+
+2004-02-21  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/nnshcmn.c
+   レスをメモ帳へ出力するとき、出力をキャンセルした場合でも出力した、
+   との表示が行われる不具合を修正する。
+
+2004-02-21  MRSa  <mrsa@users.sourceforge.jp>
+   * (全般)
+   MemPtrFree() を MEMFREE_PTR() に置換。
+   MemPtrNew()  を MEMALLOC_PTR()に置換。
+   （492さん、アドバイスありがとうございます。）
+
+   * Src/main.c
+    NNsiが未インストールだった場合には、NNsi設定のDBチェックを行わない
+   ように変更する。(ハードリセット対策)
+
+   * Src/machine.c
+    NNsi設定初期化時、参照専用ログのディレクトリ変更を選択メニューに
+   表示するような設定となるように変更する。
+
+   * Rsc/nnsh.rcp.icon
+   * Rsc/nnsh.rcp.noicon
+   * Src/nnshmain.c
+   一覧画面の「その他」メニューに『選択メニュー』を追加する。
+
+   * Rsc/nnsh.rcp.icon
+   データ入力ダイアログのメニュー表示時にエラーが出る不具合を修正。
+
+2004-02-20  MRSa  <mrsa@users.sourceforge.jp>
+   * Rsc/nnsh.rcp.icon
+   BBS登録時の注意事項を追加。
+   参照ログ取得設定でヘルプを追加。
+   標準アイコンを投票結果に合わせ変更。
+
+2004-02-15  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/sslv2.c
+   サーバからの受信を検証しないと意味がない、、、元に戻す。
+
+   * Rsc/nnsh.rcp.icon
+   * Rsc/nnsh.rcp.noicon
+   * Src/nnshset.c
+   操作ヘルプの位置を変更する。
+   ユーザ設定タブおよびNNsi設定で、操作ヘルプを出せるように拡張。
+   これに伴い、セグメントを１つ追加する。(えらいでかすぎ、、、。)
+   
+   * Src/main.c
+   JOGダイヤルの押しまわしがうまく動作していなくなった不具合を修正する。
+
+2004-02-15  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/sslv2.c
+   サーバからの受信を検証しないオプションを用意する。
+   
+   * Rsc/nnsh.rcp.icon
+   * Rsc/nnsh.rcp.noicon
+   * Src/msgview.c
+   * Src/nnshmain.c
+   * Inc/symbols.h
+   操作ヘルプ表示機能の追加。(nnDAとの連携)
+
+2004-02-14  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/machine.c
+   * Inc/machine.h
+   PEG-TH55のシルク制御に対応(したつもり)。
+
+   * Rsc/nnsh.rcp.icon
+   * Src/msgmgr.c
+   * Inc/struct.h
+   ●ログインウィンドウの位置調整。
+   ユーザ名をNNsiを終了しても記憶しておくように変更。
+   
+2004-02-12  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/msgwrite.c
+   スレ立て時にも●ログインのIDを付加できるよう変更。
+
+2004-02-12  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/sslv2.c
+   * Src/sslv2md5.c
+   * Src/sslv2rc4.c
+   * Src/sslv2rsa.c
+   * Src/rsaoutput.dat
+   * Src/msgmgr.c
+   * Src/msgwrite.c
+   ●ログイン対応。(とりあえず、スレ書き込みのみ対応。)
+
+2004-01-21  itty  <itty@users.sourceforge.jp>
+   * Src/msglist.c
+   USE_PIN_DIA が定義されていない状態では、一覧画面のフォームが描画されない不具合対応。
+
+2004-01-19  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/msgmgr.c
+   データ新規記録時に、ファイルオープンエラーが発生すると、メモリの２重解放を実行
+   してしまう不具合を修正。(492さん、ご指摘ありがとうございます！)
+
+2004-01-18  MRSa  <mrsa@users.sourceforge.jp>
+   * Rsc/nnsh.rcp.icon
+   * Rsc/nnsh.rcp.noicon
+   一覧画面の「MSG削除」を「スレ削除に変更する」
+   
+   * Inc/local.h
+   * Inc/machine.h
+   HandEraのインクルードを使わないようにする。（というか取り込む）
+
+2004-01-12  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/msgview.c
+   * Src/armc0002.c
+   改行コードの前後にスペースがあった場合には消去するよう変更する。
+
+2004-01-10  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/msglist.c
+   レス取得後の表示を ??? から New に変えてみる。
+   
+   * Rsc/nnsh_hi.bmp
+   アイコンを修正していただいたものに変更する。
+   
+   * Src/nnshset.c
+   参照画面のタイトルセレクタトリガに機能割り当てを可能にする。(NNsi設定-4)
+
+2004-01-08  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/msgview.c
+   * Src/machine.c
+   参照画面のタイトルセレクタトリガについて、機能を割り当てできるようにする。
+
+   * Src/msgview.c
+   スレ番指定取得を実施すると、ウィンドウが残ってしまう不具合を修正する。
+
+2004-01-07  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/msgview.c
+   「リンクを開く」機能での不具合を修正。
+     → １レス目でリンクを開けない（やっと不具合改修...）
+
+   * Src/msgview.c
+   * Src/nnshmain.c
+   全角スペースもスペースとして認識するようにした。(一覧画面/参照画面)
+
+2004-01-06  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/msgview.c
+   「リンクを開く」機能での不具合を修正。
+     → １レス目でリンクを開けない
+     → 表示していない次レスのリンクも抽出してしまう
+
+   * Src/msgview.c
+   * Src/machine.c
+   * Src/main.c
+   * Src/nnshmain.c
+   CLIE TGのボイスレコボタンにCLIE NXキャプチャボタンの機能を割り当てるようにした。
+   
+
+2004-01-04  MRSa  <mrsa@users.sourceforge.jp>
+   * Rsc/nnsh.rcp.*
+   * Src/msgview.c
+   参照画面の「リンクを開く」について、BBS種に関係なく開けるようにした。
+   (まだ修正途中...)
+
+2003-12-31  MRSa  <mrsa@users.sourceforge.jp>
+   * Rsc/nnsh.rcp.*
+   * Src/nnshset.c
+   NNsi設定(概要)で、VFSの種類を設定できるよう変更する。
+
+2003-12-30  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/machine.c
+   Xiino3との連携機能を追加。
+
+2003-12-28  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/msgwrite.c
+   sports2サーバに書き込みできなかった問題に対処。
+   
+   * Src/msgmgr.c
+   したらば@JBBSのID付き掲示板で、スレの解析に失敗していた不具合を修正。
+
+2003-12-27  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/msgwrite.c
+   * Src/msgmgr.c
+   * Src/msgview.c
+   したらば@JBBSのrawmodeで差分取得機能を実装。(動作確認用リリース。)
+
+2003-12-26  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/msgview.c
+   スレ番指定取得実行時に、自動的にスレ番号を抽出する機能を追加。
+   
+   * Rsc/nnsh_hi.bmp
+   * Rsc/nnsh.bmp
+   ためしにiconをもらったタイプのものにしてみた。(標準iconも変更。)
+
+2003-12-25  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/msgmgr.c
+   したらば@JBBSのrawmodeで全取得時に、レスの末尾番号を取得・DBに反映する
+   ロジックを追加。
+
+2003-12-23  MRSa  <mrsa@users.sourceforge.jp>
+   * (全般的)
+   したらば@JBBSのrawmode対応開始。
+   
+   * Src/msgview.c
+   参照画面で検索モードの場合、JOG上下で前検索/次検索を実行するように変更。
+
+2003-12-21  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/nnshset.c
+   * Rsc/nnsh.rcp.icon
+   * Rsc/nnsh.rcp.noicon
+   概要設定で、NNsi設定1～9を表示するセレクタトリガを追加する
+
+   * Src/machine.c
+   * Src/msgview.c
+   * Src/windows.c
+   * Rsc/nnsh.rcp.icon
+   * Rsc/nnsh.rcp.noicon
+   検索文字列の初期値にIDを抽出して格納できるようにした。
+   
+   * Src/nnshset.c
+   NNsi設定Import/Export時に、Busyウィンドウが消去されず残ってしまう不具合に対処。
+
+   * Src/msgview.c
+   pickupAncher()で、シングルクオートで囲まれた文字列もhrefとして認識するよう変更。
+   一部ソースのクリーニング。(elseロジック、ネストの深いところの見直し)
+
+   * Src/windows.c
+   BUSYウィンドウのDEBUG ROM対応(USE_DEBUG_ROMスイッチ付加時)
+
+   * Src/nnshmain.c
+   板を選択を機能選択メニューに追加。
+
+2003-12-16  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/armc0001.c
+   * Src/msgmgr.c
+   メッセージ最大数がARMlet使用時には有効になっていなかった(1005でとまる)不具合を修正。
+
+2003-12-13  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/msgwrite.c
+   書き込みエラー発生時、Busyウィンドウが残ってしまう不具合を修正。
+
+   * Src/nnshset.c
+   * Rsc/nnsh.rcp.icon
+   * Rsc/nnsh.rcp.noicon
+   "朝三暮四"的表示の変更。NNsi設定-1～NNsi設定-9の呼び出しをできないようにする。
+   ユーザタブ設定を、メニューから１つだけ表示するようにする。
+   (一覧画面のキー入力での画面オープン、DEBUGモード時には表示できるようになる。)
+   NNsi設定から、Dキー、ゼロキー入力でNNsi設定-1へ遷移するように変更する。
+
+   * Src/nnshmain.c
+   一覧画面で再描画が多発する不具合について調査開始。
+
+
+2003-12-10  MRSa  <mrsa@users.sourceforge.jp>
+   * Src/msgmgr.c
+   * Src/getlog.c
+   取得時のHTTPメッセージヘッダ解析処理の変更。(StrNCompare()を使わないようにした)
+
+2003-12-06  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/msgmgr.c
+    したらば@JBBSの新read.cgi仕様で取得するよう変更。(表示URLの変更はまだ。)
+
+2003-12-06  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/msgwrite.c
+    したらば@JBBS/まちBBSの書き込み処理終了時に全取得が可能なように変更。
+    (したらば@JBBS/まちBBSも新着確認する場合のみ)
+    したらば@JBBSの書き込み新仕様に対応。
+
+    書き込み失敗時にBUSYウィンドウが残る場合があったので処理を変更。
+
+    * Src/netent.c
+    回線切断時には再描画するよう変更。
+
+2003-12-05  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/macro.c
+    マクロコマンドの「文字列が一致するか/文字列が含まれているか」が動作しない
+    不具合を修正する。
+    
+    * Src/windows.c
+    BUSYフォーム消去時に画面を再描画するようにした。(→もどにもどす)
+
+2003-12-03  MRSa  <mrsa@users.sourceforge.jp>
+    * Inc/messages.h
+    BUSYウィンドウで奇数バイト文字列をやめる。
+    
+    * Src/windows.c
+    BUSYウィンドウの出し方でフォームが表示されていない場合に問題が発生する
+    可能性があったのを削除。
+
+2003-11-29  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/windows.c
+    BUSYウィンドウ表示を直描に変更。
+    データダイアログ表示時、Jog Enterで確定するよう変更。
+
+    * Src/msgwrite.c
+    * Src/nnshset.c
+    * Src/main.c
+    書き込み画面で、シルクを拡大しないスイッチを追加
+    (設定が間違っていたので修正(pre28))
+
+    USE_HANDERAが付加されていないで、USE_PIN_DIAが付加されたコンパイル条件のとき、
+    コンパイルエラーが出る不具合を修正。
+    
+2003-11-28  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/msgwrite.c
+    書き込み時にフィールドの末尾へ移動してみる。
+
+2003-11-15  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/macro.c
+    * Src/macroedit.c
+    マクロ実行機能の最後に鳴らすビープ音は、マクロの機能で対応することにした。
+    ビープ音の指定を微妙に変更する。(実行エンジン Ver.1.00)
+
+2003-11-15  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/macro.c
+    マクロ実行機能で、一部のNNsi設定情報について取得と変更をできるようにした。
+    マクロ実行機能で、DAの呼び出しを可能にした。
+    ...これでマクロ実行エンジン自体はVer.1.0とする。
+
+2003-11-13  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/macro.c
+    * Src/macroedit.c
+    マクロ設定のコードを別ファイルに独立し、コンパイルスイッチも追加。(USE_MACROEDIT)
+    * Src/nnshmain.c
+    一覧画面で、Xキーで選択メニュー、Iキーでスレ情報、Sキーでマクロ実行、
+    Wキーでマクロ実行結果表示を割り当てる。
+
+2003-11-12  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/macro.c
+    マクロ機能の実行エンジンほぼ実装終了。
+    NNsi設定Import/Exportを実行可能に。
+    NNsi起動時にマクロを自動実行可能に。
+
+2003-11-11  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/macro.c
+    マクロ実行と実行スクリプト表示、実行ログ表示のテスト。
+    
+
+2003-11-10  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/macro.c
+    マクロ実行と実行スクリプト表示対応。（ただし未テスト）
+
+2003-11-09  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/nnshmain.c
+    * Src/macro.c
+    マクロ実行処理搭載に伴う変更。(マクロ関連をmacro.cに移動させる。)
+
+    * Src/getlog.c
+    参照専用ログ取得時にHREFアンカーの文字列区切りが '(シングルクオーテーション)でも
+    URLを取得できるようにする。
+    参照専用ログの１階層下を取得するモードがうまく動いていなかった不具合を修正する。
+
+2003-11-08  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/nnshmain.c
+    * Src/msgview.c
+    * Src/machine.c
+    * Inc/machine.h
+    * Src/bbsmng.c
+    * Src/msgwrite.c
+    * Src/main.c
+    * Src/windows.c
+    PalmOS5.3のDIA(Dynamic Input Area)制御に対応。
+
+2003-11-07  MRSa  <mrsa@users.sourceforge.jp>
+    * Rsc/nnsh.rcp.icon
+    * Rsc/nnsh.rcp.noicon
+    参照専用ログを「参照参照ログ」と誤記していた部分を修正。
+
+2003-11-03  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/machine.c
+    DIA対応開始。(まだ動かない、、、)
+
+2003-11-03  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/nnshmain.c
+    ハードキーGで、ディレクトリ選択できるようにする。
+    
+    * Src/offline.c
+    参照専用ログで未読ポイントを消去しないとき、ディレクトリＤＢがソートされない
+    不具合を修正。
+
+2003-11-01  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/nnshset.c
+    ハードキー左右の設定がハードキー上下の設定に反映される不具合を修正。
+
+2003-10-26  MRSa  <mrsa@users.sourceforge.jp>
+    * Rsc/nnsh.rcp.icon
+    * Rsc/nnsh.rcp.noicon
+    * Src/machine.c
+    * Src/nnshset.c
+    * Src/nnshmain.c
+    * Src/msgview.c
+    * Src/main.c
+    * Src/inoutXML.c
+    * Inc/struct.h
+    * Inc/symbols.h
+    * Inc/xmldefs.h
+    ハードキー左右をカスタマイズ可能にしてみる。
+
+2003-10-20  MRSa  <mrsa@users.sourceforge.jp>
+    * Rsc/nnsh.rcp.icon
+    * Rsc/nnsh.rcp.noicon
+    用語の統一。"Offlineスレ" → "参照専用ログ"へ。
+
+    * Src/nnshset.c
+    Import終了時にNNsiを終了させるよう変更。
+
+    * Src/machine.c
+    SONY NRでのシルク制御の不具合に対応。
+
+2003-10-16  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/nnshmain.c
+    新着確認終了時に鳴らす音をアラーム音に変更。
+
+    * Src/nnshset.c
+    * Rsc/nnsh.rcp.icon
+    * Rsc/nnsh.rcp.noicon
+    XML形式のNNsi設定インポート時にインポート場所を選択可能にした。
+
+2003-10-15  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/inoutXML.c
+    * Src/machine.c
+    * Src/nnshmain.c
+    * Src/nnshset.c
+    * Inc/struct.h
+    * Inc/xmldefs.h
+    * Rsc/nnsh.rcp.icon
+    * Rsc/nnsh.rcp.noicon
+    新着確認終了時にビープ音を鳴らせるように変更。
+
+2003-10-12  MRSa  <mrsa@users.sourceforge.jp>
+    * Rsc/nnsh.rcp.icon
+    * Rsc/nnsh.rcp.noicon
+    用語の統一。"Offlineスレ" → "参照専用ログ"へ。
+
+2003-10-10  MRSa  <mrsa@users.sourceforge.jp>
+    * Inc/symbols.h
+    * Src/msgview.c
+    * Src/msgwrite.c
+    * Src/machine.c
+    * Src/main.c
+    参照画面のAキーでネットワーク設定を開けるように変更。
+    書き込み画面でBt On/Off, ネットワーク設定オープンの準備。
+    CLIEハードキー押下を無視するよう変更(DEBUG時)。
+
+2003-10-02  MRSa  <mrsa@users.sourceforge.jp>
+    * Inc/machine.h
+    * Src/bbsmng.c
+    * Src/msgview.c
+    * Src/nnshset.c
+    * Src/msgwrite.c
+    * Src/nnshmain.c
+    * Src/windows.c
+    CLIE TJの左右ボタンに対応する。
+
+2003-09-23  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/msgwrite.c
+    書き込み時パラメータの時刻計算ロジックに不具合があったのを修正する。
+
+2003-09-18  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/netmng.c
+    ホストに接続失敗したとき、リトライしなくなっていた不具合を修正する。
+
+2003-09-14  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/sslv2.c
+    SSL v2の実装途中。（まだまだ動かない、、、。）
+
+2003-09-12  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/nnshmain.c
+    * Src/macro.c
+    ユーザ1～5のタブに移動することをコマンド割付可能にする
+    "マクロ実行"機能の実装準備
+    
+    * Src/netent.c
+    ホストに接続失敗したとき回線を切断するタイミングを変更
+    （リトライ回数を過ぎてから回線を切断し、再試行するように変更）
+
+2003-09-06  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/bbsmng.c
+    まちBBSの解釈をmachi.toも追加。
+
+2003-08-30  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/msgview.c
+    ７、８キーに機能を割り当てないようにした
+
+2003-08-29  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/netmgr.c
+    * Src/nnshmain.c
+    SSL通信非サポート機種の動作を改善
+    
+    * Src/msgview.c
+    BSキーを無視するよう変更
+
+2003-08-27  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/netmng.c
+    SSL通信のデバッグ。（一部怪しいが、、、。）
+
+2003-08-26  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/nnshmain.c
+    * Src/msgview.c
+    * Src/nnshset.c
+    * Rsc/nnsh.rcp.icon
+    * Rsc/nnsh.rcp.noicon
+    選択メニューに「Bt On/Bt Off」を追加。
+
+2003-08-24  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/netent.c
+    * Src/httpmgr.c
+    * Src/netmgr.c
+    SSL通信をサポート。
+    
+    * Src/msgview.c
+    URLを切り出すときの不正文字列チェックを追加。
+
+2003-08-23  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/nnshmain.c
+    一覧画面のキー割付をさらに追加。(NNsi設定/ユーザ設定タブ)
+    
+    * Src/nnshset.c
+    ユーザ設定タブ画面を移動するのにジョグダイヤル、カーソルキー左右で可能にする。
+
+2003-08-22  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/nnshmain.c
+    一覧画面のキー割り付けをさらに追加。
+
+    * Src/netent.c
+    Bluetooth On/Offを、BtToggleをSublaunchして実現
+    (Bluetooth On/OffパネルのコードをBtToggle使用時には不使用にする。)
+
+2003-08-20  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/nnshmain.c
+    一覧画面のキー割り付けを追加。
+      ハードキー１～６   → 多目的ボタン１～６
+      ハードキー７、８   → Bluetooth On/Off
+      ハードキー９、０   → 多目的スイッチ１、２
+      ","、"."、";"、":" → 板移動（未読あり、取得済み全て、お気に入り、参照専用ログ）
+      ハードキーＯ(英字) → URL取得
+
+2003-08-19  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/netent.c
+    * Src/nnshmain.c
+    * Rsc/nnsh.rcp.icon
+    * Rsc/nnsh.rcp.noicon
+    Bluetooth On/Off切り替え実験を開始。
+    (うまく動かない、、、ソフトリセットすると設定が反映される...)    
+
+2003-08-15  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/msgview.c
+    参照画面キー操作の追加。
+    H: リンクを開く
+    U: 全選択＋Webブラウザで開く
+    V: a2DA起動(AA表示)
+    O: メモ帳出力
+
+    * Src/windows.c
+    選択メニューでBSキーをCancelボタンを押したことにする。
+
+2003-08-13  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/offline.c
+    OFFLINEスレ検索時、スレが１件もなかった時のソート処理を抑止する
+
+2003-08-12  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/msgview.c
+    レス数の最大領域がメモリリークを起こしていたので修正する
+
+    * Src/bbsmng.c
+    * Src/machine.c
+    使用するBBSの選択画面でメモリリークしていたので修正する
+
+    * Src/main.c
+    使用するBBSの選択画面で、CLIE UXでの一覧表示が途中で切れていた
+    不具合を修正
+
+    * Src/nnshmain.c
+    * Src/msgview.c
+    * Src/windows.c
+    カーソルキー上下を受け付けるパターンを変更した。(ジョグ上下と等価にした)
+
+
+2003-08-10  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/getlog.c
+    参照専用ログ取得レベルの取得設定がゼロのときは、全てのログを取得する
+    よう変更。
+
+2003-08-09  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/nnshset.c
+    * Src/machine.c
+    CLIE UX向け調整。
+      - VFS使用デバイスを設定可能にする。
+      - 一覧画面の処理で、前/後ページ移動が画面ボタンで
+       できなかった不具合を修正。
+
+    * Src/msgview.c
+    a2DAの起動を、選択メニューに追加。
+    スレレベルのセレクタトリガに、機能を割り当てられるようにした。
+
+2003-08-08  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/msgview.c
+    a2DAとの連携機構を搭載。
+
+2003-08-03  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/msgview.c
+    * Src/getlog.c
+    参照専用ログのチャージ機能で、User-Agentを Monazillaではなくす。
+    参照専用ログ表示中に、リンク選択してブラウザを起動する場合、
+    相対URLだと開けない不具合を修正する。
+
+2003-08-02  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/getlog.c
+    * Inc/struct.h
+    * Rsc/nnsh.rcp.icon
+    * Rsc/nnsh.rcp.noicon
+    参照専用ログのチャージ機能で、取得レベルと一致したときだけログを取得する
+    よう変更。
+    NG設定-3の入力フォームを追加。
+
+    * Src/msgview.c
+    * Inc/struct.h
+    * Rsc/nnsh.rcp.icon
+    * Rsc/nnsh.rcp.noicon
+    メッセージのNG-3チェックを追加する。
+    RAW表示モードを追加する。
+
+2003-08-01  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/nnshset.c
+    * Src/getlog.c
+    * Src/xmldefs.h
+    * Src/inoutXML.c
+    * Src/machine.c
+    * Rsc/nnsh.rcp.icon
+    * Rsc/nnsh.rcp.noicon
+    参照専用ログのチャージ機能で、指定した取得レベル以上のログを取得する
+    よう変更。
+    参照専用ログの取得URL設定画面で、取得レベルの設定を可能にするよう拡張。
+
+2003-07-29  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/msgview.c
+    参照専用ログで、アンカー切り出し時のURLバッファサイズを 80 → 160 に拡大。
+
+    * Src/getlog.c
+    readOnlyLogDataPickup()の使っていない引数を削除。
+
+    * Src/nnshmain.c
+    「URLを取得」機能を追加。
+
+    * Src/httpmgr.c
+    * Src/getlog.c
+    「URLを取得」機能で、ファイル名を省略した場合、取得に失敗していた
+    不具合を修正。
+
+
+2003-07-28  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/nnshset.c
+    参照専用ログチャージ機能の設定画面がちらつくのを修正。
+
+2003-07-27  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/windows.c
+    レス表示中のグラフィック描画モードで、全ページ数の計算を間違える不具合を
+    修正。
+    修正ミス。必ずスクロールバーが表示されるようになってしまった不具合を修正。
+
+2003-07-26  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/msgview.c
+    メッセージ読み出し処理で参照専用ログの先頭データが文字化けする不具合を修正。
+
+    * Src/msgview.c
+    * ArmSrc/armc0002.c
+    <hr>, <dt>, <dd>, </tr>, </td>タグに(適当に)対応。タブコードを無視する
+    ように変更。
+
+    * Src/msgview.c
+    * Src/msgmgr.c
+    アンカー解析処理で相対アドレスもリンクとして認識するようにした。
+
+2003-07-25  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/machine.c
+    T|TのWebBrowser(Web Pro)対応(仮)。
+
+2003-07-24  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/msgview.c
+    アンカー切り出し方法をさらに変更。
+
+    * Src/getlog.c
+    参照専用ログ取得時、リダイレクト応答に対応。
+    
+    * Src/offline.c
+    したらば＠JBBS、まちBBSの参照専用ログ対応。
+    
+    * Src/nnshset.c
+    参照専用ログ取得設定画面について、ジョグで前後レコード移動を可能にした
+
+    * Src/nnshmain.c
+    * Rsc/nnsh.rcp.icon
+    * Rsc/nnsh.rcp.noicon
+    選択メニューで、Dir選択とDir変更を同時にメニューに出す/出さない
+    制御するようにした
+    
+2003-07-22  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/msgview.c
+    「リンクを開く」は、参照専用ログ専用の機能とする。
+    アンカー切り出し方法をちょっと変更。
+
+2003-07-22  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/nnshset.c
+    * Src/nnshmain.c
+    * Src/msgview.c
+    * Src/msgmgr.c
+    * Src/getlog.c
+    * Rsc/nnsh.rcp.noicon
+    * Rsc/nnsh.rcp.icon
+    * Inc/sections.h
+    * Inc/messages.h
+    * Inc/struct.h
+    * Inc/symbols.h
+    * ArmSrc/armc0002.c
+    参照専用ログチャージ機能の修正。(メッセージ内にリンクがあるとそのリンクを
+    選択し、オープンできるような機能を追加した。１階層下までログを連続して
+    チャージできるようにした。取得する/しないのフラグを用意した。漢字コードを
+    html内のcharsetを使って判定できるようにした。)
+	
+2003-07-20  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/nnshdmmy.c:
+    ダミー画面に遷移すると、二度とNNsi本来の画面に戻れなくなっていた不具合を
+    修正する
+
+2003-07-19  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/nnshdmmy.c:
+    * Src/main.c:
+    ダミー画面でVFS ON/OFFが切り替わると、一覧画面に遷移してしまう不具合に対処
+
+    * ArmSrc/armc0002.c:
+    コメントの関数名が間違っていたので修正する
+    
+    * Src/msgwrite.c:
+    書き込み時の時刻遅延を拡大させる
+
+    * Src/filemgr.c:
+    ファイルのコピーを実行し、ファイルサイズの偶数バイト調整機能が働いたとき、
+    1バイトデータが欠落してしまう可能性があったのを修正。
+    (実質はバッファサイズを奇数で設定しないため、問題は発生しないはず。)
+
+    * Inc/symbols.h
+    * Inc/struct.h
+    * Inc/sections.h
+    * Inc/local.h
+    * Rsc/nnsh.rcp.noicon
+    * Rsc/nnsh.rcp.icon
+    * Src/subjmgr.c
+    * Src/nnshset.c
+    * Src/nnshcmn.c
+    * Src/msgview.c
+    * Src/msgmgr.c
+    * Src/getlog.c
+    「参照専用ログチャージ機能」の実装。
+
+
+2003-07-18  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/getlog.c:
+    * Src/nnshmain.c:
+    「参照専用ログチャージ機能」の関数スケルトンのみ作成。
+
+    * Src/bbsmng.c:
+    * Src/msgview.c:
+    * Src/msgwrite.c:
+    * Src/nnshmain.c:
+    * Src/nnshset.c:
+    * Src/windows.c:
+    Fossil Wrist PDA対応。(仮)
+
+2003-07-17  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/machine.c:
+    * Inc/machine.h:
+    CLIE UXの横方向シルク対応。(仮)
+
+2003-07-16  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/nnshset.c:
+    * Inc/struct.h:
+    * Inc/symbols.h:
+    * Rsc/nnsh.rcp.icon:
+    * Rsc/nnsh.rcp.noicon:
+    「参照専用ログチャージ機能」の実装開始。。。
+    (指定したURLからデータを取得し、「参照専用ログ」として格納する機能)
+
+2003-07-10  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/main.c:
+    * Src/machine.c:
+    * Src/inoutXML.c:
+    * Src/nnshset.c:
+    * Src/nnshmain.c:
+    * Src/msgview.c:
+    * Inc/xmldefs.h:
+    * Inc/struct.h:
+    TsPatchを使わない設定を追加する。
+    (TsPatchを使わない設定にすると、標準解像度になる)
+
+2003-07-07  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/msgmgr.c:
+    * Inc/symbols.h:
+    まちBBSの一時的なスクリプト変更により、データ構造が変わっているものに対応。
+
+2003-07-01  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/nnshset.c:
+    * Src/msgview.c:
+    * Src/msgmgr.c:
+    * Src/machine.c:
+    * Rsc/nnsh.rcp.icon:
+    * Rsc/nnsh.rcp.noicon:
+    * Inc/symbols.h:
+    * Inc/struct.h:
+    レス数の最大を変更できるようにした。
+
+2003-06-30  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/main.c:
+    * Src/msgview.c:
+    * Build/Makefile*
+    TsPatch対応。コンパイルスイッチ(USE_TSPATCH)が有効なときのみ動作する。
+    （TsPatchのヘッダ(SmallFontSupport.h)は、 /PalmDev/include に置くこと）
+
+2003-06-29  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/nnshmain.c
+    * Rsc/nnsh.rcp.icon:
+    * Rsc/nnsh.rcp.noicon:
+    * Inc/symbols.h:
+    * Inc/struct.h:
+    * Inc/messages.h:
+    "未読あり" および "取得済み全て" 一覧の表示をワンタッチでできるように
+    する。
+    参照専用ログのログファイルを別ディレクトリに移動できるようにする。
+    選択メニューに「ログ位置変更」と「ログ格納ディレクトリ変更」を追加する。
+	
+    * Src/machine.c
+    VFSを自動的にONした場合に、参照専用ログの階層化も自動的に実施するよう
+    変更する。
+
+2003-06-15  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/nnshcmn.c:
+    DAがインストールしているかどうかチェックする関数を追加する。
+
+    * Src/msgwrite.c:
+    AAボタンが押されたら、AADAをkickするように変更する。
+    
+    * Src/nnshset.c:
+    NNsi設定-9でcMDAがインストールされていなければ、設定項目を表示しないよう
+    にする。
+
+2003-06-15  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/nnshmain.c: 
+    * Rsc/nnsh.rcp.icon:
+    * Rsc/nnsh.rcp.noicon:
+    * Inc/symbols.h:
+    * Inc/struct.h:
+    * Inc/messages.h:
+     "一覧取得時に差分取得"の設定切り替えを一覧画面多目的スイッチで設定できる
+    ようにする。
+
+    * Src/nnshmain.c:
+    * Src/filemgr.c:
+    * Src/msgmgr.c:
+    ログファイルの管理場所をVFS<>Palm本体間で移動できるようにした。
+
+2003-06-15  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/subjmgr.c: 
+    * Src/nnshset.c: 
+    * Src/nnshmain.c: 
+    * Src/inoutXML.c: 
+    * Src/dbmgr.c: 
+    * Rsc/nnsh.rcp.icon:
+    * Rsc/nnsh.rcp.noicon:
+    * Inc/symbols.h:
+    * Inc/struct.h:
+    * Inc/sections.h:
+    * Inc/messages.h:
+    スレ一覧取得時に新着レスがあったら自動で差分取得するオプションを追加。
+
+2003-06-12  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/nnshmain.c:
+    checkMailDAの起動成否確認論理が逆になっていた不具合を修正する。
+
+2003-06-09  shinhei  <shinhei@users.sourceforge.jp>
+	* Rsc/nnsh.rcp.icon:
+	* Rsc/nnsh.rcp.noicon:
+	* Rsc/nnsh.h
+	* Src/msgwrite.c:
+	AA挿入機能の追加(Experimental)
+
+2003-06-08  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/nnshmain.c:
+    * Src/nnshset.c:
+    * Rsc/nnsh.rcp.icon:
+    * Rsc/nnsh.rcp.noicon:
+    新着確認時にメール到着チェックする/しないの設定切り替えを一覧画面の多目的
+    スイッチに割り当て可能にした。
+
+2003-06-07  shinhei  <shinhei@users.sourceforge.jp>
+	* Src/machine.c
+	* Src/main.c
+	* Src/skelton.c
+	PilotMain()でVFS Notificationを受ける用に変更(OS5マシン対策)
+	VFSマウント/アンマウントの際Dialog表示時に前Formに戻るように変更
+
+2003-06-07  MRSa  <mrsa@users.sourceforge.jp>
+    * Inc/proto.h:
+    * Src/nnshcmn.c:
+    DAアプリ等を起動できるようにしてみる。
+    
+    * Src/nnshmain.c:
+    * Src/nnshset.c:
+    * Rsc/nnsh.rcp.icon:
+    * Rsc/nnsh.rcp.noicon:
+    新着確認時に、Check Mail DAとの連携機能を実装。
+
+2003-06-06  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/machine.c:
+    * Src/main.c:
+    VFSマウント/アンマウントが発生したとき、通知メッセージを表示するようにした。
+    OS5デバイスで、何度か連続してMount/Unmountすると、Fatal Errorが発生する。
+
+    * Src/nnshmain.c:
+    * Src/msglist.c:
+    * Rsc/nnsh.rcp.icon:
+    * Rsc/nnsh.rcp.noicon:
+    メニューに "NNsi終了" を追加した。
+    機能設定メニューに、"タブ情報"を追加した。一覧表示する/しないのチェック
+    関数を流用して、所属するスレの件数を表示できるようにした。
+
+
+2003-06-06  shinhei  <shinhei@users.sourceforge.jp>
+	* Src/machine.c:
+	VFSアンマウント時に一覧フォームに戻るようした
+	VFSリマウント処理の追加
+
+	* Inc/sections.h:
+	ReadMessage_Closeのstatic指定の削除(VFSUnmountNotifyからcallできるようにするため)
+	
+2003-06-03  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/nnshmain.c:
+    参照専用ログの階層化で、ディレクトリが１つ表示されていなかった不具合を
+    修正する。
+
+    * Src/msgview.c:
+    HandEra対策で、とりあえずスレタイトルの省略文字をコンパイルスイッチ化した。
+    (とりあえずの対策)
+    FileOpen()エラー発生時のメモリフリー解放を追加（これが本来の処理？）
+
+2003-06-01  shinhei  <shinhei@users.sourceforge.jp>
+    * Src/msgview.c:
+	エラー発生時のNNsiGlobal->msgIndexの解放のバグを修正。
+	NNsiGlobal->magnIndexの領域確保でFreeテストを行なうように修正。
+
+    * Src/machine.c:
+    * Src/main.c:
+	VFSアンマウント時のパラメータ制御処理の追加
+
+2003-06-01  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/machine.c:
+    * Src/nnshset.c:
+    * Src/inoutXML.c:
+    * Src/nnsh.rcp.icon:
+    * Src/nnsh.rcp.noicon:
+    VFSのCF対応（使用VFSをCFを使うか、それ以外を使うかチェックするスイッチを追加）
+
+2003-05-31  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/netmng.c:
+    ホスト接続チェックで、接続確認時にエラーとなった場合何も表示されない不具合に対処。
+
+    * Src/bbsmng.c:
+    ユーザ設定タブの先頭に数字を入れて他タブと区別できるようにした。
+
+2003-05-31  MRSa  <mrsa@users.sourceforge.jp>
+    * Inc/sections.h:
+    OS31NNsi.prc, NNsiSTD.prc対応。
+
+    * (全般)
+    タブ → 空白変換。
+
+    * Src/netmng.c:
+    ホスト接続確認時、ホスト名 → IPのlookupが失敗したときに関数を終了させるよう変更。
+
+2003-05-30  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/msgview.c:
+    参照画面で差分取得実施後、画面の文字色/背景色がおかしくなる不具合に対処。
+    参照画面で差分取得実施後、スレタイが短くなる不具合に対処。
+
+    * Src/nnshmain.c:
+    一覧画面からダミー画面へ遷移できるようにする。
+
+    * Src/netmng.c:
+    ホスト接続確認時、http通信するサイズを限定する。
+
+2003-05-30  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/netmng.c:
+    ホストとの接続確認について、pingはあきらめhttp通信で実施することにした。
+
+2003-05-27  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/msglist.c:
+    スレ一覧表示で、一覧表示するページ数が減ったときに表示するスレ一覧の選択アイテムを
+    末尾に変更する。
+    * Src/nnshmain.c:
+    ディレクトリ選択メニューが有効なのは、板タブが、「参照専用ログ」のときのみに変更する。
+    ディレクトリ作成中に、BUSYフォームを表示するように変更する。
+
+2003-05-27  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/msglist.c:
+    * Src/nnshmain.c:
+    * Src/window.c:
+    * Src/nnshset.c:
+    * Src/inoutXML.c:
+    * Inc/xmldefs.h:
+    * Inc/struct.h:
+    * Inc/symbols.h:
+    * Rsc/nnsh.rcp.icon:
+    * Rsc/nnsh.rcp.noicon:
+    「参照専用ログ」の階層化(とりあえず)対応。
+    NNsi設定-6の一覧時選択メニューに"Dir選択"を追加する。
+
+    * Src/msglist.c:
+    スレ一覧表示で、一覧表示するページ数が減ったときに表示するスレ一覧がおかし
+    かった不具合を修正する。
+
+2003-05-26  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/msglist.c:
+    "スレ一覧表示で、前ページを表示するときスレの選択が先頭になってしまう不具合を
+    修正"は、なんか違和感があるのでもとにもどす。
+
+    * Src/nnshmain.c:
+    * Src/window.c:
+    「参照専用ログ」のディレクトリ選択機能を追加する。(試験実装)
+    これに伴い、横幅の広い選択ウィンドウを用意し、外部I/F変更の調整を実施する。
+
+2003-05-26  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/msglist.c:
+    スレ一覧表示で、途中で抜ける場合にメモリハンドルのロック解放忘れがあった
+    不具合を修正する。
+    スレ一覧表示で、前ページを表示するときスレの選択が先頭になってしまう不具合を
+    修正する。
+
+2003-05-25  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/msglist.c:
+    * Inc/sections.h:
+    * Inc/symbols.h:
+    * Src/nnshmain.c:
+    スレ一覧表示部分の全面変更。（参照専用ログの階層化準備）
+
+    * Src/msgmgr.c:
+    スレ差分取得時のhttpメッセージ判別部分で、StrNCompare()を使わないように
+    してみた。(PalmOS Sim.でよくわからん不具合にでくわしたため、苦し紛れに変更。)
+
+2003-05-22  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/nnshdmmy.c:
+    * Src/netmng.c:
+    ダミー画面で、自ネットI/F情報の表示内容を(またまた)整理。
+    ダミー画面で、接続する前にキャンセルしたときFatal Errorが出る不具合を修正。
+    ダミー画面から、ネットワーク設定を呼び出せるようメニューに追加。
+
+    * Src/msgview.c:
+    取得保留モード時でも、参照画面でのスレ番指定取得実行後に、スレを開くか
+    どうか確認し、スレを開こうとしてしまう不具合に対処する。
+
+2003-05-20  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/nnshdmmy.c:
+    * Src/netmng.c:
+    ダミー画面を独立させたファイルにする。
+    自ネットI/F情報の表示内容を整理。
+
+2003-05-20  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/netmng.c:
+    * Src/main.c:
+    * Src/machine.c:
+    ダミー画面で、自分のIPアドレス表示部分を微妙に変更。
+    ダミー画面で、シルクの最大化処理をやめる。
+    ダミー画面で、編集メニューを使えるよう変更する。
+
+2003-05-20  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/machine.c:
+    * Src/netmng.c:
+    * Inc/sections.h:
+    * Inc/symbols.h:
+    ダミー画面で、名前解決(ホスト名→IPアドレス表示)機能を搭載。
+    自分のIPアドレスも引けるようにした。
+
+2003-05-20  shinhei  <shinhei@users.sourceforge.jp>
+    * Rsc/FirstFirst_hi.bmp
+    * Rsc/Go_C_hi.bmp
+    * Rsc/Go_C_hi.xcf
+    * Rsc/LastLast_hi.bmp
+    * Rsc/Next_hi.bmp 
+    * Rsc/Prev_hi.bmp
+    * Rsc/Return_C_hi.bmp
+    * Rsc/Write_C_hi.bmp
+    * Rsc/Write_C_hi.xcf
+    * Rsc/nnsh.rcp.icon
+    アイコンのHi-Density化(まだまだ途中...)
+
+2003-05-17  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/machine.c:
+    ダミー画面で、自分のＩＰアドレスを表示させようと努力途中...。
+
+2003-05-16  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/msgview.c:
+    * Src/nnshmain.c:
+    * Src/msgmgr.c:
+    参照画面でスレ番指定取得を実施した時、文字列を選択していると
+    それをデフォルトで入力フィールドに格納するよう変更する。
+
+2003-05-16  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/msgview.c:
+    * Src/msgmgr.c:
+    参照画面でスレ番指定取得を実施した時、取得したスレを開くかどうか
+    確認する機能を追加。
+    （スレを開いた後、一覧画面に戻ると「取得済み全て」に移動する。←直感的でない？）
+
+2003-05-16  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/nnshmain.c:
+    * Inc/messages.h:
+    「取得済み全て」で一覧ボタンを押すと、使用設定している板すべての一覧を
+    取得するよう仕様を変更する。
+
+2003-05-15  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/httpmgr.c:
+    * Inc/sections.h:
+    * Inc/symbols.h:
+    * Inc/struct.h:
+    * Inc/xmldefs.h:
+    * Build/NNsi.def:
+    * Rsc/nnsh.h:
+    * Rsc/nnsh.rcp.icon:
+    * Rsc/nnsh.rcp.noicon:
+    * Src/subjmgr.c:
+    * Src/nnshset.c:
+    * Src/nnshmain.c:
+    * Src/inoutXML.c:
+    * Src/machine.c:
+    * Src/msgview.c:
+    * Src/bbsmng.c:
+    * Src/msglist.c:
+    2ch互換スクリプト掲示板(書き込み)対応(BBSTYPE追加)
+    ユーザ設定タブの３～５追加
+    ほか、、、。
+	
+2003-05-15  shinhei  <shinhei@users.sourceforge.jp>
+    * Rsc/NNsh_hi.xcf:
+    * Rsc/NNsh_hi.bmp:
+    * Rsc/NNsh_S_hi.xcf:
+    * Rsc/NNsh_S_hi.bmp:
+    * Rsc/nnsh.rcp.icon:
+    アプリケーションアイコンのHi-Density化
+
+2003-05-15  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/*.c:
+    * Rsc/nnsh.rcp.icon:
+    * Rsc/nnsh.rcp.noicon:
+    2ch互換BBS対応準備。(BBSTYPEに OTHERBBSを追加する。）
+    
+    * Src/netent.c
+    名前解決、ソケット接続ができなかった場合、一度回線接続して再接続するように変更。
+
+2003-05-14  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/msgview.c:
+    参照画面のHandEra JOG Push、ハードキーのJOG PUSHエミュレートで、本来JOG PUSH
+    機能を処理すべきところがJOG BACK機能を処理していた不具合に対処
+
+2003-05-14  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/subjmgr.c:
+    ユーザ設定タブで、文字列の合致条件が「文字列どれか」になっていると、上位の
+    「すべて一致」条件が無視される不具合に対処
+
+2003-05-13  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/nnshmain.c:
+    一覧画面で使わないキーコードのとき、デバイス標準の制御にならない不具合を修正
+
+2003-05-11  MRSa  <mrsa@users.sourceforge.jp>
+    * Inc/struct.h:
+    * Src/msgview.c:
+    参照画面で、スレタイトルが全て表示できないとき、末尾に省略記号を表示する
+    よう変更
+    （モバ板の３８３さん修正コードのマージ漏れでした、、、ごめんなさい）
+
+2003-05-11  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/nnshcmn.c:
+    * Src/msgview.c:
+    * Src/msglist.c:
+    スレタイトルの半角カナ→全角カナ変換を実装。
+    （モバ板の３８３さん、ありがとうございます！）
+
+2003-05-10  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/nnshset.c:
+    * Inc/messages.h:
+    ハードキー制御で、JOG PUSH/BACK 上下は、「制御しない」ではなく「NNsiで
+    制御」と表示するよう変更
+
+    * Src/windows.c:
+    選択メニューで、上下をシームレスにつないでみる
+
+2003-05-10  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/machine.c:
+    シルク上下時に、消えているオブジェクトが移動しなかった不具合を修正。
+
+2003-05-10  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/nnshmain.c:
+    HandEra 330のジョグダイヤルが有効でなかった不具合を修正。
+
+    * Src/msgwrite.c:
+    連続書き込みができるよう修正(名無しさん@三村さん！ありがとうございます！)
+
+2003-05-09  MRSa  <mrsa@users.sourceforge.jp>
+    * Src/machine.c:
+    モーダルフォームはシルク上下時にリサイズしないようにした。
+    画面リサイズ時に消しているオブジェクトを表示される不具合を修正。
+
+2003-05-08  MRSa  <mrsa@users.sourceforge.jp>
+	* Rsc/nnsh.rcp.noicon:
+	* Rsc/nnsh.rcp.icon:
+    * Src/msgwrite.c:
+	スレ立てメニューの前のセパレータを削除。
+    書き込み後の応答コードの解析部分を修正。
+    書き込みシーケンスタイプ２で、待ちを入れる個所を増やした。
+
+2003-05-07  MRSa  <mrsa@users.sourceforge.jp>
+	* Rsc/nnsh.rcp.noicon:
+	* Rsc/nnsh.rcp.icon:
+	* Src/nnshset.c:
+	* Inc/symbols.h:
+        NNsi設定-6のジョグボタン設定項目(Goと等価にする項目)を削除。
+
+2003-05-07  MRSa  <mrsa@users.sourceforge.jp>
+	* Src/msgwrite.c:
+        スレ立て機能の仮実装。（動作確認はまだ）
+
+2003-05-06  MRSa  <mrsa@users.sourceforge.jp>
+	* Src/filemgr.c(AppendFileAsURLEncode_NNsh):
+        ハンドル名が１バイトだったとき、うまく出力できなかった不具合を修正。
+
+2003-05-06  MRSa  <mrsa@users.sourceforge.jp>
+	* Rsc/nnsh.rcp.noicon:
+	* Rsc/nnsh.rcp.icon:
+	* Inc/symbols.h:
+	* Inc/messages.h:
+	* Src/main.c:
+	* Src/msgwrite.c:
+	* Src/nnshmain.c:
+	スレ立て機能の実装準備（スレ立て用画面を追加しただけ。実際に書き込む
+	処理は未実装。）
+
+2003-05-05  MRSa  <mrsa@users.sourceforge.jp>
+	* Rsc/nnsh.rcp.noicon:
+	* Rsc/nnsh.rcp.icon:
+	* Inc/symbols.h:
+	* Src/bbsmng.c:
+	* Src/msgview.c:
+	* Src/msgmgr.c:
+	* Src/nnshmain.c:
+	スレを取得したとき、板別にスレレベルをあらかじめ設定できるようにした
+
+2003-05-04  MRSa  <mrsa@users.sourceforge.jp>
+	* Rsc/nnsh.rcp.noicon:
+	* Rsc/nnsh.rcp.icon:
+	* Inc/symbols.h:
+	* Src/msgview.c:
+	* Src/nnshmain.c:
+	ハードキー制御で、ダミー画面へ遷移する設定をできるようにした
+
+2003-05-03  MRSa  <mrsa@users.sourceforge.jp>
+	* Rsc/nnsh.rcp.noicon:
+	* Rsc/nnsh.rcp.icon:
+	* Inc/symbols.h:
+	* Inc/messages.h:
+	* Inc/struct.h:
+	* Src/machine.c:
+	* Src/nnshset.c:
+	* Src/main.c:
+	起動時にパスワードを入力して画面を開く機能を追加
+
+2003-05-03  MRSa  <mrsa@users.sourceforge.jp>
+	* Src/msgview.c(selEvt_KeyDown_DispMessage): 
+	参照画面の上下ハードキーに機能を割り当てる
+
+2003-05-03  MRSa  <mrsa@users.sourceforge.jp>
+	* Rsc/nnsh.rcp.noicon:
+	* Rsc/nnsh.rcp.icon:
+	* Src/machine.c: 
+	* Src/msgview.c: 
+	参照画面のハードキー制御処理実装。（それにあわせた参照画面の修正。）
+
+2003-05-01  MRSa  <mrsa@users.sourceforge.jp>
+	* Rsc/nnsh.rcp.noicon:
+	* Rsc/nnsh.rcp.icon:
+	* Src/nnshset.c:
+	NNsi設定-1のハードキー詳細設定部分で、一度開くと選択文字列が同じに
+	なってしまう不具合を修正。
+	参照画面のハードキー制御データ入力、格納部分を追加。（制御は未実装）
+
+	* Src/msgwrite.c:
+	書き込み途中のレスを保存するとき、自動的にレス番号を入れたときでも
+	保存してしまい、次回開いたときでも前回のレス番号となってしまう不具合を
+	修正する。
+
+2003-04-30  MRSa  <mrsa@users.sourceforge.jp>
+	* Rsc/nnsh.rcp.noicon:
+	* Rsc/nnsh.rcp.icon:
+    ハードキー制御セレクタトリガをNNsi設定-1画面に集約させる。
+
+2003-04-29  MRSa  <mrsa@users.sourceforge.jp>
+	* Rsc/nnsh.rcp.noicon:
+	* Rsc/nnsh.rcp.icon:
+	* Src/nnshset.c:
+	* Src/msgview.c:
+	* Inc/struct.h:
+	参照画面の文字色、背景色を指定できるようにする。
+	参照画面でジャンプフィールドに数字が入力できなかった不具合を修正する。
+
+	* Src/subjmgr.c:
+	ユーザ設定タブのスレ立て日チェックをUTC時刻を基準にしていたが、JSTを
+	基準に変更してみる。
+
+2003-04-29  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Rsc/nnsh.rcp.noicon:
+	* Rsc/nnsh.rcp.icon:
+	* Src/nnshset.c:
+	* Src/msglist.c:
+	* Inc/struct.h:
+	一覧画面の上下ボタンの色を設定できるようにする。
+
+2003-04-28  MRSa  <mrsa@users.sourceforge.jp>
+
+	* makefile:
+	eclipse用に一応作ってみる。
+
+	* Rsc/nnsh.rcp.noicon:
+	* Rsc/nnsh.rcp.icon:
+	* Src/nnshset.c:
+	* Src/subjmgr.c:
+	* Inc/struct.h:
+	ユーザ設定タブに、「スレ立てｎ日以降」の条件を追加する。
+
+2003-04-27  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/nnshset.c:
+	キーが入力できなくなっていた不具合を修正する。
+	* Src/offline.c:
+	OFFLINEスレの「一覧」を検索すると、スレが重複する不具合を修正する。
+	* Src/bbsmng.c:
+	イベントが受け付けられない不具合を修正する。
+	板一覧の表示が２つ欠ける不具合を修正する。
+
+2003-04-26  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Rsc/nnsh.rcp.icon:
+	* Rsc/nnsh.rcp.noicon:
+	* Src/nnshset.c:
+	* Src/inoutXML.c:
+	* Inc/messages.h:
+	* Inc/struct.h:
+	NNsi設定画面の整理。NNsi設定1～9の並びをセレクタトリガに合わせる。
+	ハードボタン制御の機能を拡張する
+	（ボタン個別で有効/無効を選択できる、ＪＯＧと等価にするオプション追加）
+
+2003-04-25  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/main.c (MyApplicationDispatchEvent): 
+	SONYデバイスのKey入力確認用デバッグコードを追加。
+
+2003-04-23  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/nnshmain.c (delete_notreceived_message): 
+	* Src/bbsmng.c (Create_BBS_INDEX): 
+	板タブの順番を変更。「未読あり」を先頭に、「お気に入り」を３番目に。
+	全未取得スレタイトル削除機能を「未読あり」タブでも有効にする。
+
+2003-04-22  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/windows.c (NNsi_HRSclUpdate): 
+	改行コードがないときにスクロールバーを表示させようとして落ちる不具合を
+	修正する。
+
+2003-04-21  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/nnshmain.c (executeAction): 
+	応答コードを全てtrueに変更する。
+
+	* Src/machine.c (checkVFSdevice_NNsh): 
+	VFSを自動的にONした時でも、ＤＢインポート画面を表示させないようにする。
+
+	* Src/nnshset.c (Handler_NNshSetting): 
+	NNsi設定画面で、PalmOS3.1デバイスでNG設定１、NG設定２の設定後画面が
+	真っ白になる不具合を修正する。
+
+2003-04-20  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/nnshset.c (OpenForm_NNsiSettingA): 
+	Import/Exportが機能していないとき、ラベルが消えない不具合を修正。
+
+2003-04-19  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Rsc/nnsh.rcp.icon:
+	* Rsc/nnsh.rcp.noicon:
+	* Src/skeleton.c (PilotMain): 
+	* Src/main.c (MyApplicationDispatchEvent): 
+	* Src/nnshmain.c (keyDownEvt_ThreadMain): 
+	一覧画面でハードキーを使用する設定を追加。
+
+	* Src/nnshset.c (Handler_NNshSetting): 
+	* Src/inoutXML.c (Output_NNsiSet_XML): 
+	XML形式のNNsi設定ファイルを逐次出力していたのを一括で出力するよう変更。
+	XML形式のデータインポート後に画面を再描画するよう変更。
+
+2003-04-19  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Rsc/nnsh.rcp.icon:
+	* Rsc/nnsh.rcp.noicon:
+	* Src/nnshset.c:
+	* Src/inoutXML.c (Input_NNsiSet_XML): 
+	XML形式のNNsi設定ファイルをVFS/Palmデバイスから読み出し設定する機能を
+	追加。（「NNsi設定」画面にImport/Exportボタンを追加する）
+
+	
+2003-04-18  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/inoutXML.c:
+	* Inc/xmldefs.h:
+	NNsi設定をXML形式でVFS/Palmデバイス内に出力する機能を追加。
+	
+2003-04-17  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Rsc/nnsh.rcp.icon:
+	* Rsc/nnsh.rcp.noicon:
+	* Src/nnshset.c:
+	NNsi設定の表示アイテム配置を一部変更。
+
+	* Src/machine.c (NNshRestoreNNsiSetting): 
+	NNsi設定の初期設定アイテムを一部変更。
+
+	* Src/nnshmain.c (OpenForm_ThreadMain): 
+	BBS一覧が未取得なとき、画面リフレッシュが不完全だった不具合を修正。
+
+2003-04-16  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/main.c:
+	* Src/nnshset.c (Handler_NNshSetting): 
+	* Src/nnshcmn.c (CheckNGWordString): 
+	* Src/msgview.c (checkHideMessage): 
+	参照画面で使用するNG設定文字列を複数指定可能にしてみる。
+	(セパレータは、',')
+
+2003-04-16  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/msgwrite.c (selEvt_Control_WriteMessage): 
+	書き込みメッセージをクリアするとき、クリアしてよいか
+	確認するよう仕様変更。
+
+	* Rsc/nnsh.rcp.icon:
+	* Src/nnshset.c:
+	項目を整理。
+	書き込み画面でメッセージを自動保存することができるよう設定を追加。
+
+2003-04-15  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/nnshmain.c (OpenForm_ThreadMain): 
+	ＢＢＳ未取得時にはボタンキャプションが反映されなかった不具合に対処。
+
+	* Rsc/nnsh.rcp.icon:
+	* Src/nnshset.c:
+	NNsi設定(概略)とNNsi設定-9を追加。
+	NNsi設定-7, 8は、DB更新フラグを立てずに終了していた不具合を修正。
+	設定項目を移動・整理する。
+
+2003-04-14  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/nnshset.c:
+	Proxy設定をNNsi設定-2に移動、ハンドル設定をNNsi設定-3に移動
+
+2003-04-14  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/windows.c (NNsh_DialogMessage): 
+	ダイアログ省略部分の仕様を既存仕様と互換にするよう変更する。
+
+2003-04-13  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Rsc/nnsh.rcp.noicon:
+	* Rsc/nnsh.rcp.icon:
+	* Src/windows.c:
+	* Src/nnshmain.c:
+	* Src/nnshset.c:
+	確認ダイアログの省略を詳細化する
+	(警告/情報/確認のダイアログ別に表示する/しないを設定できるようにする)
+
+	* Src/nnshcmn.c (getOSFreeMem): 
+	空きメモリ容量を取得する関数をPalmSourceのKnowledgeBaseから持ってくる
+
+	* Rsc/nnsh.rcp.noicon:
+	* Rsc/nnsh.rcp.icon:
+	* Src/windows.c (NNshWinViewResizeFieldHeight):  ※ 関数を削除 ※
+	フィールドの DYNAMICSIZE 指定を誤解していた部分を修正。
+
+	* Src/msgview.c (menuEvt_DispMessage): 
+	* Src/msgwrite.c(menuEvt_WriteMessage): 
+	* Src/nnshcmn.c (ShowDeviceInfo_NNsh): 
+	デバイス情報表示画面を新規追加。それにあわせ、参照画面と書き込み画面の
+	バージョン情報表示画面と入れ換える。
+
+2003-04-12  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/msgview.c (menuEvt_DispMessage): 
+	* Src/msgwrite.c (menuEvt_WriteMessage): 
+	スレ参照画面とレス書き込み画面でもバージョン情報を表示可能にする。
+
+	* Inc/messages.h: 
+	* Src/nnshmain.c (show_version): 
+        バージョン情報画面に現在時刻とバッテリ残量を表示するよう拡張する。
+
+2003-04-10  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/windows.c (NNshWinSelectionWindow): 
+	選択ウィンドウで、アイテムが指定されなかったときにFatal Errorになる
+	不具合に対処する。
+
+2003-04-08  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/nnshmain.c (get_all_message): 
+	ディスク空き容量が不足しても、スレダブルタップで未取得スレをオープン
+	する不具合を修正する
+
+	* Src/msgmgr.c (message_appendMessage): 
+	ディスク空き容量チェック/ワーク領域確保チェック時にエラーとなった
+	とき、エラー応答するよう変更する。
+
+2003-04-07  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/msgmgr.c (message_entryMessage): 
+	* Src/msgmgr.c (message_appendMessage): 
+	* Src/filemgr.c (CheckFileSpace_NNsh): 
+	ディスク空き容量のチェック関数を追加。
+
+2003-04-06  MRSa  <mrsa@users.sourceforge.jp>
+	* Inc/struct.h: 
+	* Inc/symbols.h:
+	* Src/nnshmain.c:
+	* Src/nnshset.c:
+	* Rsc/nnsh.rcp.noicon:
+	* Rsc/nnsh.rcp.icon:
+	NGキーワードのバッファサイズを拡張(48→160)
+	NNsi設定-8に「NG設定に正規表現を使用」を追加
+	※※ 実際の正規表現処理はまだ入っていない...(現在作成中) ※※
+
+	* Src/subjmgr.c (CheckIfCustomTabIsValid): 
+	スレ状態のエラーチェックが動作しない不具合を修正する。
+
+	* Src/subjmgr.c (parse_SubjectList): 
+	スレタイ取得時に、bbsTypeを格納するよう修正。
+        (微妙にコードを修正。)
+	
+	* Rsc/nnsh.rcp.noicon:
+	* Rsc/nnsh.rcp.icon:
+	* Src/nnshset.c:
+	NNsi設定-8に、「まちBBS/したらば@JBBSも新着確認」を追加
+
+	* Src/nnshmain.c (checkIfNewArrivalIsValid): 
+	まちBBS/したらば@JBBも新着確認する場合のことを考慮する
+
+	* Src/nnshmain.c (get_subject_txt): 
+	未読ありタブで、スレ一覧取得を実行してしまう不具合を修正
+
+2003-04-05  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/machine.c (NNshRestoreNNsiSetting): 
+	標準設定で、一覧表示時に重複確認を実施するように変更する
+	標準設定で、新着確認実施時にエラーになれば再取得するよう変更する
+	標準設定で、通信タイムアウト発生時、１回再試行するよう変更する
+
+	* Src/msgview.c (jumpMessage): 
+	* Inc/symbols.h (NNSH_LIMIT_COPYBUFFER): 
+	「全選択＋Webブラウザで開く」の最大コピーバッファサイズを2000にする
+	(特に意味はない...)
+	「全選択＋Webブラウザで開く」でコピーバッファ内にURLがなかったとき、
+	画面が真っ白になる不具合に対処。
+
+2003-04-04  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Rsc/nnsh.rcp.noicon:
+	* Rsc/nnsh.rcp.icon:
+	* Src/nnshset.c:
+	* Src/msgwrite.c (selEvt_KeyDown_WriteMessage): 
+	書き込み画面でJOG PUSHを無効にする設定を追加。(NNsi設定-8)
+	
+2003-04-02  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Rsc/nnsh.rcp.noicon:
+	* Rsc/nnsh.rcp.icon:
+	* Src/main.c:
+	* Src/nnshset.c:
+	* Src/nnshmain.c:
+	NNsi設定-8を追加(とりあえず追加しただけ。)
+
+2003-04-02  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/nnshmain.c (update_newarrival_message): 
+	* Src/msgmgr.c (GetThreadDataFromMesNum): 
+	スレ番指定取得の保留機能を実装する。(Databaseを１つ追加)
+	※ スレ番指定取得の保留については、ＤＢのバックアップは実施しない。 ※
+
+2003-04-01  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/nnshset.c (keyDownEvt_NNshSetting): 
+	NNsi設定画面で、ジョグダイヤル/ハードキー上下で設定画面を移れるように
+	修正する。
+
+2003-04-01  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/nnshmain.c (delete_notreceived_message): 
+	「取得済み全て」タブで、未取得一覧削除を実施すると、全未取得一覧を
+	削除するように仕様を追加する。
+
+	* Src/subjmgr.c (CheckIfCustomTabIsValid): 
+	ユーザ設定タブで最大メッセージ数を超えていたときの判定が間違って
+	いた不具合を修正する。
+
+	* Src/subjmgr.c (DeleteSubjectList): 
+	未取得のスレを全て削除できるオプションを用意する。
+	
+	* Src/msgwrite.c (OpenForm_WriteMessage): 
+	書き込み時のフォームタイトルにスレ名を表示するよう変更
+
+2003-03-23  itty  <itty@users.sourceforge.jp>
+
+	* Src/subjmgr.c (parse_SubjectList): 
+	* Src/dbmgr.c (GetExistRecordList): 
+	重複チェックのロジックの見直し。
+
+2003-03-23  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/msgwrite.c (OpenForm_WriteMessage): 
+	書き込み画面オープン時にスレ参照番号がレス記入フィールドに反映され
+	なかった不具合を修正。
+
+	* Src/msgmgr.c:
+	データファイルサイズの初期化(0)が行われていなかった不具合を修正。
+	dat落ちスレを再取得すると既読位置が初期化される不具合を修正。
+
+	* Src/subjmgr.c (CheckIfCustomTabIsValid): 
+	ユーザ設定のスレ状態チェックが「ＡＮＤ」になっていた不具合を修正。
+
+2003-03-23  itty  <itty@users.sourceforge.jp>
+
+	* Src/subjmgr.c (parse_SubjectList): 
+	* Src/dbmgr.c (GetExistRecordList): 
+	取得していない板で一覧を実行した時に fatal になる不具合修正。
+
+2003-03-21  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/subjmgr.c (CheckIfCustomTabIsValid): 
+	ユーザ設定の文字列条件チェックが「ＡＮＤ」になっていた不具合を修正。
+	ユーザ設定のログ位置チェックがまともに動いていなかった不具合を修正。
+	ユーザ設定の文字列条件チェックが有効だとすべての条件で有効になる
+	不具合を修正。
+
+	* Src/nnshset.c (Handler_FavorTabSet): 
+	ユーザ設定のスレタイ文字列条件設定が変更できなかった不具合を修正。
+
+
+2003-03-21  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Inc/symbols.h: 
+	* Src/machine.c: 
+	ユーザ設定１の初期値設定を「取得エラー」タブに、
+	ユーザ設定２の初期値設定を「Palm関連」タブに設定する。
+
+	* Src/nnshmain.c (update_newarrival_message): 
+	ユーザ設定１およびユーザ設定２の新着確認部分の不具合を修正。
+	
+
+2003-03-20  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/bbsmng.c: 
+	* Src/msgview.c: 
+	* Src/msgwrite.c: 
+	* Src/nnshmain.c: 
+	* Src/windows.c: 
+	* Src/machine.c: 
+	T|Tの5way navigator割り当てを、カーソルキー左右に変更し、それにあわせた
+	修正を行う。
+
+	* Src/nnshmain.c: 
+	OS3.1使用時、NGキーワードおよびスレタイ変更後画面が真っ白になってしまう
+	不具合を修正する。
+
+	* Src/nnshset.c:
+	ユーザ設定画面のＢＢＳリスト割り当て方法を変更。
+
+2003-03-20  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Inc/symbols.h: 
+	* Inc/sections.h: 
+	* Inc/proto.h: 
+	* Rsc/nnsh.rcp.icon:
+	* Src/windows.c:
+	* Src/subjmgr.c:
+	* Src/nnshset.c:
+	* Src/nnshmain.c:
+	* Src/msglist.c:
+	ユーザ設定タブの条件設定を一通り作りこんだ
+	(スレ状態の確認ロジックが間違っていたのを修正)
+	(検索文字列の指定チェックボックスを消去すると詳細の
+	リストが初期化される不具合を修正する)
+
+2003-03-19  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/nnshmain.c (get_message_Info): 
+	ユーザ設定タブ１と２のタブを取得するようにした
+
+2003-03-19  itty  <itty@users.sourceforge.jp>
+
+	* Src/subjmgr.c: 
+	* Src/dbmgr.c: 
+	* Inc/symbols.h: 
+	* Inc/sections.h: 
+	* Inc/proto.h: 
+	* Inc/messages.h: 
+	スレの重複チェックロジックおよび一覧表示の高速化。
+
+2003-03-19  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/nnshset.c:
+	* Src/msglist.c (checkCustomListCondition): 
+	ユーザ設定タブの条件設定実装(しただけ)
+	NNsi設定のユーザ設定部分を構造体にしてみた
+	
+2003-03-17  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/nnshmain.c:
+	* Src/nnshset.c:
+	* Rsc/nnsh.rcp.icon: 
+	* Inc/struct.h:
+	* Inc/symbols.h:
+	ユーザ設定タブ１と２を追加した。（まだ追加しただけ）
+
+	* Src/bbsmng.c:
+	BBSインデックス領域が解放されていなかった部分を開放するよう変更
+
+2003-03-16  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Rsc/nnsh.rcp.noicon: 
+	* Rsc/nnsh.rcp.icon: 
+	* Src/main.c:
+	* Src/nnshset.c:
+	「お気に入り」条件設定画面を作成した。（制御ロジックは未作成）
+
+	*Src/msgview.c:
+	NGキーワードが合致したとき、Fatal Errorが出る不具合を修正。
+	
+2003-03-16  itty  <itty@users.sourceforge.jp>
+
+	* Src/nnshcmn.c: 
+	StrCopyEUC(), StrCopySJ() で '\0' もコピーするように変更。
+	
+2003-03-14  itty  <itty@users.sourceforge.jp>
+
+	* Src/msgview.c (NNsh_Search_Message): 
+	EUCのBBSでのスレ内検索、対応したつもり。
+	(EUCのBBSの取得方法が分からないので未確認(^^;)
+
+2003-03-13  itty  <itty@users.sourceforge.jp>
+
+	* Src/msgview.c: 
+	* ArmSrc/armc0002.c (ParseMessage_ARM): 
+	ARMlet使用時、jump リストが正常動作しなくなってたのを修正。
+	(スレ内検索の変更時にエンバグさせてしまった(^^;)
+
+2003-03-12  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/msgwrite.c (threadWrite_Message): 
+	書き込みエラーでダイアログを表示せずに終了することがあった不具合を
+	修正する。
+	書き込み後のしたらばタイプ板で差分取得を実施できるように修正する。
+	書き込み後の応答メッセージ表示は、当面２ちゃんねるのみに変更する。
+	* Src/msgview.c:
+	したらば、したらば＠ＪＢＢＳに対しての書き込み制限を解除。
+
+2003-03-12  itty  <itty@users.sourceforge.jp>
+
+	* Src/msgview.c: 
+	* Inc/sections.h: 
+	* ArmSrc/armc0002.c (ParseMessage_ARM): 
+	スレ内検索でファイルの内容で検索すると
+	表示されていない内容でも検索に引っかかる事があるため、
+	表示されている内容でも検索するようにした。
+
+2003-03-12  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/msgwrite.c: 
+	* Src/httpmgr.c (NNshHttp_createPostMsg): 
+	したらば および したらば＠ＪＢＢＳ書き込み用に調整
+
+2003-03-12  itty  <itty@users.sourceforge.jp>
+
+	* Src/nnshset.c: 
+	* Src/main.c (MyStartApplication): 
+	* Src/machine.c: 
+	* Src/dbmgr.c (GetDBInfo_NNsh): 
+	* Src/bbsmng.c (Create_BBS_INDEX): 
+	* Rsc/nnsh.rcp.noicon: 
+	* Rsc/nnsh.rcp.icon: 
+	* Inc/symbols.h: 
+	* Inc/struct.h: 
+	* Inc/sections.h: 
+	* Inc/proto.h: 
+	* Inc/messages.h: 
+	起動時 VFS にある DB を IMPORT 出来るようにした。
+	(複数のデバイスでの起動が行いやすくなるはず)
+
+2003-03-11  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/subjmgr.c (GetSubjectIndex): 
+	* Src/main.c (MyStopApplication), (MyStartApplication): 
+	* Src/msgview.c:
+	しおり設定使用時のスレＩＤ記憶方法に不具合があったので修正する
+	（スレ一覧を更新すると、スレレコード番号が変わってしまうことを考慮
+	  していなかった）
+	（しおり設定していないでスレ参照中にNNsiを終了させると、レコード番号
+	  ０のスレをオープンしていた）
+
+	* Src/msgview.c (jumpMessage): 
+	Go選択メニューに「しおり設定」アイテムを追加する
+
+2003-03-10  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/nnshcmn.c (ConvertSJtoJIS): 
+	* Src/nnshcmn.c (ConvertSJtoEUC): 
+	漢字コード変換ロジックをマジメに実装してみた
+	(またもや奥村さんのコードを参考にさせていただいた)
+
+	* Rsc/nnsh.rcp.icon: 
+	* Rsc/nnsh.rcp.noicon: 
+	* Inc/struct.h: 
+	* Src/nnshset.c:
+	* Src/msgview.c (checkHideMessage): 
+	* Src/nnshmain.c (executeAction): 
+	NGワードを登録し、レスを表示しないような機能を実装
+	(ただし、積極的には使って欲しくないため、ＵＩは適当)
+
+2003-03-09  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/msgview.c (displayMessage): 
+	メッセージを表示するとき、確保領域の方法を変更
+
+2003-03-08  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/msgwrite.c (Handler_WriteMessage): 
+	* Src/windows.c (NNshWinNewViewResizeFieldHeight): 
+	フィールドサイズが更新されたときの処理を修正
+
+	* Src/msgview.c (displayMessageSub): 
+	ARMlet使用時、レス番がずれる不具合があったのを修正
+
+2003-03-07  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/bbsmng.c (Handler_SelectBBS): 
+	使用BBS選択画面で、HandEraのシルク拡大/縮小に対応していなかった
+	不具合を修正
+	
+	* Src/nnshmain.c (change_handera_rotate): 
+	スレ一覧画面でHandEra画面回転を実施したときタイトル一覧が表示
+	されない不具合を修正
+
+	* Src/nnshmain.c (update_newarrival_message): 
+	新着確認時にエラーがでたら再取得した場合、読んでいる位置を
+	復旧させるようにする
+	
+	* Src/nnshmain.c (updateMultiPurposeSwitch): 
+	ゾーン表示モードを設定しても複数レスが表示できなかった不具合を修正
+
+2003-03-07  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/msgmgr.c (message_appendMessage): 
+	差分取得時の書き込みファイルオープンタイミングを変更。
+	
+2003-03-07  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Rsc/nnsh.rcp.icon: 
+	* Rsc/nnsh.rcp.noicon: 
+	* Inc/struct.h: 
+	* Src/nnshset.c:
+	* Src/subjmgr.c (entryNotExistSubject): 
+	スレタイがダブらないようにすることもできるようにしてみた。
+	（ただし、実用的な速度ではない...）
+	一覧画面ボタン４を他ボタンと同じ大きさにしてみた。
+
+2003-03-06  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Rsc/nnsh.rcp.icon: 
+	* Rsc/nnsh.rcp.noicon: 
+	* Inc/struct.h: 
+	* Src/nnshset.c:
+	* Src/nnshmain.c (open_menu): 
+	選択メニューの選択肢に"NNsi終了"を追加できるようにする
+	一覧画面の（タイトル一覧表示領域の）背景色を設定可能にする
+
+2003-03-05  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/nnshmain.c (search_NextTitle): 
+	スレタイ検索で、「一覧なし」の時に検索を実行したときの不具合に対処。
+
+2003-03-04  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/msgmgr.c (message_entryMessage): 
+	全取得時のデータファイル消去タイミングを変更する。
+
+2003-03-03  MRSa  <mrsa@users.sourceforge.jp>
+	* Rsc/nnsh.rcp.icon: 
+	* Rsc/nnsh.rcp.noicon: 
+	* Inc/struct.h: 
+	* Src/nnshset.c:
+	* Src/msgview.c:
+	レスゾーン表示モードの実装。(それっぽく動いている。)
+
+2003-03-02  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Rsc/nnsh.rcp.icon: 
+	* Rsc/nnsh.rcp.noicon: 
+	* Inc/struct.h: 
+	* Src/nnshset.c:
+	* Src/windows.c (NNsi_HRFldDrawField): 
+	* Src/msgview.c:
+	メッセージの末尾から表示できるようにする。
+	(とりあえずグラフィック描画モードで有効)
+
+2003-03-01  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/msgview.c (displayMessageSub): 
+	名前欄の数字をレス番号として認識できるよう修正
+	
+	* Inc/symbols.c:
+	* Inc/struct.c:
+	* Src/machine.c:
+	* Src/nnshset.c:
+	* Src/nnshmain.c:
+	一覧画面のジョグPUSH/ジョグBACKボタンを変更できるように修正
+
+2003-02-28  itty  <itty@users.sourceforge.jp>
+
+	* Src/nnshmain.c (menuEvt_ThreadMain): 
+	スレ番指定のメッセージ取得のエンバグ修正
+
+2003-02-28  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Rsc/nnsh.rcp.icon: 
+	* Rsc/nnsh.rcp.noicon: 
+	* Inc/struct.h: 
+	* Src/nnshset.c:
+	* Src/nnshmain.c (update_newarrival_message): 
+	新着確認中に取得エラーが発生した場合、最初から取得しなおす
+	NNsi設定を追加する
+
+	* Src/machine.c (NNshRestoreNNsiSetting): 
+	* Src/main.c (MyStartApplication): 
+	OSバージョンを起動時に取得するよう変更し、非カラーサポートOS
+	(PalmOS 3.5以上)の場合には、NNsh設定初期化時にカラー設定をしないよう
+	変更する。(これでNNsi.prcがOS3.1デバイスでも起動する)
+
+	* Rsc/nnsh.rcp.icon: 
+	* Rsc/nnsh.rcp.noicon: 
+	* Inc/struct.h: 
+	* Src/nnshset.c:
+	* Src/nnshmain.c:
+	* Src/machine.c (NNshRestoreNNsiSetting): 
+	一覧画面でハードキー上下も機能割り当てをできるようにした
+
+2003-02-28  itty  <itty@users.sourceforge.jp>
+
+	* Src/msgview.c (NNsh_Search_Message): 
+	検索結果がみつからなかった時、メッセージ再表示処理追加(OS3.1用)
+	
+2003-02-27  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/msgview.c (Handler_NNshMessage): 
+	UpdateFieldRegion()のtypoを修正。(USE_HANDERA有効時に使用するロジック)
+
+2003-02-27  itty  <itty@users.sourceforge.jp>
+
+	* Src/msgview.c: 
+	* Src/machine.c: 
+	* Inc/struct.h: 
+	* Inc/sections.h: 
+	* Inc/proto.h: 
+	* Inc/local.h:
+	参照画面(グラフィック描画時)で画面タップを「上下ボタン」と同等の処理追加
+	
+2003-02-26  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/bbsmng.c (ctlSelEvt_SelectBBS): 
+	使用BBS選択に「詳細」ボタンを追加する
+
+	* Rsc/nnsh.rcp.icon: 
+	* Rsc/nnsh.rcp.noicon: 
+	* Inc/messages.h:
+	* Src/bbsmng.c (entryBBSRecord): 
+	BBS情報の編集機能を追加
+
+	* Rsc/nnsh.rcp.icon: 
+	* Rsc/nnsh.rcp.noicon: 
+	* Inc/symbols.h (MULTIBTN_FEATURE_xxx): 
+	* Src/nnshmain.c (executeAction): 
+	多目的ボタン作成にあわせ、スレ一覧画面を全面変更。(大部分の機能を、
+	executeAction()経由で実行するよう変更する。)
+	関数コールの多層化にあわせ、スタックサイズを8192から10240に拡張。
+	※ 実行速度が心配... ※
+
+2003-02-25  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Inc/symbols.h:
+	* Inc/struct.h:
+	* Rsc/nnsh.rcp.icon: 
+	* Rsc/nnsh.rcp.noicon: 
+	* Src/nnshset.c:
+	NNsi設定-7に多目的ボタンの設定項目を追加
+	(現状、ボタンキャプションのみ利用)
+
+	* Src/machine.c (NNshRestoreNNsiSetting): 
+	NNsi設定の初期化コードに多目的ボタンの初期値を追加
+
+	* Src/nnshmain.c (OpenForm_ThreadMain): 
+	左側ボタンのキャプションをpreferenceから取得するよう変更
+
+2003-02-23  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Inc/messages.h (NNSH_MSGINFO_RESERVE): 
+	* Src/msgmgr.c (DisplayMessageInformations): 
+	取得予約スレの情報を表示するよう変更
+
+	* Src/windows.c (NNshWinViewPageScroll): 
+	* Src/msgview.c (sclRepEvt_DispMessage): 
+	通常描画モードでスクロールバーを動かすと、末尾までメッセージが表示
+	されない不具合に対処する
+
+	* Rsc/nnsh.rcp.icon: 
+	* Rsc/nnsh.rcp.noicon: 
+	「全選択＋Web」の表記を「全選択後にWeb」へ変更する
+	通常モード/検索モードのアイコンを追加
+
+	* Src/msgmgr.c (DisplayMessageInformations): 
+	i-mode用のブラウザを開くとき、うまく開くことができなかった不具合を修正
+
+	* Src/machine.c (convertFormID): 
+	NNsi更新時にFatal Errorが出ていた不具合を修正。
+	(PreferenceにformIDを記憶していたが、リソースの変更でIDがずれていた)
+	
+
+2003-02-20  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/msgmgr.c (Get_MessageFromMesNum): 
+	差分取得のときにエラーが発生していても正常応答していた不具合を修正
+
+2003-02-20  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/nnshset.c:
+	* Src/netent.c (NNshHttp_comm): 
+	* Rsc/nnsh.rcp.icon: 
+	* Rsc/nnsh.rcp.noicon: 
+	* Inc/symbols.h:
+	* Inc/struct.h:
+	通信タイムアウト時自動リトライする機能を追加
+
+	* Src/nnshset.c (OpenForm_NNsiSetting5): 
+	* Rsc/nnsh.rcp.icon: 
+	* Rsc/nnsh.rcp.noicon: 
+	* Inc/struct.h:
+	* Inc/symbols.h:
+	* Src/msgmgr.c:
+	* Src/nnshmain.c:
+	* Src/nnshset.c:
+	* Src/msgmgr.c:
+	i-mode用のURLを使用する設定を追加
+
+2003-02-19  MRSa  <mrsa@users.sourceforge.jp>
+	* Src/msgview.c (selEvt_KeyDown_DispMessage): 
+	書き込みは、２ちゃんねるおよびまちＢＢＳのみ可能にした。
+	(よく考えたら、SJ -> EUC変換も必要だった...仕切りなおし。)
+
+2003-02-18  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/bbsmng.c (parseBoard): 
+	* Src/nnshset.c:
+	* Rsc/nnsh.rcp.icon: 
+	* Rsc/nnsh.rcp.noicon: 
+	BBS一覧取得時に、BBS一覧を消去せず上書きする設定を追加した
+
+2003-02-17  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Rsc/nnsh.rcp.icon: 
+	* Rsc/nnsh.rcp.noicon: 
+	参照画面でスクロールバーのゴミが出るのを修正
+	選択メニューを「描画モード変更」に統一
+
+2003-02-16  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Rsc/nnsh.rcp.icon: 
+	* Rsc/nnsh.rcp.noicon: 
+	* Src/msgview.c: 
+	しおり設定をメニューに移動させ、検索モードのスイッチを上に移動。
+
+2003-02-16  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Inc/symbols.h:
+	* Inc/sections.h:
+	* Inc/messages.h:
+	* Rsc/nnsh.rcp.icon: 
+	* Rsc/nnsh.rcp.noicon: 
+	* Src/subjmgr.c:
+	* Src/nnshmain.c:
+	* Src/msgmgr.c:
+	* Src/msgview.c
+	* Src/bbsmng.c (entryBBSRecord): 
+	したらば/したらば@JBBSの読み出しエンジンを追加する。
+	* Src/bbsmng.c (closeForm_SelectBBS): 
+	メモリリークしていた領域を解放するよう変更する。
+
+2003-02-16  itty  <itty@users.sourceforge.jp>
+
+	* Inc/local.h: 
+	* Inc/messages.h (NNSH_MSGINFO_NOTFOUND): 
+	* Src/nnshmain.c (modify_title, set_SearchTitleString): 
+	* Src/msgview.c
+	* Inc/proto.h (DataInputDialog): 
+	* Inc/sections.h: 
+	* Src/msgmgr.c (Get_MessageFromMesNum): 
+	* Src/bbsmng.c (Handler_SelectBBS): 
+	* Src/windows.c (DataInputDialog): 
+	* Rsc/nnsh.rcp.icon: 
+	* Rsc/nnsh.rcp.noicon: 
+	* Inc/symbols.h: 
+	* Inc/struct.h: 
+	スレ内検索対応
+
+2003-02-15  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Rsc/nnsh.rcp.noicon: 
+	「Go」「戻」「書込」ボタンの幅を調整する(OS31NNsi.prc)
+
+2003-02-15  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Rsc/nnsh.rcp.icon: 
+	* Rsc/nnsh.rcp.noicon: 
+	* Src/msgview.c (outputMemoPad): 
+	メモ帳へ出力する機能を追加する(参照画面)
+
+2003-02-13  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/nnshcmn.c (SendToLocalMemopad): 
+	指定された文字列をメモ帳へ吐き出す関数を追加する。
+	（まだテストは行っていない。）
+	
+
+2003-02-12  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/nnshcmn.c　(ConvertEUCtoSJ): 
+	漢字コードをEUCからShift JISに変換するルーチンを追加する。
+	(まだ関数ヘッダ等には追加していない。)
+
+2003-02-12  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/msgview.c (openWebBrowser): 
+	「選択文字列をブラウザで」の実行時、クリップボードデータをクリップ
+	ボード文字列数以上コピーしないように変更する。
+
+2003-02-11  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/nnshmain.c (update_newarrival_message): 
+	* Src/msgmgr.c:
+	新着確認中に現在件数/全件数の表示を行うように変更する
+	(I/F整合させるため、修正点は多岐)
+
+	* Src/httpmgr.c (NNshHttp_commMain): 
+	* Src/netent.c (NNshHttp_comm): 
+	http通信でホストに接続しにいったとき、ユーザ指定メッセージをホスト名の
+	末尾に表示できるよう変更する
+	(I/F整合させるため、修正点は多岐)
+
+2003-02-10  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/msgmgr.c (message_entryMessage): 
+	データ格納領域を確保するタイミングを（以前の）ファイルを削除する前に
+	移動し、エラー表示メッセージ(具体的にはバッファ確保エラー)を強化した。
+	サーバ移転があったときに再取得した場合、ログを消去してしまう不具合に
+	対処(したつもり)
+	
+2003-02-10  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/msgwrite.c: 
+	* Src/main.c: 
+	* Inc/local.h (SOFT_REVISION): 
+	書き込み画面を表示中アプリを切り替えたとき、編集中文書を保存する
+	ことができるよう変更する。
+
+2003-02-10  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Inc/symbols.h:
+	* Src/msgwrite.c: 
+	* Src/nnshset.c: 
+	* Rsc/nnsh.rcp.icon: 
+	* Rsc/nnsh.rcp.noicon: 
+	* Rsc/nnsh.h:
+	* Inc/local.h (SOFT_REVISION): 
+	ワークバッファサイズを大きくしていたとき、書き込みができなかった
+	不具合に対処（NNsi設定-2で確保するバッファサイズ指定を可能に)
+
+2003-02-09  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/nnshmain.c (Handler_ThreadMain): 
+	スレ一覧の前ページ/後ページ移動ボタンの位置を変更したことで、OS3.5機
+	でボタンが押せなかった不具合に対処する
+
+2003-02-09  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Src/msgview.c (PartReceiveMessage_View): 
+	スレ取得保留機能をスレ参照中の差分取得でも有効にする。
+	
+2003-02-09  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Rsc/nnsh.rcp.icon: 
+	* Rsc/nnsh.rcp.noicon: 
+	* Src/nnshmain.c:
+	* Src/nnshset.c:
+	スレ取得保留機能を多目的スイッチに割り当てることができるようにする。
+
+2003-02-09  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Rsc/nnsh.rcp.noicon: 
+	* Rsc/nnsh.rcp.icon: 
+	* Rsc/nnsh.h: 
+	* Src/nnshset.c (OpenForm_NNsiSetting4): 
+	NNsi設定-7の項目を他のNNsi設定に移動させる
+
+2003-02-08  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Rsc/nnsh.rcp.noicon: 
+	* Rsc/nnsh.rcp.icon: 
+	* Rsc/nnsh.h: 
+	* Src/nnshmain.c (update_newarrival_message):
+	* Src/nnshmain.c (get_all_message):
+	* Src/msgmgr.c (Get_PartMessage):
+	* Src/nnshset.c (OpenForm_NNsiSetting7): 
+	* Src/nnshset.c (effectNNsiSetting7): 
+	* Inc/symbols.h (NNSH_MSGATTR_NOTRESERVE):
+	* Inc/messages.h (NNSH_MSGINFO_RESERVE):
+	* Inc/struct.h: 
+	取得保留スレ指定機能を追加する。
+	※ 取得保留は、スレ一覧画面の差分取得および新規取得(再取得)のみ有効
+	(取得保留したスレは、新着確認を実施した時に一括取得する)
+
+2003-02-07  MRSa  <mrsa@users.sourceforge.jp>
+
+	* Inc/han2zen.h (Han2ZenTable): カナテーブルを16進数に書き換える。
+
+2003-02-07  itty  <itty@users.sourceforge.jp>
+
+	* Src/windows.c: 微々たる高速化。
+	STRIP_MEANINGLESS_LINE を定義した時にコンパイル出来るように変更。
+
+	

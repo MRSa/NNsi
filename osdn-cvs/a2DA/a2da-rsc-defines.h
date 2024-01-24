@@ -1,0 +1,13 @@
+/* pilrc generated file.  Do not edit!*/
+#define BTNID_A2DA_ABOUT 9987
+#define BTNID_SHIFT 9988
+#define BTNID_DOWN 9989
+#define BTNID_NEXT 9990
+#define BTNID_PREV 9991
+#define BTNID_UP 9992
+#define BTNID_A2DA_OK 9993
+#define GADID_A2DA_VIEW 9994
+#define FRMID_AA_VIEWER 9995
+#define ALERTID_A2DA_ABOUT 9996
+#define ALTID_ERROR 9997
+#define TSTR_NNSIDAFAMILY1 9998

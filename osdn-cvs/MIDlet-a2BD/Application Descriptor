@@ -1,0 +1,11 @@
+MIDlet-1: a2BD,/res/a2BD.png,a2BDmain
+MIDlet-Jar-URL: a2BD.jar
+MIDlet-Icon: /res/a2BD.png
+MicroEdition-Configuration: CLDC-1.1
+MIDlet-Version: 1.1.3
+MIDlet-Info-URL: http://nnsi.sourceforge.jp/archives/midp/a2BD/
+MIDlet-Name: a2BD downloader
+MIDlet-Description: file downloader for a2B
+MIDlet-Vendor: NNsi Project
+MicroEdition-Profile: MIDP-2.0
+MIDlet-Permissions: javax.microedition.io.Connector.http,javax.microedition.io.Connector.file.write,javax.microedition.io.Connector.file.read,javax.microedition.io.Connector.https

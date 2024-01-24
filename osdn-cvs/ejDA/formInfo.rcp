@@ -1,0 +1,78 @@
+/*****
+ *  $Id: formInfo.rcp,v 1.1.1.1 2004/09/05 15:58:14 mrsa Exp $
+ *
+ *  ej DA  : English - Japanese Translation DA (ejDA)
+ *****/
+#include "formID.h"
+#include "formInfo.h"
+
+ALERT ID ALTID_INFO
+INFORMATION
+  BEGIN
+    TITLE "INFORMATION"
+    MESSAGE "^1 ^2 ^3"
+    BUTTONS "OK"
+  END
+
+
+FORM ID FRMID_RESULT AT (5 5 150 150) MODAL MENUID MNUID_MAIN
+  BEGIN
+    TITLE "xxxxxxxxx1xxxxxxxxx2xxxxxxxxx3xxxxxxxxx4xxxxxxxxx5xxxxx"
+    FIELD ID FLDID_INFOFIELD AT (5 15 145 121) USABLE MAXCHARS 32768 MULTIPLELINES NONEDITABLE 
+    BUTTON "OK"     ID BTNID_DIALOG_OK     AT (5   137 30 11) USABLE FRAME
+    BUTTON "Redraw" ID BTNID_DIALOG_REDRAW AT (110 137 36 11) NONUSABLE FRAME
+  END
+
+
+FORM ID FRMID_BUSY AT (12 70 136 16) NOFRAME MODAL
+  BEGIN
+    FIELD ID FLDID_BUSY AT (3 2 130 12) USABLE NONEDITABLE DYNAMICSIZE
+  END
+
+FORM ID FRMID_INPUTDIALOG AT (10 64 140 86) MODAL MENUID MNUID_EDIT
+  BEGIN
+    TITLE "123456789012345678901234567890"
+    FIELD ID FLDID_INPUTFIELD AT (5 15 130 56) USABLE UNDERLINED MAXCHARS 320 MULTIPLELINES
+
+    BUTTON "OK"     ID BTNID_DIALOG_OK     AT (5           73         30 11) USABLE FRAME
+    BUTTON "Cancel" ID BTNID_DIALOG_CANCEL AT (PREVRIGHT+5 PREVTOP    30 11) USABLE FRAME
+    GRAFFITISTATEINDICATOR AT (PREVRIGHT+50 PREVTOP)
+  END
+
+MENU ID MNUID_EDIT
+  BEGIN
+    PULLDOWN "Edit"
+      BEGIN
+        MENUITEM "Undo"             MNUID_EDIT_UNDO      "U"
+        MENUITEM "Cut"              MNUID_EDIT_CUT       "X"
+        MENUITEM "Copy"             MNUID_EDIT_COPY      "C"
+        MENUITEM "Paste"            MNUID_EDIT_PASTE     "P"
+        MENUITEM "Select All"       MNUID_SELECT_ALL     "S"
+      END
+  END
+
+MENU ID MNUID_MAIN
+  BEGIN
+    PULLDOWN "Kanji"
+      BEGIN
+        MENUITEM "RAW"              MNUID_CODE_RAW       "0"
+        MENUITEM "-"                MNUID_SEPARATOR
+        MENUITEM "Shift JIS"        MNUID_CODE_SHIFTJIS  "N"
+        MENUITEM "EUC"              MNUID_CODE_EUC       "E"
+        MENUITEM "JIS"              MNUID_CODE_JIS       "J"
+        MENUITEM "UTF8"             MNUID_CODE_UTF8      "8"
+        MENUITEM "-"                MNUID_SEPARATOR
+        MENUITEM "PARSE"            MNUID_CODE_PARSE     "1"
+      END
+
+    PULLDOWN "Etc"
+      BEGIN
+        MENUITEM "Version"          MNUID_VERSION        "V"
+        MENUITEM "-"                MNUID_SEPARATOR
+        MENUITEM "to Memopad"       MNUID_SENDMEMO       "M"
+        MENUITEM "-"                MNUID_SEPARATOR
+        MENUITEM "Disconnect"       MNUID_DISCONNECT     "Q"
+      END
+  END
+
+APPLICATIONICONNAME ID APPID_NAME "ejDA"

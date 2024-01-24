@@ -1,0 +1,8 @@
+MIDlet-Version: 0.1.0
+MIDlet-Info-URL: http://sourceforge.jp/projects/nnsi/
+MIDlet-Vendor: NNsi Project
+MIDlet-Jar-URL: TheCount.jar
+MicroEdition-Configuration: CLDC-1.1
+MIDlet-1: a2chS,/res/icon.png,MyMidpMain
+MicroEdition-Profile: MIDP-2.0
+MIDlet-Name: TheCount

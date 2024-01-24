@@ -1,0 +1,43 @@
+---------------------------------------------------------------
+  a2BC : a2B Connectivity (a2Bのログを更新するツール)
+
+                                              Copyright (C) 2006年～、NNsi Project
+---------------------------------------------------------------
+
+     ※ NNsi Projectの詳細は、http://sourceforge.jp/projects/nnsi を
+       ご確認ください。
+
+     ※ 本ツールは、Qt4 Open Source Editionを使用して開発しました。
+
+1. a2BCとは？
+ MIDP 2.0対応２ちゃんねるブラウザの a2Bが管理する２ちゃんねるログ、
+管理データをを更新つーるです。
+
+2. 使用方法その他
+ NNsi-Wikiにて記述します。そちらをご参照ください。(URLは以下です。)
+http://nnsi.sourceforge.jp/PukiWiki/pukiwiki.php?%5B%5Ba2BC%5D%5D
+
+3. ライセンスについて
+ 前述したように、a2BCは、Qt4 Open Source Editionを利用して作成
+しました。
+
+そのため、a2BCは、Qt4 Open Source Editionの制約に従います。
+= = = = = = = = =
+ The Qt/Windows Open Source Edition is provided with no support 
+and no warranty.
+
+ The Qt Open Source Edition is provided under the GNU General 
+Public License (GPL). 
+
+ You may use the Qt Open Source Edition for:
+
+ - Development of open source/non-proprietary software 
+   that is also released under the GPL license.
+
+ - Compiling and running GPL software developed by others.
+= = = = = = = = =
+
+※ Qt Open Source Edition については、次を参照してください。
+   → http://www.trolltech.com/download/opensource.html
+
+以上

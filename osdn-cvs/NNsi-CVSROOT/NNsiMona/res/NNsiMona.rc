@@ -1,0 +1,293 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "..\resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,0,0,0
+ PRODUCTVERSION 4,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041103a4"
+        BEGIN
+            VALUE "Comments", "NNsi Conduit (NNsiMona)\0"
+            VALUE "CompanyName", "http://nnsi.sourceforge.jp\0"
+            VALUE "FileDescription", "NNsiMona.DLL\0"
+            VALUE "FileVersion", "0.0.0\0"
+            VALUE "InternalName", "NNsiMona\0"
+            VALUE "LegalCopyright", "Copyright (c) 1995-2003 Palm, Inc.\r\n(CDK 4.03付属のGenCn.Dll を NNsi用に変更)\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "GenCn.Dll\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "Palm Desktop\0"
+            VALUE "ProductVersion", "4.0.0\0"
+            VALUE "SpecialBuild", "Release\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 932
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CONDUIT_ACTION DIALOG DISCARDABLE  0, 0, 262, 141
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "NNsiMona(HotSync動作の変更)"
+FONT 8, "MS UI Gothic"
+BEGIN
+    RADIOBUTTON     "ファイルの同期 (&S)",IDC_RADIO_SYNC,72,34,109,10,
+                    WS_GROUP | WS_TABSTOP
+    RADIOBUTTON     "PCがPalmを上書き (&D)",IDC_RADIO_PCTOHH,72,60,108,10
+    RADIOBUTTON     "PalmがPCを上書き (&H)",IDC_RADIO_HHTOPC,72,86,108,10
+    RADIOBUTTON     "何もしない (&N)",IDC_RADIO_DONOTHING,72,112,107,10
+    CONTROL         "標準に設定 (&A)",IDC_MAKEDEFAULT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,196,74,58,10
+    DEFPUSHBUTTON   "OK",IDOK,196,11,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,196,27,50,14
+    PUSHBUTTON      "Help",9,196,43,50,14
+    GROUPBOX        "<同期の設定>",IDC_ACTIONGROUPBOXTEXT,8,8,177,124,
+                    WS_GROUP
+    CONTROL         103,IDC_SYNC,"Static",SS_BITMAP,14,30,32,15
+    CONTROL         104,IDC_PCTOHH,"Static",SS_BITMAP,14,56,32,15
+    CONTROL         105,IDC_HHTOPC,"Static",SS_BITMAP,14,82,32,15
+    CONTROL         106,IDC_DONOTHING,"Static",SS_BITMAP,14,108,32,15
+END
+
+IDD_CONDUIT_CFG_DETAILED DIALOG DISCARDABLE  0, 0, 262, 188
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "NNsiMona(HotSync動作の変更詳細)"
+FONT 8, "MS UI Gothic"
+BEGIN
+    RADIOBUTTON     "ファイルの同期 (&S)",IDC_RADIO_SYNC,72,80,79,10,
+                    WS_GROUP | WS_TABSTOP
+    RADIOBUTTON     "PCがPalmを上書き (&D)",IDC_RADIO_PCTOHH,72,106,108,10
+    RADIOBUTTON     "PalmがPCを上書き (&H)",IDC_RADIO_HHTOPC,72,132,108,10
+    RADIOBUTTON     "何もしない (&N)",IDC_RADIO_DONOTHING,72,158,106,10
+    CONTROL         "標準に設定 (&A)",IDC_MAKEDEFAULT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,196,120,58,10
+    DEFPUSHBUTTON   "OK",IDOK,196,57,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,196,73,50,14
+    PUSHBUTTON      "Help",9,196,89,50,14
+    GROUPBOX        "<NNsiMona動作設定>",IDC_ACTIONGROUPBOXTEXT,8,54,177,124,
+                    WS_GROUP
+    CONTROL         103,IDC_SYNC,"Static",SS_BITMAP,14,76,32,17
+    CONTROL         104,IDC_PCTOHH,"Static",SS_BITMAP,14,102,32,17
+    CONTROL         105,IDC_HHTOPC,"Static",SS_BITMAP,14,128,32,17
+    CONTROL         106,IDC_DONOTHING,"Static",SS_BITMAP,14,154,32,17
+    GROUPBOX        "<現在の動作設定>",IDC_CURRENT_SETTINGS_GROUP,8,8,238,44
+    LTEXT           "標準のHotSync動作     :",IDC_STATIC,14,23,77,8
+    LTEXT           "Static",IDC_STATIC_PERMANENT,103,23,131,8
+    LTEXT           "変更後のHotSync動作 :",IDC_STATIC,14,36,77,8
+    LTEXT           "Static",IDC_STATIC_TEMPORARY,103,36,131,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_DONOTHING           BITMAP  DISCARDABLE     ".\\DoNothing.bmp"
+IDB_HHTOPC              BITMAP  DISCARDABLE     ".\\PcToHh.bmp"
+IDB_PCTOHH              BITMAP  DISCARDABLE     ".\\HhToPc.bmp"
+IDB_SYNC                BITMAP  DISCARDABLE     ".\\Synchronize.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CONDUIT_NAME        "NNsiMona(NNsi Conduit)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CONNECTION          "接続を確認した後、もう一度実行してください。"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_DEVICE_FULL         "Palmデバイスのメモリが不足しているようです。Palmの空きメモリ容量を確認してください。"
+    IDS_DESKTOP_FULL        "PCのディスク容量が不足しているようです。ＰＣのディスク空き容量を確認して、再度HotSyncしてください。"
+    IDS_BAD_ADD_REC         "次のレコード(%s)は、Palmデバイスにコピーすることができませんでした。"
+    IDS_BAD_PURGE_REMOTE    "Palmデバイス上の削除されたレコード(%s)を解放(パージ)することができませんでした。"
+    IDS_BAD_DEL_REC         "Palmデバイス上の次のレコード(%s)は、削除することができませんでした。"
+    IDS_BAD_CHANGE_REC      "Palmデバイス上の次のレコード(%s)は、変更することができませんでした。"
+    IDS_BAD_LOCALADD_REC    "次のレコード(%s)は、PCにコピーすることができませんでした。"
+    IDS_REMOTE_BAD_CHANGE_CAT 
+                            "カテゴリを '%s' から '未分類' に移動させることができませんでした。"
+    IDS_BAD_READ_RECORD     "Palmデバイスの次レコードを読むことができませんでした。"
+    IDS_REMOTE_TOOMANY_CATS "カテゴリは15個まで使用可能です。カテゴリ'%s'のデータは、'未分類'に変更します。"
+    IDS_REMOTE_CAT_DELETED  "-- カテゴリ '%s' は、削除されていましたので、'未分類'に移動させます。"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_DOUBLE_MODIFIED     "%sは、両方で更新されているため、両方のデータを残します。不要なデータを削除した後、再度HotSyncしなおしてください。"
+    IDS_ARCH_DOUBLE_MOD1    "%sは、両方で更新されているため、両方のデータを残します。(Palmのレコードはアーカイブ指示されていましたが実行しません。) どちらか一方の不要データを削除した後、HotSyncしなおしてください。"
+    IDS_REVERSE_DELETE      "%s は、片方で更新され、片方で削除されています。（更新されたレコードは、PCとPalmデバイスの両方で表示されることになります。）"
+    IDS_RECCOUNT_DESKTOP1   "Palmデバイス上の全データをPCにコピーすることができませんでした。（PCのディスク容量が不足しているようです。） 一部のデータを削除して、HotSyncをやり直してください。"
+    IDS_RECCOUNT_PILOT1     "PC上の全てのレコードをPalmデバイスにコピーすることができませんでした。（Palmデバイスのメモリが不足しているようです。） 一部のデータを削除して、HotSyncをやり直してください。"
+    IDS_CUSTOM_LABEL        "カスタムラベルがPCとPalmデバイスの両方で変更されているようです。Palmデバイス上のラベル('%1s')は、PC上のラベル('%2s')で上書きします。"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_BAD_XMAP            "レコードは、PC上で正しくソートされていないようです。"
+    IDS_BAD_ARCHIVE_ERR     "削除されたレコードの一部または全ては、アーカイブされませんでした。"
+    IDS_BAD_RESET_FLAGS_REMOTE 
+                            "Palmデバイスの状態フラグをクリアすることができませんでした。エラーコード： %s"
+    IDS_DOUBLE_MODIFY_SUBSC1 
+                            "次のレコード(%s)は、データが一部変更されているようです。このレコードは、データ変更前のレコードが存在した場合には、重複する可能性があります。"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_LOG_SPACING         "    - "
+    IDS_RECORD_COUNT_MISMATCH 
+                            "レコード件数が一致しません。（こっち：%1l件、あっち：%2l件）"
+    IDS_UNKNOWN_FATAL_ERROR "致命的なエラーが発生しました。(%l)"
+    IDS_BAD_PURGE_LOCAL     "PC上で削除されたレコードを解放（パージ）することができませんでした。エラーコード： %s"
+    IDS_BAD_LOCAL_SAVE      " -- データベース(Local)を保存することができませんでした。 エラーコード： %s"
+    IDS_BAD_RESET_FLAGS_LOCAL 
+                            " -- PC上のデータベース状態フラグをクリアすることができませんでした。エラーコード： %s"
+    IDS_BAD_CLOSE_DB_REMOTE " -- データベース(Remote)を閉じることができませんでした。エラーコード： %s"
+    IDS_BAD_CLOSE_DB_LOCAL  " -- データベース(Local)を閉じることができませんでした。 エラーコード： %s"
+    IDS_LOCAL_CAT_DELETED   " -- カテゴリ %s は削除されています。（このカテゴリにあるデータは、'未分類'に変更します。）"
+    IDS_LOCAL_BAD_CHANGE_CAT 
+                            "カテゴリを '%s'から'未分類'に移動させることができませんでした。"
+    IDS_LOCAL_TOOMANY_CATS  "カテゴリは15個までのため、カテゴリが%sのレコードは、 '未分類'となります。"
+    IDS_DATABASE_DESCRIPTION 
+                            "DB名： %1s 、クリエータID： %2s 、 タイプ： %3u 、フラグ： %4d 、 バージョン： %5d"
+    IDS_DATABASE_SHORT_DESC "DB名： %1s, クリエータID： %2s"
+    IDS_PC_DB_CREATE_FAILURE 
+                            " -- PC上のデータベースを作成するのに失敗しました。 : %1s, エラーコード %2u"
+    IDS_HH_DB_CREATE_FAILURE 
+                            " -- Palmデバイス上のデータベースを作成するのに失敗しました。  : %1s, エラーコード %2u"
+    IDS_PC_ADD_RECORD_ERROR " -- PCは、レコードを追加するのに失敗しました。 : %1s, エラーコード %2u"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_HH_ADD_RECORD_ERROR " -- Palmデバイスは、レコードを追加するのに失敗しました。 : %1s, エラーコード %2u"
+    IDS_PC_READ_REC_ERROR   " -- PCは、レコードを読み込むのに失敗しました。 : %1s, エラーコード %2u"
+    IDS_HH_READ_REC_ERROR   " -- Palmデバイスは、レコードを読み込むのに失敗しました。 : %1s, エラーコード %2u"
+    IDS_RECORD_DESC_ID      "レコード ID %u"
+    IDS_RECORD_DESC_INDEX   "レコードインデックス %u"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CURRENT_SETTINGS_GROUP "%sの現在の設定は次のとおりです。 :"
+    IDS_SYNC_FILES          "ファイルを同期します。"
+    IDS_PCTOHH              "PCのデータでPalmデバイスを上書きします。"
+    IDS_HHTOPC              "PalmデバイスのデータでPCを上書きします。"
+    IDS_DO_NOTHING          "同期処理は実行しません。"
+    IDS_SYNC_ACTION_TEXT    "NNsiとのHotSync動作"
+END
+
+#endif    // 日本語 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 英語 (ｱﾒﾘｶ) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "..\\resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // 英語 (ｱﾒﾘｶ) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+#include "afxres.rc"         // Standard components
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

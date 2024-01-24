@@ -1,0 +1,940 @@
+<ui version="4.0" >
+ <class>a2BCMain</class>
+ <widget class="QMainWindow" name="a2BCMain" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>652</width>
+    <height>467</height>
+   </rect>
+  </property>
+  <property name="sizePolicy" >
+   <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize" >
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="maximumSize" >
+   <size>
+    <width>11678</width>
+    <height>11678</height>
+   </size>
+  </property>
+  <property name="windowTitle" >
+   <string>a2BC</string>
+  </property>
+  <widget class="QWidget" name="centralwidget" >
+   <layout class="QGridLayout" >
+    <property name="leftMargin" >
+     <number>9</number>
+    </property>
+    <property name="topMargin" >
+     <number>9</number>
+    </property>
+    <property name="rightMargin" >
+     <number>9</number>
+    </property>
+    <property name="bottomMargin" >
+     <number>9</number>
+    </property>
+    <property name="horizontalSpacing" >
+     <number>6</number>
+    </property>
+    <property name="verticalSpacing" >
+     <number>6</number>
+    </property>
+    <item row="0" column="0" >
+     <widget class="QTabWidget" name="syncInfoData" >
+      <property name="currentIndex" >
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="updateLog" >
+       <attribute name="title" >
+        <string>ログ更新</string>
+       </attribute>
+       <layout class="QGridLayout" >
+        <property name="leftMargin" >
+         <number>9</number>
+        </property>
+        <property name="topMargin" >
+         <number>9</number>
+        </property>
+        <property name="rightMargin" >
+         <number>9</number>
+        </property>
+        <property name="bottomMargin" >
+         <number>9</number>
+        </property>
+        <property name="horizontalSpacing" >
+         <number>6</number>
+        </property>
+        <property name="verticalSpacing" >
+         <number>6</number>
+        </property>
+        <item rowspan="3" row="3" column="0" >
+         <widget class="QTextBrowser" name="informData" >
+          <property name="sizePolicy" >
+           <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1" >
+         <widget class="QPushButton" name="executeCancel" >
+          <property name="sizePolicy" >
+           <sizepolicy vsizetype="Fixed" hsizetype="Fixed" >
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text" >
+           <string>中止</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1" >
+         <spacer>
+          <property name="orientation" >
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" >
+           <size>
+            <width>20</width>
+            <height>16</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="0" colspan="2" >
+         <widget class="QGroupBox" name="groupBox_bbstable" >
+          <property name="title" >
+           <string>bbstable.html (a2B管理ディレクトリ指定)</string>
+          </property>
+          <layout class="QGridLayout" >
+           <property name="leftMargin" >
+            <number>9</number>
+           </property>
+           <property name="topMargin" >
+            <number>9</number>
+           </property>
+           <property name="rightMargin" >
+            <number>9</number>
+           </property>
+           <property name="bottomMargin" >
+            <number>9</number>
+           </property>
+           <property name="horizontalSpacing" >
+            <number>6</number>
+           </property>
+           <property name="verticalSpacing" >
+            <number>6</number>
+           </property>
+           <item row="2" column="2" >
+            <spacer>
+             <property name="orientation" >
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" >
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="3" colspan="2" >
+            <widget class="QPushButton" name="pBtnUpdateBbsTable" >
+             <property name="sizePolicy" >
+              <sizepolicy vsizetype="Fixed" hsizetype="Minimum" >
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="toolTip" >
+              <string comment="このボタンを使って、a2Bが使用するbbstable.html を選択してください。" />
+             </property>
+             <property name="text" >
+              <string>bbstable.htmlの更新</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" >
+            <widget class="QLabel" name="label_url" >
+             <property name="sizePolicy" >
+              <sizepolicy vsizetype="Preferred" hsizetype="Fixed" >
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text" >
+              <string>取得先URL</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0" >
+            <widget class="QLabel" name="label" >
+             <property name="sizePolicy" >
+              <sizepolicy vsizetype="Preferred" hsizetype="Fixed" >
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text" >
+              <string>ファイル</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="4" >
+            <widget class="QPushButton" name="pBtnSelectionBbsTable" >
+             <property name="toolTip" >
+              <string comment="このボタンを使って、a2Bが使用するbbstable.html を選択してください。" />
+             </property>
+             <property name="text" >
+              <string>参照...</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1" colspan="3" >
+            <widget class="QLineEdit" name="lineEdit_File_bbsTable" />
+           </item>
+           <item row="1" column="1" colspan="4" >
+            <widget class="QLineEdit" name="urlBbsTable" />
+           </item>
+           <item row="2" column="0" colspan="2" >
+            <widget class="QLabel" name="label_2" >
+             <property name="text" >
+              <string>※ 更新ボタンを押すと、取得先URLからbbstable.htmlを取得し、ファイルを更新します。</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="2" >
+         <widget class="QGroupBox" name="groupBox_2" >
+          <property name="title" >
+           <string>新着確認</string>
+          </property>
+          <layout class="QGridLayout" >
+           <property name="leftMargin" >
+            <number>9</number>
+           </property>
+           <property name="topMargin" >
+            <number>9</number>
+           </property>
+           <property name="rightMargin" >
+            <number>9</number>
+           </property>
+           <property name="bottomMargin" >
+            <number>9</number>
+           </property>
+           <property name="horizontalSpacing" >
+            <number>6</number>
+           </property>
+           <property name="verticalSpacing" >
+            <number>6</number>
+           </property>
+           <item row="2" column="0" >
+            <widget class="QCheckBox" name="chkRemoveErrorThread" >
+             <property name="text" >
+              <string>取得エラーが発生したスレを管理対象からはずす</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1" >
+            <widget class="QCheckBox" name="chkTrimDatLogFile" >
+             <property name="text" >
+              <string>エラー時datファイルを削除する</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" >
+            <widget class="QCheckBox" name="chkGetAgainAll" >
+             <property name="text" >
+              <string>スレを全て再取得する</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1" >
+            <widget class="QCheckBox" name="chkModifyBbsTable" >
+             <property name="text" >
+              <string>スレ取得板をa2Bカテゴリとしてbbstable.htmlに登録</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1" >
+            <widget class="QCheckBox" name="chkEnableDownThread" >
+             <property name="text" >
+              <string>dat落ちしたスレも読めるようにする</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0" >
+            <widget class="QCheckBox" name="chkGetSubjectTxt" >
+             <property name="text" >
+              <string>スレ一覧(subject.txt)を同時に更新する</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0" >
+            <widget class="QCheckBox" name="chkRemoveOverThread" >
+             <property name="text" >
+              <string>1000超えが発生したスレを管理対象からはずす</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="2" column="0" colspan="2" >
+         <widget class="QGroupBox" name="groupBox_3" >
+          <property name="title" >
+           <string>スレ取得間隔</string>
+          </property>
+          <layout class="QHBoxLayout" >
+           <property name="spacing" >
+            <number>6</number>
+           </property>
+           <property name="leftMargin" >
+            <number>9</number>
+           </property>
+           <property name="topMargin" >
+            <number>9</number>
+           </property>
+           <property name="rightMargin" >
+            <number>9</number>
+           </property>
+           <property name="bottomMargin" >
+            <number>9</number>
+           </property>
+           <item>
+            <widget class="QLineEdit" name="getInterval" />
+           </item>
+           <item>
+            <widget class="QLabel" name="label_4" >
+             <property name="text" >
+              <string>ms毎</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_5" >
+             <property name="text" >
+              <string>※ ２ちゃんねるのサーバに極端な負荷をかけないよう、十分に大きな値を設定してください。</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="3" column="1" >
+         <widget class="QPushButton" name="executeUpdate" >
+          <property name="sizePolicy" >
+           <sizepolicy vsizetype="MinimumExpanding" hsizetype="Fixed" >
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text" >
+           <string>ログ更新</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="syncLog" >
+       <attribute name="title" >
+        <string>ログ同期</string>
+       </attribute>
+       <layout class="QGridLayout" >
+        <item row="0" column="0" colspan="3" >
+         <widget class="QGroupBox" name="grp2chBrowser" >
+          <property name="sizePolicy" >
+           <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="title" >
+           <string>同期する２ちゃんねるブラウザの設定</string>
+          </property>
+          <layout class="QGridLayout" >
+           <property name="leftMargin" >
+            <number>9</number>
+           </property>
+           <property name="topMargin" >
+            <number>9</number>
+           </property>
+           <property name="rightMargin" >
+            <number>9</number>
+           </property>
+           <property name="bottomMargin" >
+            <number>9</number>
+           </property>
+           <property name="horizontalSpacing" >
+            <number>6</number>
+           </property>
+           <property name="verticalSpacing" >
+            <number>6</number>
+           </property>
+           <item row="1" column="1" >
+            <widget class="QLineEdit" name="lineEdit_2chLogDirectory" >
+             <property name="sizePolicy" >
+              <sizepolicy vsizetype="Preferred" hsizetype="Expanding" >
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2" >
+            <widget class="QPushButton" name="pBtnSelectionOtherBrowserDirectory" >
+             <property name="toolTip" >
+              <string comment="このボタンを使って、a2Bが使用するbbstable.html を選択してください。" />
+             </property>
+             <property name="text" >
+              <string>参照...</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" >
+            <widget class="QLabel" name="label_6" >
+             <property name="text" >
+              <string>管理ディレクトリ</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0" colspan="3" >
+            <layout class="QHBoxLayout" >
+             <property name="spacing" >
+              <number>6</number>
+             </property>
+             <property name="leftMargin" >
+              <number>0</number>
+             </property>
+             <property name="topMargin" >
+              <number>0</number>
+             </property>
+             <property name="rightMargin" >
+              <number>0</number>
+             </property>
+             <property name="bottomMargin" >
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QRadioButton" name="gikoNavitype" >
+               <property name="enabled" >
+                <bool>true</bool>
+               </property>
+               <property name="text" >
+                <string>ギコナビ</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="Abonetype" >
+               <property name="enabled" >
+                <bool>false</bool>
+               </property>
+               <property name="text" >
+                <string>ABone</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="hotZonu2type" >
+               <property name="enabled" >
+                <bool>false</bool>
+               </property>
+               <property name="text" >
+                <string>ホットゾヌ２</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="V2Ctype" >
+               <property name="enabled" >
+                <bool>false</bool>
+               </property>
+               <property name="text" >
+                <string>V2C</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="janeType" >
+               <property name="enabled" >
+                <bool>true</bool>
+               </property>
+               <property name="text" >
+                <string>Jane系</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="pGIKOtype" >
+               <property name="text" >
+                <string>ぽけギコ</string>
+               </property>
+               <property name="checked" >
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="1" column="0" >
+         <widget class="QGroupBox" name="groupBox_4" >
+          <property name="title" >
+           <string>同期方式</string>
+          </property>
+          <layout class="QVBoxLayout" >
+           <property name="spacing" >
+            <number>6</number>
+           </property>
+           <property name="leftMargin" >
+            <number>9</number>
+           </property>
+           <property name="topMargin" >
+            <number>9</number>
+           </property>
+           <property name="rightMargin" >
+            <number>9</number>
+           </property>
+           <property name="bottomMargin" >
+            <number>9</number>
+           </property>
+           <item>
+            <widget class="QRadioButton" name="btnToOtherBrowser" >
+             <property name="text" >
+              <string>a2Bから２ちゃんねるブラウザへコピーする</string>
+             </property>
+             <property name="checked" >
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="btnToa2B" >
+             <property name="text" >
+              <string>２ちゃんねるブラウザからa2Bへコピーする</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="btnSynchronize" >
+             <property name="enabled" >
+              <bool>false</bool>
+             </property>
+             <property name="text" >
+              <string>a2Bと２ちゃんねるブラウザのログを同期する</string>
+             </property>
+             <property name="checked" >
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="1" column="1" colspan="2" >
+         <widget class="QGroupBox" name="groupBox" >
+          <property name="title" >
+           <string>同期オプション</string>
+          </property>
+          <layout class="QVBoxLayout" >
+           <property name="spacing" >
+            <number>6</number>
+           </property>
+           <property name="leftMargin" >
+            <number>9</number>
+           </property>
+           <property name="topMargin" >
+            <number>9</number>
+           </property>
+           <property name="rightMargin" >
+            <number>9</number>
+           </property>
+           <property name="bottomMargin" >
+            <number>9</number>
+           </property>
+           <item>
+            <widget class="QCheckBox" name="chkErrLogBackup" >
+             <property name="enabled" >
+              <bool>true</bool>
+             </property>
+             <property name="sizePolicy" >
+              <sizepolicy vsizetype="Fixed" hsizetype="Fixed" >
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text" >
+              <string>a2Bのエラー(dat落ち)スレを移動させる</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="chkCopySubjectTxt" >
+             <property name="enabled" >
+              <bool>true</bool>
+             </property>
+             <property name="sizePolicy" >
+              <sizepolicy vsizetype="Fixed" hsizetype="Fixed" >
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text" >
+              <string>スレ一覧(subject.txt)もコピーする</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item rowspan="2" row="2" column="0" colspan="2" >
+         <widget class="QTextBrowser" name="textBrowser" >
+          <property name="sizePolicy" >
+           <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2" >
+         <widget class="QPushButton" name="executeSync" >
+          <property name="sizePolicy" >
+           <sizepolicy vsizetype="MinimumExpanding" hsizetype="Minimum" >
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text" >
+           <string>ログ同期</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="2" >
+         <widget class="QPushButton" name="executeCancel_2" >
+          <property name="text" >
+           <string>中止</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="editFavor" >
+       <attribute name="title" >
+        <string>お気に入り管理</string>
+       </attribute>
+       <layout class="QGridLayout" >
+        <property name="leftMargin" >
+         <number>9</number>
+        </property>
+        <property name="topMargin" >
+         <number>9</number>
+        </property>
+        <property name="rightMargin" >
+         <number>9</number>
+        </property>
+        <property name="bottomMargin" >
+         <number>9</number>
+        </property>
+        <property name="horizontalSpacing" >
+         <number>6</number>
+        </property>
+        <property name="verticalSpacing" >
+         <number>6</number>
+        </property>
+        <item row="1" column="3" >
+         <widget class="QPushButton" name="btnReadFavorite" >
+          <property name="text" >
+           <string>読み込み (&amp;R)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="4" >
+         <widget class="QPushButton" name="btnWriteFavorite" >
+          <property name="text" >
+           <string>保存 (&amp;W)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1" >
+         <widget class="QPushButton" name="btnRemoveFavorite" >
+          <property name="text" >
+           <string>削除 (&amp;D)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" >
+         <widget class="QPushButton" name="btnSwapFavorite" >
+          <property name="text" >
+           <string>入れ替え (&amp;X)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" colspan="5" >
+         <widget class="QTableView" name="tblViewFavorite" >
+          <property name="alternatingRowColors" >
+           <bool>true</bool>
+          </property>
+          <property name="gridStyle" >
+           <enum>Qt::SolidLine</enum>
+          </property>
+          <property name="sortingEnabled" >
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2" >
+         <spacer>
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" >
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="manageBoard" >
+       <attribute name="title" >
+        <string>板管理</string>
+       </attribute>
+       <layout class="QGridLayout" >
+        <item row="0" column="0" colspan="8" >
+         <widget class="QTableView" name="BbsTableTableWidget" >
+          <property name="dragDropOverwriteMode" >
+           <bool>false</bool>
+          </property>
+          <property name="alternatingRowColors" >
+           <bool>true</bool>
+          </property>
+          <property name="selectionMode" >
+           <enum>QAbstractItemView::SingleSelection</enum>
+          </property>
+          <property name="selectionBehavior" >
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+          <property name="sortingEnabled" >
+           <bool>true</bool>
+          </property>
+          <property name="cornerButtonEnabled" >
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" >
+         <widget class="QPushButton" name="btnAddBoard" >
+          <property name="enabled" >
+           <bool>false</bool>
+          </property>
+          <property name="text" >
+           <string>追加 (&amp;A)</string>
+          </property>
+          <property name="iconSize" >
+           <size>
+            <width>20</width>
+            <height>20</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1" >
+         <spacer>
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" >
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="2" >
+         <widget class="QPushButton" name="btnDeleteBoard" >
+          <property name="enabled" >
+           <bool>false</bool>
+          </property>
+          <property name="text" >
+           <string>削除 (&amp;D)</string>
+          </property>
+          <property name="iconSize" >
+           <size>
+            <width>20</width>
+            <height>20</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3" >
+         <spacer>
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" >
+           <size>
+            <width>81</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="4" >
+         <widget class="QPushButton" name="btnPickupBbs" >
+          <property name="enabled" >
+           <bool>false</bool>
+          </property>
+          <property name="text" >
+           <string>抽出 (&amp;U)</string>
+          </property>
+          <property name="iconSize" >
+           <size>
+            <width>20</width>
+            <height>20</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="5" >
+         <spacer>
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" >
+           <size>
+            <width>101</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="6" >
+         <widget class="QPushButton" name="btnReadBoard" >
+          <property name="enabled" >
+           <bool>false</bool>
+          </property>
+          <property name="text" >
+           <string>読み込み (&amp;R)</string>
+          </property>
+          <property name="iconSize" >
+           <size>
+            <width>20</width>
+            <height>20</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="7" >
+         <widget class="QPushButton" name="btnWriteBoard" >
+          <property name="enabled" >
+           <bool>false</bool>
+          </property>
+          <property name="text" >
+           <string>保存 (&amp;W)</string>
+          </property>
+          <property name="iconSize" >
+           <size>
+            <width>20</width>
+            <height>20</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar" >
+   <property name="sizeGripEnabled" >
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QMenuBar" name="menuBar" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>652</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_Help" >
+    <property name="title" >
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="actionAbout_a2B" />
+    <addaction name="actionAbout_Qt" />
+   </widget>
+   <addaction name="menu_Help" />
+  </widget>
+  <action name="actionAbout_Qt" >
+   <property name="text" >
+    <string>About Qt</string>
+   </property>
+  </action>
+  <action name="actionAbout_a2B" >
+   <property name="text" >
+    <string>About a2BC...</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>syncInfoData</tabstop>
+  <tabstop>lineEdit_File_bbsTable</tabstop>
+  <tabstop>pBtnSelectionBbsTable</tabstop>
+  <tabstop>urlBbsTable</tabstop>
+  <tabstop>pBtnUpdateBbsTable</tabstop>
+  <tabstop>chkGetSubjectTxt</tabstop>
+  <tabstop>chkGetAgainAll</tabstop>
+  <tabstop>chkRemoveErrorThread</tabstop>
+  <tabstop>chkModifyBbsTable</tabstop>
+  <tabstop>chkEnableDownThread</tabstop>
+  <tabstop>chkTrimDatLogFile</tabstop>
+  <tabstop>getInterval</tabstop>
+  <tabstop>informData</tabstop>
+  <tabstop>executeUpdate</tabstop>
+  <tabstop>executeCancel</tabstop>
+  <tabstop>gikoNavitype</tabstop>
+  <tabstop>Abonetype</tabstop>
+  <tabstop>hotZonu2type</tabstop>
+  <tabstop>V2Ctype</tabstop>
+  <tabstop>janeType</tabstop>
+  <tabstop>pGIKOtype</tabstop>
+  <tabstop>lineEdit_2chLogDirectory</tabstop>
+  <tabstop>pBtnSelectionOtherBrowserDirectory</tabstop>
+  <tabstop>btnToOtherBrowser</tabstop>
+  <tabstop>btnToa2B</tabstop>
+  <tabstop>btnSynchronize</tabstop>
+  <tabstop>chkErrLogBackup</tabstop>
+  <tabstop>chkCopySubjectTxt</tabstop>
+  <tabstop>textBrowser</tabstop>
+  <tabstop>executeSync</tabstop>
+  <tabstop>executeCancel_2</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

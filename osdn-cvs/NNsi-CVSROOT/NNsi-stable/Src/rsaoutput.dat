@@ -1,0 +1,648 @@
+#if 0
+/***** RSA PUBLIC KEY ENCODE for tiger2.he.net { ****/
+    *ptr = '\x0f';
+    ptr++;
+    *ptr = '\x6d';
+    ptr++;
+    *ptr = '\xca';
+    ptr++;
+    *ptr = '\x80';
+    ptr++;
+    *ptr = '\xe5';
+    ptr++;
+    *ptr = '\x9e';
+    ptr++;
+    *ptr = '\x5d';
+    ptr++;
+    *ptr = '\x0f';
+    ptr++;
+    *ptr = '\x16';
+    ptr++;
+    *ptr = '\xeb';
+    ptr++;
+    *ptr = '\x45';
+    ptr++;
+    *ptr = '\x5f';
+    ptr++;
+    *ptr = '\x3b';
+    ptr++;
+    *ptr = '\xf1';
+    ptr++;
+    *ptr = '\x20';
+    ptr++;
+    *ptr = '\x3d';
+    ptr++;
+    *ptr = '\x51';
+    ptr++;
+    *ptr = '\xc2';
+    ptr++;
+    *ptr = '\xb9';
+    ptr++;
+    *ptr = '\x18';
+    ptr++;
+    *ptr = '\x7a';
+    ptr++;
+    *ptr = '\xb9';
+    ptr++;
+    *ptr = '\x5c';
+    ptr++;
+    *ptr = '\x47';
+    ptr++;
+    *ptr = '\xbf';
+    ptr++;
+    *ptr = '\x88';
+    ptr++;
+    *ptr = '\x67';
+    ptr++;
+    *ptr = '\x6a';
+    ptr++;
+    *ptr = '\x31';
+    ptr++;
+    *ptr = '\x85';
+    ptr++;
+    *ptr = '\x74';
+    ptr++;
+    *ptr = '\x77';
+    ptr++;
+    *ptr = '\x00';
+    ptr++;
+    *ptr = '\xa2';
+    ptr++;
+    *ptr = '\x21';
+    ptr++;
+    *ptr = '\xd3';
+    ptr++;
+    *ptr = '\xfb';
+    ptr++;
+    *ptr = '\x26';
+    ptr++;
+    *ptr = '\x4b';
+    ptr++;
+    *ptr = '\x99';
+    ptr++;
+    *ptr = '\x3b';
+    ptr++;
+    *ptr = '\x05';
+    ptr++;
+    *ptr = '\xed';
+    ptr++;
+    *ptr = '\x04';
+    ptr++;
+    *ptr = '\xc5';
+    ptr++;
+    *ptr = '\x86';
+    ptr++;
+    *ptr = '\x69';
+    ptr++;
+    *ptr = '\xf5';
+    ptr++;
+    *ptr = '\x9c';
+    ptr++;
+    *ptr = '\xd7';
+    ptr++;
+    *ptr = '\x83';
+    ptr++;
+    *ptr = '\x96';
+    ptr++;
+    *ptr = '\xaa';
+    ptr++;
+    *ptr = '\x6b';
+    ptr++;
+    *ptr = '\x5f';
+    ptr++;
+    *ptr = '\x39';
+    ptr++;
+    *ptr = '\x9c';
+    ptr++;
+    *ptr = '\xfa';
+    ptr++;
+    *ptr = '\xaf';
+    ptr++;
+    *ptr = '\xa8';
+    ptr++;
+    *ptr = '\x10';
+    ptr++;
+    *ptr = '\xb1';
+    ptr++;
+    *ptr = '\x75';
+    ptr++;
+    *ptr = '\x4c';
+    ptr++;
+    *ptr = '\xb2';
+    ptr++;
+    *ptr = '\x32';
+    ptr++;
+    *ptr = '\x70';
+    ptr++;
+    *ptr = '\xe5';
+    ptr++;
+    *ptr = '\x5d';
+    ptr++;
+    *ptr = '\x16';
+    ptr++;
+    *ptr = '\x03';
+    ptr++;
+    *ptr = '\xfd';
+    ptr++;
+    *ptr = '\x7d';
+    ptr++;
+    *ptr = '\xff';
+    ptr++;
+    *ptr = '\xed';
+    ptr++;
+    *ptr = '\x1d';
+    ptr++;
+    *ptr = '\xbd';
+    ptr++;
+    *ptr = '\xf4';
+    ptr++;
+    *ptr = '\x6b';
+    ptr++;
+    *ptr = '\x11';
+    ptr++;
+    *ptr = '\x7e';
+    ptr++;
+    *ptr = '\xbd';
+    ptr++;
+    *ptr = '\x17';
+    ptr++;
+    *ptr = '\x8a';
+    ptr++;
+    *ptr = '\x21';
+    ptr++;
+    *ptr = '\x63';
+    ptr++;
+    *ptr = '\x8c';
+    ptr++;
+    *ptr = '\x99';
+    ptr++;
+    *ptr = '\xc8';
+    ptr++;
+    *ptr = '\xc8';
+    ptr++;
+    *ptr = '\x1a';
+    ptr++;
+    *ptr = '\x65';
+    ptr++;
+    *ptr = '\xf1';
+    ptr++;
+    *ptr = '\x3e';
+    ptr++;
+    *ptr = '\x49';
+    ptr++;
+    *ptr = '\x81';
+    ptr++;
+    *ptr = '\x55';
+    ptr++;
+    *ptr = '\x2c';
+    ptr++;
+    *ptr = '\x28';
+    ptr++;
+    *ptr = '\x28';
+    ptr++;
+    *ptr = '\x8a';
+    ptr++;
+    *ptr = '\xa9';
+    ptr++;
+    *ptr = '\x01';
+    ptr++;
+    *ptr = '\x5d';
+    ptr++;
+    *ptr = '\xe7';
+    ptr++;
+    *ptr = '\x24';
+    ptr++;
+    *ptr = '\xb4';
+    ptr++;
+    *ptr = '\x1d';
+    ptr++;
+    *ptr = '\x5a';
+    ptr++;
+    *ptr = '\x50';
+    ptr++;
+    *ptr = '\x38';
+    ptr++;
+    *ptr = '\x60';
+    ptr++;
+    *ptr = '\x7f';
+    ptr++;
+    *ptr = '\xfe';
+    ptr++;
+    *ptr = '\x1e';
+    ptr++;
+    *ptr = '\x51';
+    ptr++;
+    *ptr = '\x2d';
+    ptr++;
+    *ptr = '\x4d';
+    ptr++;
+    *ptr = '\xde';
+    ptr++;
+    *ptr = '\x86';
+    ptr++;
+    *ptr = '\x48';
+    ptr++;
+    *ptr = '\xfc';
+    ptr++;
+    *ptr = '\x53';
+    ptr++;
+    *ptr = '\x3e';
+    ptr++;
+    *ptr = '\x6f';
+    ptr++;
+    *ptr = '\xd0';
+    ptr++;
+    *ptr = '\xd5';
+    ptr++;
+    *ptr = '\xb8';
+    ptr++;
+
+/***** } RSA PUBLIC KEY ENCODE ****/
+#else
+/**** RSA PUBLIC KEY ENCODE for 2chv.tora3.net { ****/
+    *ptr = '\xb9';
+    ptr++;
+
+    *ptr = '\xec';
+    ptr++;
+
+    *ptr = '\xb8';
+    ptr++;
+
+    *ptr = '\x57';
+    ptr++;
+
+    *ptr = '\x78';
+    ptr++;
+
+    *ptr = '\x00';
+    ptr++;
+
+    *ptr = '\x38';
+    ptr++;
+
+    *ptr = '\x4c';
+    ptr++;
+
+    *ptr = '\x2f';
+    ptr++;
+
+    *ptr = '\xaa';
+    ptr++;
+
+    *ptr = '\xbc';
+    ptr++;
+
+    *ptr = '\xa5';
+    ptr++;
+
+    *ptr = '\x78';
+    ptr++;
+
+    *ptr = '\x5d';
+    ptr++;
+
+    *ptr = '\x14';
+    ptr++;
+
+    *ptr = '\xe4';
+    ptr++;
+
+    *ptr = '\x24';
+    ptr++;
+
+    *ptr = '\x7a';
+    ptr++;
+
+    *ptr = '\x1a';
+    ptr++;
+
+    *ptr = '\xaa';
+    ptr++;
+
+    *ptr = '\x7e';
+    ptr++;
+
+    *ptr = '\x04';
+    ptr++;
+
+    *ptr = '\xdd';
+    ptr++;
+
+    *ptr = '\x2b';
+    ptr++;
+
+    *ptr = '\xa9';
+    ptr++;
+
+    *ptr = '\xca';
+    ptr++;
+
+    *ptr = '\x38';
+    ptr++;
+
+    *ptr = '\x28';
+    ptr++;
+
+    *ptr = '\x2b';
+    ptr++;
+
+    *ptr = '\xf6';
+    ptr++;
+
+    *ptr = '\xba';
+    ptr++;
+
+    *ptr = '\x87';
+    ptr++;
+
+    *ptr = '\xf0';
+    ptr++;
+
+    *ptr = '\x20';
+    ptr++;
+
+    *ptr = '\xfa';
+    ptr++;
+
+    *ptr = '\x98';
+    ptr++;
+
+    *ptr = '\xe4';
+    ptr++;
+
+    *ptr = '\xdc';
+    ptr++;
+
+    *ptr = '\x70';
+    ptr++;
+
+    *ptr = '\xd0';
+    ptr++;
+
+    *ptr = '\x2e';
+    ptr++;
+
+    *ptr = '\xf6';
+    ptr++;
+
+    *ptr = '\x25';
+    ptr++;
+
+    *ptr = '\xf3';
+    ptr++;
+
+    *ptr = '\xbb';
+    ptr++;
+
+    *ptr = '\xdb';
+    ptr++;
+
+    *ptr = '\x2e';
+    ptr++;
+
+    *ptr = '\x38';
+    ptr++;
+
+    *ptr = '\x04';
+    ptr++;
+
+    *ptr = '\x62';
+    ptr++;
+
+    *ptr = '\x21';
+    ptr++;
+
+    *ptr = '\x23';
+    ptr++;
+
+    *ptr = '\x7f';
+    ptr++;
+
+    *ptr = '\xa8';
+    ptr++;
+
+    *ptr = '\xa2';
+    ptr++;
+
+    *ptr = '\x8c';
+    ptr++;
+
+    *ptr = '\x4a';
+    ptr++;
+
+    *ptr = '\x77';
+    ptr++;
+
+    *ptr = '\xa1';
+    ptr++;
+
+    *ptr = '\x3b';
+    ptr++;
+
+    *ptr = '\x1e';
+    ptr++;
+
+    *ptr = '\x5d';
+    ptr++;
+
+    *ptr = '\xba';
+    ptr++;
+
+    *ptr = '\xf4';
+    ptr++;
+
+    *ptr = '\x34';
+    ptr++;
+
+    *ptr = '\xa7';
+    ptr++;
+
+    *ptr = '\xe8';
+    ptr++;
+
+    *ptr = '\x3e';
+    ptr++;
+
+    *ptr = '\x11';
+    ptr++;
+
+    *ptr = '\x9f';
+    ptr++;
+
+    *ptr = '\x99';
+    ptr++;
+
+    *ptr = '\x03';
+    ptr++;
+
+    *ptr = '\xd7';
+    ptr++;
+
+    *ptr = '\x87';
+    ptr++;
+
+    *ptr = '\x7d';
+    ptr++;
+
+    *ptr = '\x5e';
+    ptr++;
+
+    *ptr = '\x8f';
+    ptr++;
+
+    *ptr = '\xc4';
+    ptr++;
+
+    *ptr = '\x94';
+    ptr++;
+
+    *ptr = '\x80';
+    ptr++;
+
+    *ptr = '\x57';
+    ptr++;
+
+    *ptr = '\xb0';
+    ptr++;
+
+    *ptr = '\x09';
+    ptr++;
+
+    *ptr = '\x51';
+    ptr++;
+
+    *ptr = '\x5e';
+    ptr++;
+
+    *ptr = '\x82';
+    ptr++;
+
+    *ptr = '\x3d';
+    ptr++;
+
+    *ptr = '\x6d';
+    ptr++;
+
+    *ptr = '\xa7';
+    ptr++;
+
+    *ptr = '\x65';
+    ptr++;
+
+    *ptr = '\x8f';
+    ptr++;
+
+    *ptr = '\xdf';
+    ptr++;
+
+    *ptr = '\x6d';
+    ptr++;
+
+    *ptr = '\x93';
+    ptr++;
+
+    *ptr = '\xfa';
+    ptr++;
+
+    *ptr = '\x38';
+    ptr++;
+
+    *ptr = '\xf5';
+    ptr++;
+
+    *ptr = '\xdf';
+    ptr++;
+
+    *ptr = '\xc5';
+    ptr++;
+
+    *ptr = '\x40';
+    ptr++;
+
+    *ptr = '\x22';
+    ptr++;
+
+    *ptr = '\x3a';
+    ptr++;
+
+    *ptr = '\x0d';
+    ptr++;
+
+    *ptr = '\xb7';
+    ptr++;
+
+    *ptr = '\xfb';
+    ptr++;
+
+    *ptr = '\x24';
+    ptr++;
+
+    *ptr = '\x08';
+    ptr++;
+
+    *ptr = '\x7b';
+    ptr++;
+
+    *ptr = '\xe9';
+    ptr++;
+
+    *ptr = '\xdc';
+    ptr++;
+
+    *ptr = '\x34';
+    ptr++;
+
+    *ptr = '\x83';
+    ptr++;
+
+    *ptr = '\xb7';
+    ptr++;
+
+    *ptr = '\x23';
+    ptr++;
+
+    *ptr = '\xd8';
+    ptr++;
+
+    *ptr = '\x38';
+    ptr++;
+
+    *ptr = '\xbf';
+    ptr++;
+
+    *ptr = '\x1b';
+    ptr++;
+
+    *ptr = '\x85';
+    ptr++;
+
+    *ptr = '\x30';
+    ptr++;
+
+    *ptr = '\xef';
+    ptr++;
+
+    *ptr = '\x3a';
+    ptr++;
+
+    *ptr = '\xc5';
+    ptr++;
+
+    *ptr = '\x39';
+    ptr++;
+
+    *ptr = '\x54';
+    ptr++;
+
+    *ptr = '\x79';
+    ptr++;
+
+    *ptr = '\x8a';
+    ptr++;
+
+    *ptr = '\xbb';
+    ptr++;
+
+/**** } RSA PUBLIC KEY ENCODE ****/
+#endif

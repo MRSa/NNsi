@@ -1,0 +1,57 @@
+2006-12-20  MRSa  <mrsa@users.sourceforge.jp>
+    a2da.c
+    Yomeru5で表示するとき、文字がかすれる不具合を修正する。
+
+2006-04-21  MRSa  <mrsa@users.sourceforge.jp>
+    a2da.c
+    Tungsten T5, Palm TXの5way navigator対応。
+    (NNsiスレPart5の359さんよりcontributeしていただきました。
+     ありがとうございました。)
+
+2004-09-13  MRSa  <mrsa@users.sourceforge.jp>
+    a2da.c
+    DIAサポートデバイスでのダイアログ表示を改善する。
+
+2004-03-19  MRSa  <mrsa@users.sourceforge.jp>
+    a2da.c
+    ハードキー３押下でa2DAを終了させるようにした。
+
+2004-01-24  MRSa  <mrsa@users.sourceforge.jp>
+    a2da.c
+    キーに機能割り当てを追加。
+      H:左移動、J:下移動、K:上移動、L:右移動, Q:a2DA終了
+    OS4CLIE向けのハイレゾ描画に対応する。
+
+
+2003-10-02  MRSa  <mrsa@users.sourceforge.jp>
+    a2da.c
+    CLIE TJの左右ボタンに対応。
+
+2003-09-24  MRSa  <mrsa@users.sourceforge.jp>
+    a2da.c
+    ジョグ回しで上下移動、5wayNavの上下左右移動に対応。
+
+2003-09-16  itty  <itty@users.sourceforge.jp>
+    a2da.c
+    ジョグ押し＋回転で左右スクロール可能にする。
+
+2003-08-15  MRSa  <mrsa@users.sourceforge.jp>
+    a2da.c
+    画面をはみでで描画する不具合を修正する。
+
+2003-08-14  MRSa  <mrsa@users.sourceforge.jp>
+    a2da.c
+    画面サイズにあわせダイアログサイズを拡大する。
+    ボタンも移動させる。
+    ※ シルクを動かすと表示がおかしくなるので注意。 ※
+
+2003-08-13  MRSa  <mrsa@users.sourceforge.jp>
+    a2da.c
+    カーソルキーを受け付け、上下左右スクロール可能に変更。
+
+2003-08-09  MRSa  <mrsa@users.sourceforge.jp>
+    a2da-rsc-defines.h
+    フォームIDがAADAとダブっていたので修正する。
+
+2003-07-28  MRSa  <mrsa@users.sourceforge.jp>
+	Initial revision.

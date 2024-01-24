@@ -1,0 +1,111 @@
+2005-09-19  MRSa  <mrsa@users.sourceforge.jp>
+    * aada.rcp
+    add AA.
+
+2005-09-10  MRSa  <mrsa@users.sourceforge.jp>
+    * aada.rcp
+    add AA.
+
+2005-09-03  MRSa  <mrsa@users.sourceforge.jp>
+    * aada.rcp
+    add AA.
+
+2005-08-07  MRSa  <mrsa@users.sourceforge.jp>
+    * aada.rcp
+    add AA.
+
+2005-06-05  MRSa  <mrsa@users.sourceforge.jp>
+    * aada.c
+    formIdを変更。AAを追加。
+
+2005-03-21  MRSa  <mrsa@users.sourceforge.jp>
+    * aada.rcp
+    add AA.
+
+2005-01-15  MRSa  <mrsa@users.sourceforge.jp>
+    * aada.c
+    Tungsten T5/Treo650使用中で、KaniEdit/NNsiから"AA..."ボタンで起動されたとき、
+    フィールドがうまく検出できなかった不具合を修正する。
+    
+    * aada.rcp
+    add AA.
+
+2004-11-28  MRSa  <mrse@users.sourceforge.jp>
+    * aada.rcp
+    add AA.
+
+2004-09-05  MRSa  <mrse@users.sourceforge.jp>
+    * aada.rcp
+    add AA.
+
+2004-09-05  MRSa  <mrse@users.sourceforge.jp>
+    * aada.rcp
+    add AA.
+
+2004-06-13  MRSa  <mrsa@users.sourceforge.jp>
+    * aada.rcp
+    add AA.
+
+2004-06-12  MRSa  <mrsa@users.sourceforge.jp>
+    * aada.rcp
+    add AA.
+
+2004-06-06  MRSa  <mrsa@users.sourceforge.jp>
+    * aada.rcp
+    add AA.
+
+2004-06-05  MRSa  <mrsa@users.sourceforge.jp>
+    * aada.rcp
+    add AA.
+
+2004-05-06  MRSa  <mrsa@users.sourceforge.jp>
+    * aada.rcp
+    add AA.
+
+2004-03-19  MRSa  <mrsa@users.sourceforge.jp>
+    * aada.rcp
+    add AA.
+
+2004-03-08  MRSa  <mrsa@users.sourceforge.jp>
+    * aada.rcp
+    add more AA.
+
+2004-01-25  MRSa  <mrsa@users.sourceforge.jp>
+    * aada.c:
+    * aada.rcp
+    add some 'kita---' AA.
+
+2003-11-29  MRSa  <mrsa@users.sourceforge.jp>
+    * aada.c:
+    Push jog/enter to insert immediately.
+
+2003-06-22  MRSa  <mrsa@users.sourceforge.jp>
+
+	* aada.c:
+	To prevent a fatal error when any memo-data category does not include 'aaDA'.
+	* aada.rcp: 
+	modify version number
+
+2003-06-21  shinhei  <shinchan@users.sourceforge.jp>
+	* aada.c
+	modify to show the first item when list group is changed. 
+
+	* aada.rcp
+	add some more funny AAs. (w	
+	
+2003-06-20  MRSa  <mrsa@users.sourceforge.jp>
+
+	* aada.c (AAInsChangeAAList): 
+	To prevent a fatal error when a user-defined data does not include 0x0a.
+	
+	* aada.rcp: 
+	modify version number
+
+2003-06-13  shinhei  <shinhei@users.sourceforge.jp>
+	* aada-defines.h:
+	* aada.c:
+	* aada-entry.c
+	* aada.rcp:
+	* Makefile:
+	* ChangeLog:
+	Initial revision.

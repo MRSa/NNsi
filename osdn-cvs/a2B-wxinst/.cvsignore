@@ -1,0 +1,7 @@
+debug
+release
+.cdtproject
+.project
+Makefile
+Makefile.Debug
+Makefile.Release

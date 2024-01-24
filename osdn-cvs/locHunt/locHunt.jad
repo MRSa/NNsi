@@ -1,0 +1,9 @@
+MIDlet-1: locHunt,icon.png,MyMidpMain
+MIDlet-Jar-URL: locHunt.jar
+MicroEdition-Configuration: CLDC-1.1
+MIDlet-Version: 0.4.0
+MIDlet-Name: locHunt
+MIDlet-Description: A Camera Application
+MIDlet-Vendor: NNsi Project
+MicroEdition-Profile: MIDP-2.0
+MIDlet-Permissions: javax.microedition.io.Connector.http,javax.microedition.io.Connector.file.write,javax.microedition.io.Connector.file.read,javax.microedition.io.Connector.https,javax.microedition.io.Connector.socket

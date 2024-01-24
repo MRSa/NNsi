@@ -1,0 +1,44 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NNsiMona", "NNsiMona.vcproj", "{576B4BC4-3D4E-4BE4-BB0E-8615A72FDA5F}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "NNsiMonaInstall", "NNsiMonaInstall\NNsiMonaInstall.vdproj", "{A42D71F8-9A5A-4501-82BE-7896E966346C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConduitInstallDll", "installer\ConduitInstallDll\ConduitInstallDll.vcproj", "{5941717E-FF67-411D-B5CF-C466F9C48060}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PalmConduitInstaller", "installer\PalmConduitInstaller\PalmConduitInstaller.vcproj", "{195E3F88-9240-4263-A492-B27393CF25D3}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+		{A42D71F8-9A5A-4501-82BE-7896E966346C}.0 = {5941717E-FF67-411D-B5CF-C466F9C48060}
+		{A42D71F8-9A5A-4501-82BE-7896E966346C}.1 = {576B4BC4-3D4E-4BE4-BB0E-8615A72FDA5F}
+		{A42D71F8-9A5A-4501-82BE-7896E966346C}.2 = {195E3F88-9240-4263-A492-B27393CF25D3}
+		{195E3F88-9240-4263-A492-B27393CF25D3}.0 = {5941717E-FF67-411D-B5CF-C466F9C48060}
+		{195E3F88-9240-4263-A492-B27393CF25D3}.1 = {576B4BC4-3D4E-4BE4-BB0E-8615A72FDA5F}
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{576B4BC4-3D4E-4BE4-BB0E-8615A72FDA5F}.Debug.ActiveCfg = Debug|Win32
+		{576B4BC4-3D4E-4BE4-BB0E-8615A72FDA5F}.Debug.Build.0 = Debug|Win32
+		{576B4BC4-3D4E-4BE4-BB0E-8615A72FDA5F}.Release.ActiveCfg = Release|Win32
+		{576B4BC4-3D4E-4BE4-BB0E-8615A72FDA5F}.Release.Build.0 = Release|Win32
+		{A42D71F8-9A5A-4501-82BE-7896E966346C}.Debug.ActiveCfg = Debug
+		{A42D71F8-9A5A-4501-82BE-7896E966346C}.Debug.Build.0 = Debug
+		{A42D71F8-9A5A-4501-82BE-7896E966346C}.Release.ActiveCfg = Release
+		{A42D71F8-9A5A-4501-82BE-7896E966346C}.Release.Build.0 = Release
+		{5941717E-FF67-411D-B5CF-C466F9C48060}.Debug.ActiveCfg = Debug|Win32
+		{5941717E-FF67-411D-B5CF-C466F9C48060}.Debug.Build.0 = Debug|Win32
+		{5941717E-FF67-411D-B5CF-C466F9C48060}.Release.ActiveCfg = Release|Win32
+		{5941717E-FF67-411D-B5CF-C466F9C48060}.Release.Build.0 = Release|Win32
+		{195E3F88-9240-4263-A492-B27393CF25D3}.Debug.ActiveCfg = Debug|Win32
+		{195E3F88-9240-4263-A492-B27393CF25D3}.Debug.Build.0 = Debug|Win32
+		{195E3F88-9240-4263-A492-B27393CF25D3}.Release.ActiveCfg = Release|Win32
+		{195E3F88-9240-4263-A492-B27393CF25D3}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

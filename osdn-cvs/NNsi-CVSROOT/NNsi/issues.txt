@@ -1,0 +1,21 @@
+NNsi (Feb  11, 2003)
+
+※※ sourceforge.jpのトラッキングシステムを使用して管理することとしました ※※
+
+ 詳細は、http://sourceforge.jp/projects/nnsi/tracker/ を参照ください。
+
+ また、機能追加/不具合について、このシステムへ登録していただいてかまいませんので、
+お気軽にどんどん追加してください。よろしくお願い致します。
+# ちなみに、誰でも匿名で登録可能なようです。(メール欄の記入は不要みたいです。)
+
+不具合報告
+  http://sourceforge.jp/tracker/index.php?func=add&group_id=432&atid=1706
+
+機能追加の要望
+  http://sourceforge.jp/tracker/index.php?func=add&group_id=432&atid=1709
+
+サポート依頼(使い方がよーわからん、など)
+  http://sourceforge.jp/tracker/index.php?func=add&group_id=432&atid=1707
+
+
+[EOF]

@@ -1,0 +1,11 @@
+MIDlet-1: a2B,/res/a2B-icon.png,a2BMain
+MIDlet-Jar-URL: a2B.jar
+MIDlet-Icon: /res/a2B-icon.png
+MicroEdition-Configuration: CLDC-1.1
+MIDlet-Version: 1.2.18
+MIDlet-Info-URL: http://nnsi.sourceforge.jp/archives/midp/a2B/
+MIDlet-Name: a2B
+MIDlet-Description: a 2ch Browser
+MIDlet-Vendor: NNsi Project
+MicroEdition-Profile: MIDP-2.0
+MIDlet-Permissions: javax.microedition.io.Connector.http,javax.microedition.io.Connector.file.write,javax.microedition.io.Connector.file.read,javax.microedition.io.Connector.https,javax.microedition.io.Connector.socket
