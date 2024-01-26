@@ -1,0 +1,8 @@
+MIDlet-1: fwSample,,fwSampleMain
+MIDlet-Jar-Size: 28381
+MIDlet-Jar-URL: MIDlet-FW-SAMPLE5.jar
+MIDlet-Name: キッチンタイマー
+MIDlet-Vendor: NNsi Project
+MIDlet-Version: 1.0.0
+MicroEdition-Configuration: CLDC-1.1
+MicroEdition-Profile: MIDP-2.0

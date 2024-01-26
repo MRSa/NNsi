@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="Shift_JIS" ?>
+
+<!ELEMENT NNsi:NNsiXML (NNsi:NNsiSet)>
+<!ATTLIST NNsi:NNsiXML xmlns:NNsi CDATA #REQUIRED>
+
+  <!ELEMENT NNsi:NNsiSet (NNsi:item+)>
+  <!ATTLIST NNsi:NNsiSet ver CDATA #REQUIRED>
+
+  <!ELEMENT NNsi:item    (NNsi:val, NNsi:def?)>
+  <!ATTLIST NNsi:item name ID    #REQUIRED>
+  <!ATTLIST NNsi:item type CDATA #REQUIRED>
+  <!ATTLIST NNsi:item len  CDATA #IMPLIED>
+
+  <!ELEMENT NNsi:val     (#PCDATA)>
+  <!ELEMENT NNsi:def     (#PCDATA)>
+

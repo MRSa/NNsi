@@ -1,0 +1,3 @@
+AddType application/java-archive .jar
+AddType text/vnd.sun.j2me.app-descriptor .jad
+AddType application/x-x509-ca-cert .cer

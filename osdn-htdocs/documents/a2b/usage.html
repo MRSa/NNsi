@@ -1,0 +1,35 @@
+<html><title>
+a2B Frameworkの使い方概略
+</title><body>
+<h1>利用前に決めること</h1>
+a2B Frameworkを使う上で、まず最初に次のことを決めてください。
+（画面遷移図（状態遷移図）を書いておくと良いかも、です。）
+
+<ul>
+<li>どういったシーン(画面)を用意し、どういったタイミング(どういったトリガ)でシーンを切り替えるか</li>
+<li>シーンを切り替える時に行う操作（データ加工処理）は何か？</li>
+<li>アプリを終了しても記憶しておきたいデータは何か？</li>
+</ul>
+
+<h1>作成が必要なクラス</h1>
+<ul>
+<li><a href="http://cvs.sourceforge.jp/cgi-bin/viewcvs.cgi/*checkout*/nnsi/MIDlet-FW-SAMPLE1/fwSampleMain.java">メイン呼び出し部</a></li>
+<li><a href="http://cvs.sourceforge.jp/cgi-bin/viewcvs.cgi/*checkout*/nnsi/MIDlet-FW-SAMPLE1/fwSampleFactory.java">生成部</a></li>
+<li><a href="http://cvs.sourceforge.jp/cgi-bin/viewcvs.cgi/*checkout*/nnsi/MIDlet-FW-SAMPLE1/fwSampleSceneDB.java">シーン切替制御部</a></li>
+<li><a href="http://cvs.sourceforge.jp/cgi-bin/viewcvs.cgi/*checkout*/nnsi/MIDlet-FW-SAMPLE1/fwSampleMainCanvas.java">(個別画面部)</a></li>
+</ul>
+
+<h2>メイン呼び出し部</h2>
+メイン呼び出し部です。(見ればわかりますが、生成部を作って渡してやるだけです。)
+
+<h2>生成部</h2>
+いわゆるファクトリです。画面やユーティリティなどを生成し、準備する部分です。
+
+<h2>シーン切替制御部</h2>
+a2B Frameworkの中心となる部分で、状態遷移（画面切替）を実際に行う部分です。
+
+<h2>(個別画面部)</h2>
+それぞれのアプリに固有な画面です。
+
+<hr>
+</body></html>

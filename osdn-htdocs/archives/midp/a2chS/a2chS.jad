@@ -1,0 +1,12 @@
+MIDlet-1: a2chS,/res/icon.png,MyMidpMain
+MIDlet-Description: 2ch検索の検索結果からスレを取得し、a2Bで読めるようにします。
+MIDlet-Icon: /res/icon.png
+MIDlet-Info-URL: http://sourceforge.jp/projects/nnsi/
+MIDlet-Jar-Size: 42896
+MIDlet-Jar-URL: a2chS.jar
+MIDlet-Name: a2B 2ch Searcher
+MIDlet-Permissions: javax.microedition.io.Connector.file.write,javax.microedition.io.Connector.file.read
+MIDlet-Vendor: NNsi Project
+MIDlet-Version: 1.0.4
+MicroEdition-Configuration: CLDC-1.1
+MicroEdition-Profile: MIDP-2.0

@@ -1,0 +1,10 @@
+MIDlet-1: locHunt,icon.png,MyMidpMain
+MIDlet-Description: A location Application
+MIDlet-Jar-Size: 50186
+MIDlet-Jar-URL: lookAround.jar
+MIDlet-Name: lookAround
+MIDlet-Permissions: javax.microedition.io.Connector.http,javax.microedition.io.Connector.file.write,javax.microedition.io.Connector.file.read,javax.microedition.io.Connector.https,javax.microedition.io.Connector.socket
+MIDlet-Vendor: NNsi Project
+MIDlet-Version: 0.0.2
+MicroEdition-Configuration: CLDC-1.1
+MicroEdition-Profile: MIDP-2.0

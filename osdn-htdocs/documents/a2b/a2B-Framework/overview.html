@@ -1,0 +1,47 @@
+<html><title>
+a2B frameworkの概要
+</title><body>
+<h1>a2B frameworkについて</h1>
+a2B Frameworkは、a2BやkaniFilerの開発成果を再利用可能なカタチに
+まとめなおした、MIDP 2.0用のアプリケーションフレームワークです。<br>
+a2BやkaniFilerのようなWillcom Java対応アプリ(MIDP2.0アプリ)を
+簡単に作成できるようになればいいな、と思い構築しました。
+
+<h2>コンセプト</h2>
+a2B Frameworkは、「表示(スクリーン)」と「処理(オペレータ)」、
+「データ(ストレージ)」を分離できる構造にしました。<br>
+また、画面(シーン) ＝ 状態と捉え、シーン切替（状態遷移）を
+考慮したアプリとなるようにしました。<br>
+また、このついでといっては何ですが、MIDPアプリの画面は「全画面切替」が
+基本となっていますが、個々の画面（シーン）で描画領域を指定できるように
+することで、マルチウィンドウっぽい表示を実現しています。<br>
+
+<hr>
+<h1>クラスダイアグラム</h1>
+<b>全体のイメージ</b>
+<img src="Packages.png"/>
+<ul>
+<li><a href="samples.png">サンプル実装部分</a></li>
+<li><a href="frameworks.png">フレームワーク部分</a></li>
+<li><a href="screens.png">グラフィック表示用画面部分</a></li>
+<li><a href="forms.png">データ入力用画面部分</a></li>
+<li><a href="images.png">画像表示画面部分</a></li>
+<li><a href="selections.png">アイテム選択用画面部分</a></li>
+<li><a href="informations.png">情報表示画面部分</a></li>
+<li><a href="utilities.png">処理ユーティリティ群部分</a></li>
+</ul>
+<hr>
+<h1>ドキュメント</h1>
+<h2>説明資料</h2>
+<ul>
+<li><a href="http://nnsi.sourceforge.jp/PukiWiki/pukiwiki.php?%5B%5Ba2B-Framework%5D%5D">説明(PukiWiki)</a></li>
+<li><a href="http://nnsi.sourceforge.jp/documents/a2B-Framework/doc/">クラスリファレンス</a></li>
+</ul>
+<h2>チュートリアル</h2>
+<ul>
+<li><a href="http://nnsi.sourceforge.jp/documents/a2B-Framework/usage.html">使い方概略</a></li>
+<li><a href="http://nnsi.sourceforge.jp/PukiWiki/pukiwiki.php?%5B%5Ba2B-Framework_%B4%F0%CB%DC%A5%A2%A5%D7%A5%EA%5D%5D">単純アプリ(Hello World!)</a></li>
+<li><a href="http://nnsi.sourceforge.jp/PukiWiki/pukiwiki.php?%5B%5Ba2B-Framework_%B1%FE%CD%D1%A5%A2%A5%D7%A5%EA%5D%5D">応用アプリ(キッチンタイマー)</a></li>
+</ul>
+<hr>
+</body></html>

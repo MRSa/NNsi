@@ -1,0 +1,10 @@
+MIDlet-1: hiMEMO,/res/icon.png,MyMidpMain
+MIDlet-Icon: /res/icon.png
+MIDlet-Jar-Size: 27124
+MIDlet-Jar-URL: hiMEMO.jar
+MIDlet-Name: 追記メモ
+MIDlet-Permissions: javax.microedition.io.Connector.file.write,javax.microedition.io.Connector.file.read
+MIDlet-Vendor: NNsi Project
+MIDlet-Version: 1.0.0
+MicroEdition-Configuration: CLDC-1.1
+MicroEdition-Profile: MIDP-2.0

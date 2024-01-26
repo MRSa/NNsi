@@ -1,0 +1,12 @@
+MIDlet-1: kaniFileMain,/res/icon.png,kaniFileMain
+MIDlet-Description: kaniFileManager
+MIDlet-Icon: /res/icon.png
+MIDlet-Info-URL: http://nnsi.sourceforge.jp/archives/midp/kaniFiler/
+MIDlet-Jar-Size: 75661
+MIDlet-Jar-URL: kaniFile.jar
+MIDlet-Name: kaniFiler
+MIDlet-Permissions: javax.microedition.io.Connector.http,javax.microedition.io.Connector.file.write,javax.microedition.io.Connector.file.read,javax.microedition.io.Connector.https,javax.microedition.io.Connector.socket
+MIDlet-Vendor: NNsi Project
+MIDlet-Version: 1.7.8
+MicroEdition-Configuration: CLDC-1.1
+MicroEdition-Profile: MIDP-2.0

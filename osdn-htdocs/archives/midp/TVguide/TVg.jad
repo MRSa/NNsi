@@ -1,0 +1,8 @@
+MIDlet-1: TV-PGM,/res/icon.png,MyMidpMain
+MIDlet-Jar-Size: 50620
+MIDlet-Jar-URL: TVg.jar
+MIDlet-Name: TV番組表
+MIDlet-Vendor: NNsi Project
+MIDlet-Version: 0.1.1
+MicroEdition-Configuration: CLDC-1.1
+MicroEdition-Profile: MIDP-2.0
