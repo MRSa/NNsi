@@ -4,17 +4,6 @@
 
 -----
 
-<!DOCTYPE HTML PUBLIC "-//IBM//DTD HPB HTML//EN">
-<HTML>
-<HEAD>
-<META name="GENERATOR" content="IBM HomePage Builder V3.0.7  for Windows">
-<META name="Content-Language" content="ja">
-<META http-equiv="Content-Type" content="text/html; charset=EUC-JP">
-<TITLE>Main operations of NNsi</TITLE>
-</HEAD>
-
-<BODY bgcolor="#efefef">
-
 <H1>NNsiの主要操作説明</H1>
 <HR>
 <H2>もくじ</H2>
@@ -295,5 +284,3 @@ ONダイヤルで±１」で切り替わる）
 <P align="right">
 (Nov/30/2002)
 </P>
-</BODY>
-</HTML>

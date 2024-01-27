@@ -4,17 +4,6 @@
 
 -----
 
-<!DOCTYPE HTML PUBLIC "-//IBM//DTD HPB HTML//EN">
-<HTML lang="ja">
-<HEAD>
-<META name="GENERATOR" content="IBM HomePage Builder V3.0.7  for Windows">
-<META name="Content-Language" content="ja">
-<META http-equiv="Content-Type" content="text/html; charset=EUC-JP">
-<TITLE>REVISION HISTORY for &quot;NNsi&quot; (2002)</TITLE>
-</HEAD>
-
-<BODY bgcolor="#efefef">
-
 <P>
 <B>NNsi 更新履歴</B> (2002年版)<BR>
 </P>
@@ -531,12 +520,8 @@ ONダイヤルで±１」にチェックを入れると有効になります。)
 <BR>
 <BR>
 </P>
-<P>
-<A href="index.htm">(戻る)</A>
-</P>
 <HR>
 <P align="right">
 (05/Feb/2003)
 </P>
 </BODY>
-</HTML>

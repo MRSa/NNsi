@@ -4,18 +4,6 @@
 
 -----
 
-<!DOCTYPE HTML PUBLIC "-//IBM//DTD HPB HTML//EN">
-
-<HTML>
-<HEAD>
-<META name="GENERATOR" content="IBM HomePage Builder V3.0.7  for Windows">
-<META name="Content-Language" content="ja">
-<META http-equiv="Content-Type" content="text/html; charset=EUC-JP">
-<TITLE>NNsi - The &quot;2ch&quot; viewer for PalmOS</TITLE>
-</HEAD>
-
-<BODY bgcolor="#efefef">
-
 <H1>NNsiの使用方法説明</H1>
 <HR>
 <H2>もくじ</H2>
@@ -290,5 +278,3 @@ NNsi設定-4では、主に各機種特有の機能について設定を行い�
 <P align="right">
 (Nov/30/2002)
 </P>
-</BODY>
-</HTML>

@@ -4,16 +4,6 @@
 
 -----
 
-<!DOCTYPE HTML PUBLIC "-//IBM//DTD HPB HTML//EN">
-<HTML>
-<HEAD>
-<META name="GENERATOR" content="IBM HomePage Builder V3.0.7  for Windows">
-<META name="Content-Language" content="ja">
-<TITLE>FAQ of NNsi</TITLE>
-</HEAD>
-
-<BODY bgcolor="#efefef">
-
 <H1>NNsiのよくある質問と答え</H1>
 <P>
 NNsiをリリースしてから、質問があった項目をまとめてみました。
@@ -58,5 +48,3 @@ ON」のチェックをはずしてご使用ください。
 <P align="right">
 (Feb/11/2002)
 </P>
-</BODY>
-</HTML>

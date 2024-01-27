@@ -42,6 +42,3 @@
 <P align="right">
 (27/Nov/2002)
 </P>
-</BODY>
-</HTML>
-

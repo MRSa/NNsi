@@ -4,16 +4,6 @@
 
 -----
 
-<!DOCTYPE HTML PUBLIC "-//IBM//DTD HPB HTML//EN">
-<HTML>
-<HEAD>
-<META name="GENERATOR" content="IBM HomePage Builder V3.0.7  for Windows">
-<META name="Content-Language" content="ja">
-<TITLE>REVISION HISTORY for &quot;NNsi&quot;</TITLE>
-</HEAD>
-
-<BODY bgcolor="#efefef">
-
 <P>
 <B>NNsi 更新履歴</B><BR>
 </P>
@@ -235,7 +225,7 @@ Pushボタンに割り当て可能に(NNsi設定-4)
 </UL>
 <HR>
 <P>
-<A href="history-nnsi2002.htm">[これより前の更新履歴]</A>
+<A href="history-nnsi2002.md">[これより前の更新履歴]</A>
 </P>
 <P>
 <BR>
@@ -248,5 +238,3 @@ Pushボタンに割り当て可能に(NNsi設定-4)
 <P align="right">
 (12/Feb/2003)
 </P>
-</BODY>
-</HTML>
