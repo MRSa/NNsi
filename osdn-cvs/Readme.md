@@ -1,0 +1,70 @@
+# OSDN NNsi CVS リポジトリ
+
+OSDN NNsi の CVSリポジトリです。
+
+-----
+
+- [a2BC](a2BC/a2BC.txt)
+  - MIDP 2.0対応２ちゃんねるブラウザの a2Bが管理する２ちゃんねるログ、管理データを更新するツール (Windows用)
+- a2B-FW
+  - MIDP 2.0アプリの中心処理部分を抜き出した部分です。
+- a2B-Materials
+  - MIDP 2.0対応２ちゃんねるブラウザの a2B に関連するドキュメント塁を格納しています。
+- a2BU
+  - MIDP 2.0対応２ちゃんねるブラウザの a2B のログ取得に特化した MIDPアプリケーションです。
+- a2B-wxinst
+  - Windows用の a2B インストール支援ツールです。 
+- a2chS
+  - 2ch検索の検索結果からスレを取得し、a2Bで読めるようにする、MIDPアプリケーションです。
+- [a2DA](a2DA/a2DA.txt)
+  - PalmOSのクリップボードにコピーされたアスキーアートをずれないように表示するDAです。
+- [aaDA](aaDA/aaDA.txt)
+  - PalmOSのフィールドにアスキーアートを挿入するDAです。
+- captureDA
+  - CLIEデバイスで動作する、カメラ撮影を行うDA? だと思います。。
+- [checkMailDA](checkMailDA/checkMailDA.txt)
+  - PalmOSで、POP3/APOPサーバに対し、メールボックスにメールがあるかどうか確認するDAです。
+- dotE
+  - ドット絵を描く MIDP 2.0アプリです。
+- [editor](editor/KaniEdit.txt)
+  - PalmOS用の、簡易的なテキストエディタです。
+- [ejDA](ejDA/ejDA.txt)
+  - PalmOS用の、現在選択されている文字列、もしくはクリップボードに格納されている文字列について、Excite翻訳( http://www.excite.co.jp/world/english/ )を使用して英文を日本語に翻訳するDAです。
+- hiMEMO
+  - たぶん、、MIDP 2.0用のメモアプリです。NetFront等のブラウザ連携でテキストを開くことができます。
+- locHunt
+  - MIDP 2.0用のカメラアプリ？  撮影情報や位置情報も記録できます。
+- MIDlet-a2B
+　-  MIDP 2.0対応２ちゃんねるブラウザです。
+- MIDlet-a2BD
+  - MIDP 2.0対応の、URLを指定してデータをダウンロードするアプリです。
+- MIDlet-FW-SAMPLE1
+- MIDlet-FW-SAMPLE2
+- MIDlet-FW-SAMPLE3
+- MIDlet-FW-SAMPLE4
+- MIDlet-FW-SAMPLE5
+- MIDlet-kaniFile
+　- MIDP 2.0対応の簡易ファイラーアプリです。
+- MIDlet-test
+- [mlDA](mlDA/loginDA.txt)
+  - PalmOS対応の、HotSpot等、Webフォームのログインを実施するDAです。
+- NEET
+  - NNsi用の、Windowsでログデータをアップデートするアプリです。
+- [nnDA](nnDA/NNsiInfoDA.txt)
+  - NNsiデバッグの情報および操作ヘルプ、JPEG画像を表示するＤＡです。
+- NNsi-CVSROOT
+  - PamOS対応２ちゃんねるブラウザ NNsi のソースコード格納フォルダです。（複数枝分かれして管理しています。）
+- [NNsiMona](NNsiMona/NNsiMona-ReadMe.txt)
+  - Windowsデスクトップ上の２ちゃんねるブラウザのログと PalmOSのにちゃんねるびゅーあNNsiのログ連携するためのコンジットです。
+- [NNsj](NNsj/NNsiMacroEdit.txt)
+  - Palm用２ちゃんねるびゅーあのNNsiで実行可能なマクロを設定・編集するツールです。
+- [qTVg](qTVg/qTVg.txt)
+  - Windows用の？「テレビ番組表」アプリ用データ取得ツール  (GPL)
+- rootj
+- TheCount
+  - MIDP 2.0用のカウンターアプリです。
+- TVguide
+  - MIDP 2.0用のテレビ番組表データ取得ツール？
+- [webDA](webDA/webDA.txt)
+  - PalmOSのDA版の簡易テキスト型Webブラウザです。
+  
